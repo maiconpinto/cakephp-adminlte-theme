@@ -1,0 +1,28 @@
+{
+  "name": "maiconpinto/CakePHP-AdminLTE-Theme",
+  "description": "CakePHP 3.x AdminLTE Theme.",
+  "type": "cakephp-plugin",
+  "keywords": ["cakephp", "templates", "plugin"],
+  "homepage": "https://github.com/maiconpinto/CakePHP-AdminLTE-Theme",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Maicon Pinto",
+      "email": "maiconsilva.pinto@gmail.com",
+      "homepage": "https://www.maiconpinto.com.br/",
+      "role": "Author"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/maiconpinto/CakePHP-AdminLTE-Theme/issues",
+    "source": "https://github.com/maiconpinto/CakePHP-AdminLTE-Theme"
+  },
+  "require": {
+    "php": ">=5.4.16",
+    "cakephp/cakephp": "~3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.1"
+  }
+}
+
