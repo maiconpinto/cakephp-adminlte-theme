@@ -13,6 +13,11 @@
       "role": "Author"
     }
   ],
+  "autoload": {
+      "psr-4": {
+          "AdminLTE\\": "src"
+      }
+  },
   "support": {
     "issues": "https://github.com/maiconpinto/cakephp-adminlte-theme/issues",
     "source": "https://github.com/maiconpinto/cakephp-adminlte-theme"
