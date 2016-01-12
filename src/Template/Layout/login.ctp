@@ -13,9 +13,9 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
-  <?php echo $this->Html->css('AdminLTE'); ?>
+  <?php echo $this->Html->css('AdminLTE.theme'); ?>
   <!-- iCheck -->
-  <link rel="stylesheet" href="../../plugins/iCheck/square/blue.css">
+  <?php echo $this->Html->css('/plugins/iCheck/square/blue'); ?>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -76,11 +76,11 @@
 <!-- /.login-box -->
 
 <!-- jQuery 2.1.4 -->
-<script src="../../plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<?php echo $this->Html->script('/plugins/jQuery/jQuery-2.1.4.min'); ?>
 <!-- Bootstrap 3.3.5 -->
-<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<?php echo $this->Html->script('/bootstrap/js/bootstrap'); ?>
 <!-- iCheck -->
-<script src="../../plugins/iCheck/icheck.min.js"></script>
+<?php echo $this->Html->script('/plugins/iCheck/icheck.min'); ?>
 <script>
   $(function () {
     $('input').iCheck({
