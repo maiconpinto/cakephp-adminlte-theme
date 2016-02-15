@@ -575,5 +575,6 @@
 <!-- AdminLTE App -->
 <?php echo $this->Html->script('AdminLTE.theme'); ?>
 <!-- AdminLTE for demo purposes -->
+<?php echo $this->fetch('scriptBotton'); ?>
 </body>
 </html>
