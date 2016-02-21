@@ -579,5 +579,19 @@
 <!-- AdminLTE for demo purposes -->
 <?php echo $this->fetch('script'); ?>
 <?php echo $this->fetch('scriptBotton'); ?>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".navbar .menu").slimscroll({
+      height: "200px",
+      alwaysVisible: false,
+      size: "3px"
+    }).css("width", "100%");
+
+    var a = $('a[href="<?php echo $this->request->webroot . $this->request->url ?>"]');
+    if (!a.parent().hasClass('treeview')) {
+      a.parent().addClass('active').parents('.treeview').addClass('active');
+    }
+  });
+</script>
 </body>
 </html>
