@@ -526,8 +526,9 @@ $this->Html->script([
   'AdminLTE./plugins/jvectormap/jquery-jvectormap-world-mill-en',
   'AdminLTE./plugins/knob/jquery.knob',
   'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js',
+  'AdminLTE./plugins/datepicker/bootstrap-datepicker',
   'AdminLTE./plugins/daterangepicker/daterangepicker',
-  'AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min'
+  'AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min',
 ], 
 ['block' => 'script']); 
 
@@ -597,6 +598,13 @@ $this->start('scriptBotton');
           {label: "Mail-Order Sales", value: 20}
         ],
         hideHover: 'auto'
+      });
+
+      //Fix for charts under tabs
+      $('.box ul.nav a').on('shown.bs.tab', function () {
+        area.redraw();
+        donut.redraw();
+        line.redraw();
       });
 
       //jvectormap data
@@ -674,6 +682,11 @@ $this->start('scriptBotton');
 
       //The Calender
       $("#calendar").datepicker();
+
+      //SLIMSCROLL FOR CHAT WIDGET
+      $('#chat-box').slimScroll({
+        height: '250px'
+      });
 
     </script>
     <?php
