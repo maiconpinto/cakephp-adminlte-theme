@@ -531,10 +531,9 @@ $this->Html->script([
   'AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min',
 ], 
 ['block' => 'script']); 
+?>
 
-$this->start('scriptBotton');
-
-    ?>
+<?php $this->start('scriptBotton'); ?>
     <script type="text/javascript">
       var area = new Morris.Area({
         element: 'revenue-chart',
@@ -689,8 +688,4 @@ $this->start('scriptBotton');
       });
 
     </script>
-    <?php
-$this->end();
-
-
-?>
+<?php  $this->end(); ?>
