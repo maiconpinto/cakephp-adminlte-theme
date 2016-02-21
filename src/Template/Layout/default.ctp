@@ -17,6 +17,8 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <?php echo $this->Html->css('AdminLTE.skins/skin-blue'); ?>
+
+  <?php echo $this->fetch('css'); ?>
   
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -575,6 +577,7 @@
 <!-- AdminLTE App -->
 <?php echo $this->Html->script('AdminLTE.theme'); ?>
 <!-- AdminLTE for demo purposes -->
+<?php echo $this->fetch('script'); ?>
 <?php echo $this->fetch('scriptBotton'); ?>
 </body>
 </html>

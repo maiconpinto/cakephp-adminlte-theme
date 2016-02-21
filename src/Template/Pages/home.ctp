@@ -507,6 +507,16 @@
     </section>
     <!-- /.content -->
 <?php
+$this->Html->css([
+    'AdminLTE./plugins/iCheck/flat/blue',
+    'AdminLTE./plugins/morris/morris',
+    'AdminLTE./plugins/jvectormap/jquery-jvectormap-1.2.2',
+    'AdminLTE./plugins/datepicker/datepicker3',
+    'AdminLTE./plugins/daterangepicker/daterangepicker-bs3',
+    'AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min'
+  ],
+  ['block' => 'css']);
+
 $this->Html->script([
   'https://code.jquery.com/ui/1.11.4/jquery-ui.min.js',
   'https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js',
@@ -518,7 +528,7 @@ $this->Html->script([
   'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js',
   'AdminLTE./plugins/daterangepicker/daterangepicker'
 ], 
-['block' => 'scriptBotton']); 
+['block' => 'script']); 
 
 $this->start('scriptBotton');
 
@@ -587,6 +597,62 @@ $this->start('scriptBotton');
         ],
         hideHover: 'auto'
       });
+
+      //jvectormap data
+      var visitorsData = {
+        "US": 398, //USA
+        "SA": 400, //Saudi Arabia
+        "CA": 1000, //Canada
+        "DE": 500, //Germany
+        "FR": 760, //France
+        "CN": 300, //China
+        "AU": 700, //Australia
+        "BR": 600, //Brazil
+        "IN": 800, //India
+        "GB": 320, //Great Britain
+        "RU": 3000 //Russia
+      };
+      //World map by jvectormap
+      $('#world-map').vectorMap({
+        map: 'world_mill_en',
+        backgroundColor: "transparent",
+        regionStyle: {
+          initial: {
+            fill: '#e4e4e4',
+            "fill-opacity": 1,
+            stroke: 'none',
+            "stroke-width": 0,
+            "stroke-opacity": 1
+          }
+        },
+        series: {
+          regions: [{
+            values: visitorsData,
+            scale: ["#92c1dc", "#ebf4f9"],
+            normalizeFunction: 'polynomial'
+          }]
+        },
+        onRegionLabelShow: function (e, el, code) {
+          if (typeof visitorsData[code] != "undefined")
+            el.html(el.html() + ': ' + visitorsData[code] + ' new visitors');
+        }
+      });
+
+      /* jQueryKnob */
+      $(".knob").knob();
+
+      /* The todo list plugin */
+      $(".todo-list").todolist({
+        onCheck: function (ele) {
+          window.console.log("The element has been checked");
+          return ele;
+        },
+        onUncheck: function (ele) {
+          window.console.log("The element has been unchecked");
+          return ele;
+        }
+      });
+
     </script>
     <?php
 $this->end();
