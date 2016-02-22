@@ -1,3 +1,5 @@
+<?php $this->layout = 'boxed'; ?>
+
 <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
