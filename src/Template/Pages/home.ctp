@@ -529,8 +529,8 @@ $this->Html->script([
   'AdminLTE./plugins/datepicker/bootstrap-datepicker',
   'AdminLTE./plugins/daterangepicker/daterangepicker',
   'AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min',
-], 
-['block' => 'script']); 
+],
+['block' => 'script']);
 ?>
 
 <?php $this->start('scriptBotton'); ?>
