@@ -295,11 +295,16 @@
             <small class="label pull-right bg-red">3</small>
           </a>
         </li>
-        <li>
-          <a href="<?php echo $this->Url->build('/pages/mailbox/mailbox'); ?>">
+        <li class="treeview">
+          <a href="#">
             <i class="fa fa-envelope"></i> <span>Mailbox</span>
             <small class="label pull-right bg-yellow">12</small>
           </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo $this->Url->build('/pages/mailbox/mailbox'); ?>">Inbox <span class="label label-primary pull-right">13</span></a></li>
+            <li><a href="<?php echo $this->Url->build('/pages/mailbox/compose'); ?>">Compose</a></li>
+            <li><a href="<?php echo $this->Url->build('/pages/mailbox/read-mail'); ?>">Read</a></li>
+          </ul>
         </li>
         <li class="treeview">
           <a href="#">
