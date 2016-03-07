@@ -2032,4 +2032,3 @@ AdminLTE/
     Attribution is not required (though very much appreciated).
   </p>
 </section>
-
