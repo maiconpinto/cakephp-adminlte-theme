@@ -13,16 +13,21 @@
       "role": "Author"
     }
   ],
-  "support": {
-    "issues": "https://github.com/maiconpinto/cakephp-adminlte-theme/issues",
-    "source": "https://github.com/maiconpinto/cakephp-adminlte-theme"
-  },
   "require": {
     "php": ">=5.4.16",
     "cakephp/cakephp": "~3.0"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "AdminLTE\\": "src"
+    }
+  },
+  "support": {
+    "issues": "https://github.com/maiconpinto/cakephp-adminlte-theme/issues",
+    "source": "https://github.com/maiconpinto/cakephp-adminlte-theme"
   }
 }
 
