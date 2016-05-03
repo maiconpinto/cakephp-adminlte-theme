@@ -12,7 +12,7 @@ $fields = collection($fields)
 <section class="content-header">
     <h1>
         <%= $pluralHumanName %>
-        <?= $this->Html->link(__('New'), ['action' => 'add', <%= $pk %>], ['class'=>'btn btn-success btn-xs']) ?>
+        <?= $this->Html->link(__('New'), ['action' => 'add'], ['class'=>'btn btn-success btn-xs']) ?>
     </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
