@@ -1,0 +1,83 @@
+<%
+use Cake\Utility\Inflector;
+%>
+<section class="content-header">
+    <h1>
+        <%= $singularHumanName %>
+        <small>Formulário</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title"><?= '<%= Inflector::humanize($action) %> <%= $singularHumanName %>' ?></h3>
+                </div>
+                <!-- /.box-header -->
+                <!-- form start -->
+                <?= $this->Form->create($<%= $singularVar %>) ?>
+                    <div class="box-body">
+
+
+                        <?php
+<%
+        foreach ($fields as $field) {
+            if (in_array($field, $primaryKey)) {
+                continue;
+            }
+            if (isset($keyFields[$field])) {
+                $fieldData = $schema->column($field);
+                if (!empty($fieldData['null'])) {
+%>
+            echo $this->Form->input('<%= $field %>', ['options' => $<%= $keyFields[$field] %>, 'empty' => true]);
+<%
+                } else {
+%>
+            echo $this->Form->input('<%= $field %>', ['options' => $<%= $keyFields[$field] %>]);
+<%
+                }
+                continue;
+            }
+            if (!in_array($field, ['created', 'modified', 'updated'])) {
+                $fieldData = $schema->column($field);
+                if (($fieldData['type'] === 'date') && (!empty($fieldData['null']))) {
+%>
+            echo $this->Form->input('<%= $field %>', ['empty' => true, 'default' => '']);
+<%
+                } else {
+%>
+            echo $this->Form->input('<%= $field %>');
+<%
+                }
+            }
+        }
+        if (!empty($associations['BelongsToMany'])) {
+            foreach ($associations['BelongsToMany'] as $assocName => $assocData) {
+%>
+            echo $this->Form->input('<%= $assocData['property'] %>._ids', ['options' => $<%= $assocData['variable'] %>]);
+<%
+            }
+        }
+%>
+        ?>
+
+
+                    </div>
+                    <!-- /.box-body -->
+
+                    <div class="box-footer">
+                        <?= $this->Form->button(__('Submit')) ?>
+                    </div>
+    <?= $this->Form->end() ?>
+            </div>
+        </div>
+    </div>
+</section>
