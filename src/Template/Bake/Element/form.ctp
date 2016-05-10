@@ -7,7 +7,9 @@ use Cake\Utility\Inflector;
         <small><?= ('<%= Inflector::humanize($action) %>' == 'Add') ? 'Novo' : 'Editando' ?></small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li>
+        <?= $this->Html->link('<i class="fa fa-dashboard"></i> Voltar', ['action' => 'index'], ['escape' => false]) ?>
+        </li>
     </ol>
 </section>
 
