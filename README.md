@@ -21,6 +21,17 @@ public function beforeRender(Event $event)
 }
 ```
 
+### Form
+
+```
+// src/View/AppView.php
+
+public function initialize()
+{
+    $this->loadHelper('Form', ['className' => 'TwitterBootstrap.Form']);
+}
+```
+
 ## Para contribuir
 
 Faça um fork deste projeto.
