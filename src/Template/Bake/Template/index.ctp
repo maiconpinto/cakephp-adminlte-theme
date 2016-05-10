@@ -12,7 +12,7 @@ $fields = collection($fields)
 <section class="content-header">
     <h1>
         <%= $pluralHumanName %>
-        <?= $this->Html->link(__('New'), ['action' => 'add'], ['class'=>'btn btn-success btn-xs']) ?>
+        <?= $this->Html->link('Novo', ['action' => 'add'], ['class'=>'btn btn-success btn-xs']) ?>
     </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -80,9 +80,8 @@ $fields = collection($fields)
                                 $pk = '$' . $singularVar . '->' . $primaryKey[0];
                                 %>
                                 <td class="actions" style="white-space:nowrap">
-                                    <?= $this->Html->link(__('View'), ['action' => 'view', <%= $pk %>], ['class'=>'btn btn-default btn-xs']) ?>
-                                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', <%= $pk %>], ['class'=>'btn btn-primary btn-xs']) ?>
-                                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', <%= $pk %>], ['confirm' => __('Are you sure you want to delete # {0}?', <%= $pk %>), 'class'=>'btn btn-danger btn-xs']) ?>
+                                    <?= $this->Html->link('Editar', ['action' => 'edit', <%= $pk %>], ['class'=>'btn btn-primary btn-xs']) ?>
+                                    <?= $this->Form->postLink('Excluir', ['action' => 'delete', <%= $pk %>], ['confirm' => 'Você tem certeza que deseja excluir este registro?', 'class'=>'btn btn-danger btn-xs']) ?>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
