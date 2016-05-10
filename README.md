@@ -2,13 +2,17 @@
 
 ## Instalação
 
-Você pode instalar usando [composer](http://getcomposer.org) através do comando a seguir.
+Você pode instalar usando [composer](http://getcomposer.org).
 
-	composer require maiconpinto/cakephp-adminlte-theme
+    composer require maiconpinto/cakephp-adminlte-theme
 
-Certifique-se de carregar o plugin em **config/bootstrap.php**.
+### Ativar Plugin
 
-	Plugin::load('AdminLTE');
+```php
+// config/bootstrap.php
+
+Plugin::load('AdminLTE');
+```
 
 ### Ativar theme
 
