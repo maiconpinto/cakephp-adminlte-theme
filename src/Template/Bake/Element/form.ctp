@@ -4,7 +4,7 @@ use Cake\Utility\Inflector;
 <section class="content-header">
     <h1>
         <%= $singularHumanName %>
-        <small>Formulário</small>
+        <small><?= ('<%= Inflector::humanize($action) %>' == 'Add') ? 'Novo' : 'Editando' ?></small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -19,11 +19,11 @@ use Cake\Utility\Inflector;
             <!-- general form elements -->
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <h3 class="box-title"><?= '<%= Inflector::humanize($action) %> <%= $singularHumanName %>' ?></h3>
+                    <h3 class="box-title">Formulário</h3>
                 </div>
                 <!-- /.box-header -->
                 <!-- form start -->
-                <?= $this->Form->create($<%= $singularVar %>) ?>
+                <?= $this->Form->create($<%= $singularVar %>, array('role' => 'form')) ?>
                     <div class="box-body">
 
 
