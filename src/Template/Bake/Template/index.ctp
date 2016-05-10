@@ -25,13 +25,14 @@ $fields = collection($fields)
                     <h3 class="box-title">Lista de <%= $pluralHumanName %></h3>
 
                     <div class="box-tools">
-                        <div class="input-group input-group-sm" style="width: 150px;">
-                            <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
-
-                            <div class="input-group-btn">
-                                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                        <form action="<?php echo $this->Url->build(); ?>" method="POST">
+                            <div class="input-group input-group-sm">
+                                <input type="text" name="search" class="form-control" placeholder="Digite">
+                                <span class="input-group-btn">
+                                <button class="btn btn-info btn-flat" type="submit">Buscar</button>
+                                </span>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
                 <!-- /.box-header -->
