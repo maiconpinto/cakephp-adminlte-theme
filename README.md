@@ -10,11 +10,11 @@ Certifique-se de carregar o plugin em **config/bootstrap.php**.
 
 	Plugin::load('AdminLTE');
 
-### Para ativar o layout
-
-Informe `$this->viewBuilder()->theme('AdminLTE');` no seu controller (por exemplo, AppController para usar em qualquer página).
+### Ativar theme
 
 ```php
+// src/Controller/AppController.php
+
 public function beforeRender(Event $event)
 {
 	$this->viewBuilder()->theme('AdminLTE');
@@ -23,7 +23,7 @@ public function beforeRender(Event $event)
 
 ### Form
 
-```
+```php
 // src/View/AppView.php
 
 public function initialize()
