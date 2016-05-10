@@ -21,7 +21,7 @@ public function beforeRender(Event $event)
 }
 ```
 
-### Form
+### Ativar Form
 
 ```php
 // src/View/AppView.php
