@@ -32,7 +32,7 @@ public function beforeRender(Event $event)
 
 public function initialize()
 {
-    $this->loadHelper('Form', ['className' => 'AdminLTE.Form.Form']);
+    $this->loadHelper('Form', ['className' => 'AdminLTE.Form']);
 }
 ```
 
