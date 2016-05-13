@@ -1,12 +1,12 @@
 # CakePHP AdminLTE Theme
 
-## Instalação
+## Installation
 
-Você pode instalar usando [composer](http://getcomposer.org).
+You can install using [composer](http://getcomposer.org).
 
     composer require maiconpinto/cakephp-adminlte-theme
 
-### Ativar Plugin
+### Enable Plugin
 
 ```php
 // config/bootstrap.php
@@ -14,7 +14,7 @@ Você pode instalar usando [composer](http://getcomposer.org).
 Plugin::load('AdminLTE');
 ```
 
-### Ativar theme
+### Enable theme
 
 ```php
 // src/Controller/AppController.php
@@ -25,7 +25,7 @@ public function beforeRender(Event $event)
 }
 ```
 
-### Ativar Form
+### Enable Form
 
 ```php
 // src/View/AppView.php
@@ -36,6 +36,10 @@ public function initialize()
 }
 ```
 
-## Para contribuir
+## Contributing
 
-Faça um fork deste projeto.
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
