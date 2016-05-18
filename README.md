@@ -11,7 +11,7 @@ You can install using [composer](http://getcomposer.org).
 ```php
 // config/bootstrap.php
 
-Plugin::load('AdminLTE');
+Plugin::load('AdminLTE', ['bootstrap' => true, 'routes' => true]);
 ```
 
 ### Enable theme
@@ -34,6 +34,30 @@ public function initialize()
 {
     $this->loadHelper('Form', ['className' => 'AdminLTE.Form']);
 }
+```
+
+### Configure
+
+```php
+// src/Controller/AppController.php
+
+public function beforeRender(Event $event)
+{
+    // ...
+    $this->set('theme', Configure::read('Theme'));
+}
+```
+
+```php
+// To customize configuration paste it at end of file config/bootstrap.php
+
+Configure::write('Theme', [
+    'title' => 'AdminLTE',
+    'logo' => [
+        'mini' => '<b>A</b>LT',
+        'large' => '<b>Admin</b>LTE'
+    ]
+]);
 ```
 
 ## Contributing
