@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Lockscreen</title>
+  <title><?php echo $theme['title'] ?></title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -28,7 +28,7 @@
 <!-- Automatic element centering -->
 <div class="lockscreen-wrapper">
   <div class="lockscreen-logo">
-    <a href="<?php echo $this->Url->build('/'); ?>"><b>Admin</b>LTE</a>
+    <a href="<?php echo $this->Url->build('/'); ?>"><?php echo $theme['logo']['large'] ?></a>
   </div>
   <!-- User name -->
   <div class="lockscreen-name">John Doe</div>
@@ -42,6 +42,7 @@
     <!-- /.lockscreen-image -->
 
     <!-- lockscreen credentials (contains the form) -->
+    <?php echo $this->Flash->render(); ?>
     <?php echo $this->fetch('content'); ?>
     <!-- /.lockscreen credentials -->
 
