@@ -1,3 +1,11 @@
+<?php
+$file = ROOT . DS . 'src' . DS . 'Template' . DS . 'Element' . DS . 'aside-control-sidebar.ctp';
+if (file_exists($file)) {
+    ob_start();
+    include_once $file;
+    echo ob_get_clean();
+} else {
+?>
 <aside class="control-sidebar control-sidebar-dark">
     <!-- Create the tabs -->
     <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
@@ -187,3 +195,6 @@
         <!-- /.tab-pane -->
     </div>
 </aside>
+<?php
+}
+?>
