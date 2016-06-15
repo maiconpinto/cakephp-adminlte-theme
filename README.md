@@ -72,6 +72,7 @@ Replace the files according to the image.
 4. `src/Template/Element/aside/form.ctp`
 5. `src/Template/Element/aside/sidebar-menu.ctp`
 6. `src/Template/Element/aside-control-sidebar.ctp`
+7. `src/Template/Element/footer.ctp`
 
 ## Contributing
 
