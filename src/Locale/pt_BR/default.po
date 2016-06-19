@@ -1,0 +1,8 @@
+msgid "Back"
+msgstr "Voltar"
+
+msgid "Form"
+msgstr "Formulário"
+
+msgid "Save"
+msgstr "Salvar"
