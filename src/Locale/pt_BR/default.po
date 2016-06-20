@@ -1,3 +1,32 @@
+## Template index.ctp
+msgid "New"
+msgstr "Novo"
+
+msgid "List of"
+msgstr "Lista de"
+
+msgid "Fill in to start search"
+msgstr "Digite para pesquisar"
+
+msgid "Filter"
+msgstr "Buscar"
+
+msgid "Actions"
+msgstr "Ações"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Delete"
+msgstr "Excluir"
+
+msgid "Confirm to delete this entry?"
+msgstr "Confirme para excluir este registro"
+
+## Template add.ctp
+msgid "Add"
+msgstr "Adicionar"
+
 msgid "Back"
 msgstr "Voltar"
 
@@ -6,3 +35,35 @@ msgstr "Formulário"
 
 msgid "Save"
 msgstr "Salvar"
+
+## Template edit.ctp
+
+msgid "Edit"
+msgstr "Editar"
+
+
+## Controller
+
+msgid "The {0} has been saved."
+msgstr "{0} foi salvo."
+
+msgid "The {0} could not be saved. Please, try again."
+msgstr "{0} não foi salvo. Por favor, tente novamente."
+
+msgid "The {0} has been deleted."
+msgstr "{0} foi excluído."
+
+msgid "The {0} could not be deleted. Please, try again."
+msgstr "{0} não foi excluído. Por favor, tente novamente."
+
+## Elements
+
+msgid "Alert"
+msgstr "Alerta"
+
+
+## Helpers
+
+msgid "Click here to change the file."
+msgstr "Clique aqui para mudar o arquivo."
+
