@@ -80,8 +80,10 @@ class FormHelper extends CakeFormHelper {
                       {{content}}
                       <div>
                         <small>
+                            <label>
                             <input type="checkbox" onclick="'.$function_name.'" />
                             '. __("Click here to change the file.").'
+                            </label>
                         </small>
 
                         <script type="text/javascript">
