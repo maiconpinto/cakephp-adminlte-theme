@@ -81,17 +81,18 @@ class FormHelper extends CakeFormHelper {
                       <div>
                         <small>
                             <input type="checkbox" onclick="'.$function_name.'" />
-                            Para trocar a '.$label.' clique aqui e selecione o novo arquivo.</small>
+                            '. __("Click here to change the file.").'
+                        </small>
 
-                            <script type="text/javascript">
-                                function '.$function_name.' {
-                                    if (document.getElementById("'.$fieldName.'").disabled) {
-                                        document.getElementById("'.$fieldName.'").disabled = false;
-                                    } else {
-                                        document.getElementById("'.$fieldName.'").disabled = true;
-                                    }
+                        <script type="text/javascript">
+                            function '.$function_name.' {
+                                if (document.getElementById("'.$fieldName.'").disabled) {
+                                    document.getElementById("'.$fieldName.'").disabled = false;
+                                } else {
+                                    document.getElementById("'.$fieldName.'").disabled = true;
                                 }
-                            </script>
+                            }
+                        </script>
                       </div>
                     </div>';
 
