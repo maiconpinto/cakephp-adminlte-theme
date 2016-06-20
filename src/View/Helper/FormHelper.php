@@ -5,6 +5,7 @@ namespace AdminLTE\View\Helper;
 use Cake\View\Helper\FormHelper as CakeFormHelper;
 use Cake\Utility\Hash;
 use Cake\View\View;
+use Cake\Utility\Inflector;
 
 class FormHelper extends CakeFormHelper {
 
@@ -67,6 +68,35 @@ class FormHelper extends CakeFormHelper {
             case 'radio':
                 $options['templates']['radioWrapper'] = '<div class="radio"><label>{{input}}{{label}}</label></div>';
                 $options['templates']['label'] = '{{text}}';
+                break;
+            case 'file':
+                $options['templates']['inputContainer'] = '<div class="form-group {{type}}{{required}}">{{content}}</div>';
+                $options['templates']['label'] = '<label>{{input}}{{text}}</label>';
+                if (!empty($options['value'])) {
+                    $label = $options['label'] ? $options['label'] : Inflector::humanize($fieldName);
+                    $function_name = "enable_{$fieldName}()";
+
+                    $options['templates']['inputContainer'] = '<div class="form-group {{type}}{{required}}">
+                      {{content}}
+                      <div>
+                        <small>
+                            <input type="checkbox" onclick="'.$function_name.'" />
+                            Para trocar a '.$label.' clique aqui e selecione o novo arquivo.</small>
+
+                            <script type="text/javascript">
+                                function '.$function_name.' {
+                                    if (document.getElementById("'.$fieldName.'").disabled) {
+                                        document.getElementById("'.$fieldName.'").disabled = false;
+                                    } else {
+                                        document.getElementById("'.$fieldName.'").disabled = true;
+                                    }
+                                }
+                            </script>
+                      </div>
+                    </div>';
+
+                    $options['disabled'] = true;
+                }
                 break;
             default:
         }
