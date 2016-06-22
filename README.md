@@ -74,9 +74,9 @@ Replace the files according to the image.
 6. `src/Template/Element/aside-control-sidebar.ctp`
 7. `src/Template/Element/footer.ctp`
 
-### FormHelper
+### Wiki
 
-[Wiki](https://github.com/maiconpinto/cakephp-adminlte-theme/wiki/FormHelper)
+[FormHelper](https://github.com/maiconpinto/cakephp-adminlte-theme/wiki/FormHelper)
 
 ## Contributing
 
