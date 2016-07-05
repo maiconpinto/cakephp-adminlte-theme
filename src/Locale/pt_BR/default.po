@@ -56,6 +56,35 @@ msgstr "{0} foi excluído."
 msgid "The {0} could not be deleted. Please, try again."
 msgstr "{0} não foi excluído. Por favor, tente novamente."
 
+## Login
+
+msgid "Sign in to start your session"
+msgstr "Faça login para começar a sua sessão"
+
+msgid "OR"
+msgstr "OU"
+
+msgid "Sign in using Facebook"
+msgstr "Faça login usando Facebook"
+
+msgid "Sign in using Google+"
+msgstr "Faça login usando Google+"
+
+msgid "I forgot my password"
+msgstr "Eu esqueci minha senha"
+
+msgid "Register a new membership"
+msgstr "Registrar como novo membro"
+
+msgid "Remember Me"
+msgstr "Lembrar-me"
+
+msgid "Sign In"
+msgstr "Logar"
+
+msgid "Username or password is incorrect"
+msgstr "Usuário ou senha está incorreto"
+
 ## Elements
 
 msgid "Alert"
