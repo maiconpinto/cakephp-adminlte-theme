@@ -40,6 +40,7 @@ public function initialize()
 
 ```php
 // src/Controller/AppController.php
+use Cake\Core\Configure;
 
 public function beforeRender(Event $event)
 {
@@ -73,10 +74,6 @@ Replace the files according to the image.
 5. `src/Template/Element/aside/sidebar-menu.ctp`
 6. `src/Template/Element/aside-control-sidebar.ctp`
 7. `src/Template/Element/footer.ctp`
-
-### Wiki
-
-[FormHelper](https://github.com/maiconpinto/cakephp-adminlte-theme/wiki/FormHelper)
 
 ## Contributing
 
