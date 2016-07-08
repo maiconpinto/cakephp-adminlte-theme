@@ -31,7 +31,7 @@
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
-    <a href="<?php echo $this->Url->build('/'); ?>"><b>Admin</b>LTE</a>
+    <a href="<?php echo $this->Url->build('/'); ?>"><b><?php echo $theme['logo']['large'] ?></a>
   </div>
 
   <div class="register-box-body">
