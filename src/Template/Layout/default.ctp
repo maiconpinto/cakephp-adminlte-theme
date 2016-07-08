@@ -30,7 +30,6 @@
 <body class="hold-transition skin-blue sidebar-mini">
     <!-- Site wrapper -->
     <div class="wrapper">
-
         <header class="main-header">
             <!-- Logo -->
             <a href="<?php echo $this->Url->build('/'); ?>" class="logo">
@@ -58,14 +57,13 @@
         </div>
         <!-- /.content-wrapper -->
 
-
         <?php echo $this->element('footer'); ?>
 
         <!-- Control Sidebar -->
         <?php echo $this->element('aside-control-sidebar'); ?>
 
         <!-- /.control-sidebar -->
-        <!-- Add the sidebar's background. This div must be placed
+<!-- Add the sidebar's background. This div must be placed
     immediately after the control sidebar -->
     <div class="control-sidebar-bg"></div>
 </div>
