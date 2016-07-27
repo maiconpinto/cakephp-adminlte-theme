@@ -37,7 +37,7 @@ use Cake\Utility\Inflector;
         $fieldData = $schema->column($field);
         if (!empty($fieldData['null'])) {
 %>
-            echo $this->Form->input('<%= $field %>', ['options' => $<%= $keyFields[$field] %>, 'empty' => true, 'value' => $<%= $singularVar %>-><%= $field %>, 'disabled' => true]);
+            echo $this->Form->input('<%= $field %>', ['options' => $<%= $keyFields[$field] %>, 'empty' => true, 'placeholder' => $<%= $singularVar %>-><%= $field %>, 'disabled' => true]);
 <%
         } else {
 %>
@@ -54,7 +54,7 @@ use Cake\Utility\Inflector;
 <%
         } else {
 %>
-            echo $this->Form->input('<%= $field %>', ['value' => $<%= $singularVar %>-><%= $field %>, 'disabled' => true]);
+            echo $this->Form->input('<%= $field %>', ['placeholder' => $<%= $singularVar %>-><%= $field %>, 'disabled' => true]);
 <%
         }
       }
