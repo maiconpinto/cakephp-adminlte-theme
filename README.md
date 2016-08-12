@@ -4,7 +4,9 @@
 
 You can install using [composer](http://getcomposer.org).
 
-    composer require maiconpinto/cakephp-adminlte-theme
+```
+composer require maiconpinto/cakephp-adminlte-theme
+```
 
 ### Enable Plugin
 
@@ -21,7 +23,7 @@ Plugin::load('AdminLTE', ['bootstrap' => true, 'routes' => true]);
 
 public function beforeRender(Event $event)
 {
-	$this->viewBuilder()->theme('AdminLTE');
+    $this->viewBuilder()->theme('AdminLTE');
 }
 ```
 
@@ -57,6 +59,11 @@ Configure::write('Theme', [
     'logo' => [
         'mini' => '<b>A</b>LT',
         'large' => '<b>Admin</b>LTE'
+    ],
+    'login' => [
+        'show_remember' => true,
+        'show_register' => true,
+        'show_social' => true
     ]
 ]);
 ```
