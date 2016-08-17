@@ -82,6 +82,12 @@ Replace the files according to the image.
 6. `src/Template/Element/aside-control-sidebar.ctp`
 7. `src/Template/Element/footer.ctp`
 
+### Page debug
+
+Added link to default page of CakePHP.
+
+![Page debug](docs/page-debug.png)
+
 ## Contributing
 
 1. Fork it
