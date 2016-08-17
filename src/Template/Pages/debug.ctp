@@ -62,7 +62,14 @@ endif;
 
     <div class="row">
         <div class="col-md-12">
-            <div class="callout callout-info">
+            <?php
+            $class = 'callout-warning';
+
+            if (version_compare(PHP_VERSION, '5.5.9', '>=') && extension_loaded('mbstring') && extension_loaded('openssl') && extension_loaded('mcrypt') && extension_loaded('intl')) {
+                $class = 'callout-success';
+            }
+            ?>
+            <div class="callout <?= $class ?>">
                 <h4>Environment</h4>
                     <?php if (version_compare(PHP_VERSION, '5.5.9', '>=')): ?>
                         <p class="success">Your version of PHP is 5.5.9 or higher (detected <?= phpversion() ?>).</p>
@@ -95,21 +102,28 @@ endif;
 
     <div class="row">
         <div class="col-md-12">
-            <div class="callout callout-info">
+            <?php
+            $settings = Cache::config('_cake_core_');
+            $class = 'callout-warning';
+
+            if (is_writable(TMP) && is_writable(LOGS) && !empty($settings)) {
+                $class = 'callout-success';
+            }
+            ?>
+            <div class="callout <?= $class ?>">
                 <h4>Filesystem</h4>
                 <?php if (is_writable(TMP)): ?>
                     <p class="success">Your tmp directory is writable.</p>
                 <?php else: ?>
-                    <p class="problem">Your tmp directory is NOT writable.</p>
+                    <p class="text-red">Your tmp directory is NOT writable.</p>
                 <?php endif; ?>
 
                 <?php if (is_writable(LOGS)): ?>
                     <p class="success">Your logs directory is writable.</p>
                 <?php else: ?>
-                    <p class="problem">Your logs directory is NOT writable.</p>
+                    <p class="text-red">Your logs directory is NOT writable.</p>
                 <?php endif; ?>
 
-                <?php $settings = Cache::config('_cake_core_'); ?>
                 <?php if (!empty($settings)): ?>
                     <p class="success">The <em><?= $settings['className'] ?>Engine</em> is being used for core caching. To change the config edit config/app.php</p>
                 <?php else: ?>
@@ -121,42 +135,48 @@ endif;
 
     <div class="row">
         <div class="col-md-12">
-            <div class="callout callout-info">
-                <h4>Database</h4>
-                <?php
-                    try {
-                        $connection = ConnectionManager::get('default');
-                        $connected = $connection->connect();
-                    } catch (Exception $connectionError) {
-                        $connected = false;
-                        $errorMsg = $connectionError->getMessage();
-                        if (method_exists($connectionError, 'getAttributes')):
-                            $attributes = $connectionError->getAttributes();
-                            if (isset($errorMsg['message'])):
-                                $errorMsg .= '<br />' . $attributes['message'];
-                            endif;
+            <?php
+                try {
+                    $connection = ConnectionManager::get('default');
+                    $connected = $connection->connect();
+                } catch (Exception $connectionError) {
+                    $connected = false;
+                    $errorMsg = $connectionError->getMessage();
+                    if (method_exists($connectionError, 'getAttributes')):
+                        $attributes = $connectionError->getAttributes();
+                        if (isset($errorMsg['message'])):
+                            $errorMsg .= '<br />' . $attributes['message'];
                         endif;
-                    }
-                ?>
+                    endif;
+                }
+            ?>
                 <?php if ($connected): ?>
-                    <p class="success">CakePHP is able to connect to the database.</p>
+                    <div class="callout callout-info">
+                        <h4>Database</h4>
+                        <p class="success">CakePHP is able to connect to the database.</p>
+                    </div>
                 <?php else: ?>
-                    <p class="problem">CakePHP is NOT able to connect to the database.<br /><br /><?= $errorMsg ?></p>
+                    <div class="callout callout-danger">
+                        <h4>Database</h4>
+                        <p class="problem">CakePHP is NOT able to connect to the database.<br /><br /><?= $errorMsg ?></p>
+                    </div>
                 <?php endif; ?>
-            </div>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-12">
-            <div class="callout callout-info">
-                <h4>DebugKit</h4>
-                <?php if (Plugin::loaded('DebugKit')): ?>
-                    <p class="success">DebugKit is loaded.</p>
+            <?php if (Plugin::loaded('DebugKit')): ?>
+                <div class="callout callout-success">
+                    <h4>DebugKit</h4>
+                        <p class="success">DebugKit is loaded.</p>
+                </div>
                 <?php else: ?>
+                <div class="callout callout-danger">
+                    <h4>DebugKit</h4>
                     <p class="problem">DebugKit is NOT loaded. You need to either install pdo_sqlite, or define the "debug_kit" connection name.</p>
+                </div>
                 <?php endif; ?>
-            </div>
         </div>;
     </div>
 
@@ -181,7 +201,7 @@ endif;
             </div>
         </div>
     </div>
-    
+
     <div class="row">
         <div class="col-md-12">
             <div class="callout callout-info">
