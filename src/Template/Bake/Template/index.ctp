@@ -37,14 +37,17 @@ $fields = collection($fields)
         <div class="box-body table-responsive no-padding">
           <table class="table table-hover">
             <tr>
-<%  foreach ($fields as $field): %>
+<%  foreach ($fields as $field):
+if (!in_array($field, ['created', 'modified', 'updated'])) :%>
               <th><?= $this->Paginator->sort('<%= $field %>') ?></th>
+<%  endif; %>
 <%  endforeach; %>
               <th><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($<%= $pluralVar %> as $<%= $singularVar %>): ?>
               <tr>
 <%  foreach ($fields as $field) {
+    if (!in_array($field, ['created', 'modified', 'updated'])) {
     $isKey = false;
     if (!empty($associations['BelongsTo'])) {
     foreach ($associations['BelongsTo'] as $alias => $details) {
@@ -68,6 +71,7 @@ $fields = collection($fields)
                 <td><?= $this->Number->format($<%= $singularVar %>-><%= $field %>) ?></td>
 <%
       }
+    }
     }
   }
   $pk = '$' . $singularVar . '->' . $primaryKey[0];
