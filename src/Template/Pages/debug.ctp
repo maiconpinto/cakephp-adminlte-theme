@@ -47,7 +47,7 @@ endif;
 
     <div class="row">
         <div class="col-md-12">
-            <div class="callout callout-info">
+            <div class="callout callout-danger" id="url-rewriting">
                 <?php Debugger::checkSecurityKeys(); ?>
                 <p class="problem">URL rewriting is not properly configured on your server.</p>
                 <p>
@@ -282,11 +282,6 @@ endif;
 
 </section>
 <!-- /.content -->
-<?php $this->start('css'); ?>
-  <style>
-    .url-rewriting {
-        background-color: #F0F0F0;
-        display: none;
-    }
-  </style>
-<?php $this->end(); ?>
+<?php
+$this->Html->css('AdminLTE.debug', ['block' => 'css']);
+?>
