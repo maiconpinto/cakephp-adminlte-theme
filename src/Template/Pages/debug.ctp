@@ -151,7 +151,7 @@ endif;
                 }
             ?>
                 <?php if ($connected): ?>
-                    <div class="callout callout-info">
+                    <div class="callout callout-success">
                         <h4>Database</h4>
                         <p class="success">CakePHP is able to connect to the database.</p>
                     </div>
