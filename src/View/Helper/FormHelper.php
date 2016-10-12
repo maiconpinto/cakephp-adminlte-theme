@@ -19,7 +19,7 @@ class FormHelper extends CakeFormHelper {
     private $templates_horizontal = [
         'label' => '<label class="control-label col-md-2"{{attrs}}>{{text}}</label>',
         'formGroup' => '{{label}}<div class=" col-md-10">{{input}}{{error}}{{help}}</div>',
-        'checkboxFormGroup' => '<div class="%s"><div class="checkbox">{{label}}</div>{{error}}{{help}}</div>',
+        'checkboxFormGroup' => '<div class="checkbox">{{label}}</div>{{error}}{{help}}',
         'submitContainer' => '<div class="col-md-10 col-md-offset-2">{{content}}</div>',
         'inputContainer' => '<div class="form-group {{type}}{{required}}">{{content}}</div>',
         'inputContainerError' => '<div class="form-group {{type}}{{required}} has-error">{{content}}</div>',
@@ -103,7 +103,7 @@ class FormHelper extends CakeFormHelper {
                 break;
             case 'password':
                 $options['templates']['inputContainer'] = '<div class="form-group {{type}}{{required}}">{{content}}</div>';
-                $options['templates']['label'] = '<label>{{input}}{{text}}</label>';
+                $options['templates']['label'] = isset($options['templates']['label']) ? $options['templates']['label'] : '<label>{{input}}{{text}}</label>';
                 if (!empty($options['value'])) {
                     $label = $options['label'] ? $options['label'] : Inflector::humanize($fieldName);
                     $function_name = "enable_{$fieldName}()";
