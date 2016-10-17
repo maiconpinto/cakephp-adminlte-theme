@@ -77,10 +77,10 @@ if ($field != 'password') :%>
 <% endforeach; %>
 <% endif; %>
 <% if ($associations['HasOne']) : %>
-<%- foreach ($associations['HasOne'] as $alias => $details) : %>
+<% foreach ($associations['HasOne'] as $alias => $details) : %>
                     <dt><?= __('<%= Inflector::humanize(Inflector::singularize(Inflector::underscore($alias))) %>') ?></dt>
                     <dd><?= $<%= $singularVar %>->has('<%= $details['property'] %>') ? $this->Html->link($<%= $singularVar %>-><%= $details['property'] %>-><%= $details['displayField'] %>, ['controller' => '<%= $details['controller'] %>', 'action' => 'view', $<%= $singularVar %>-><%= $details['property'] %>-><%= $details['primaryKey'][0] %>]) : '' ?></dd>
-<%- endforeach; %>
+<% endforeach; %>
 <% endif; %>
 <% if ($groupedFields['number']) : %>
 <% foreach ($groupedFields['number'] as $field) : %>
