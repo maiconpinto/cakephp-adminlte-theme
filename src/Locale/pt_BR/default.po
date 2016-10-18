@@ -1,4 +1,5 @@
 ## Template index.ctp
+
 msgid "New"
 msgstr "Novo"
 
@@ -23,7 +24,9 @@ msgstr "Excluir"
 msgid "Confirm to delete this entry?"
 msgstr "Confirme para excluir este registro"
 
+
 ## Template add.ctp
+
 msgid "Add"
 msgstr "Adicionar"
 
@@ -36,10 +39,17 @@ msgstr "Formulário"
 msgid "Save"
 msgstr "Salvar"
 
+
 ## Template edit.ctp
 
 msgid "Edit"
 msgstr "Editar"
+
+
+## Template view.ctp
+
+msgid "Information"
+msgstr "Informação"
 
 
 ## Controller
@@ -55,6 +65,7 @@ msgstr "{0} foi excluído."
 
 msgid "The {0} could not be deleted. Please, try again."
 msgstr "{0} não foi excluído. Por favor, tente novamente."
+
 
 ## Login
 
@@ -85,6 +96,7 @@ msgstr "Logar"
 msgid "Username or password is incorrect"
 msgstr "Usuário ou senha está incorreto"
 
+
 ## Elements
 
 msgid "Alert"
@@ -95,4 +107,3 @@ msgstr "Alerta"
 
 msgid "Click here to change the file."
 msgstr "Clique aqui para mudar o arquivo."
-
