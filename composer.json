@@ -1,15 +1,15 @@
 {
-  "name": "maiconpinto/cakephp-adminlte-theme",
+  "name": "iamthom/cakephp-adminlte-theme",
   "description": "CakePHP 3.x AdminLTE Theme.",
   "type": "cakephp-plugin",
   "keywords": ["cakephp", "templates", "plugin"],
-  "homepage": "https://github.com/maiconpinto/cakephp-adminlte-theme",
+  "homepage": "https://github.com/iamthom/cakephp-adminlte-theme",
   "license": "MIT",
   "authors": [
     {
-      "name": "Maicon Pinto",
-      "email": "maiconsilva.pinto@gmail.com",
-      "homepage": "https://www.maiconpinto.com.br/",
+      "name": "Tom",
+      "email": "mynameisthom@gmail.com",
+      "homepage": "https://www.itstom.site/",
       "role": "Author"
     }
   ],
@@ -26,8 +26,8 @@
     }
   },
   "support": {
-    "issues": "https://github.com/maiconpinto/cakephp-adminlte-theme/issues",
-    "source": "https://github.com/maiconpinto/cakephp-adminlte-theme"
+    "issues": "https://github.com/iamthom/cakephp-adminlte-theme/issues",
+    "source": "https://github.com/iamthom/cakephp-adminlte-theme"
   }
 }
 
