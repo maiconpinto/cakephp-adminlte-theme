@@ -13,7 +13,7 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <?php echo $this->Html->css('AdminLTE.AdminLTE.min'); ?>
+    <?php echo $this->Html->css('AdminLTE.style.min'); ?>
 <!-- AdminLTE Skins. Choose a skin from the css/skins
     folder instead of downloading all of them to reduce the load. -->
     <?php echo $this->Html->css('AdminLTE.skins/skin-blue'); ?>
@@ -22,10 +22,10 @@
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+    <!--[if lt IE 9]>
+    <?php echo $this->Html->script('AdminLTE.html5shiv.min'); ?>
+    <?php echo $this->Html->script('AdminLTE.respond.min'); ?>
+    <![endif]-->
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
     <!-- Site wrapper -->
@@ -78,7 +78,7 @@
 <!-- FastClick -->
 <?php echo $this->Html->script('AdminLTE./plugins/fastclick/fastclick'); ?>
 <!-- AdminLTE App -->
-<?php echo $this->Html->script('AdminLTE.AdminLTE.min'); ?>
+<?php echo $this->Html->script('AdminLTE.script.min'); ?>
 <!-- AdminLTE for demo purposes -->
 <?php echo $this->fetch('script'); ?>
 <?php echo $this->fetch('scriptBotton'); ?>
