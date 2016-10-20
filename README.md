@@ -8,7 +8,7 @@ It's for my own project with some fixes because the owner is kinda slow respon o
 You can install using [composer](http://getcomposer.org).
 
 ```
-composer require iamthom/cakephp-adminlte-theme
+composer require iamthom/cakephp-adminlte-theme:dev-master
 ```
 
 ### Enable Plugin
