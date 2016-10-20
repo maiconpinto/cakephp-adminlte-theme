@@ -9,9 +9,9 @@
     <!-- Bootstrap 3.3.5 -->
     <?php echo $this->Html->css('AdminLTE./bootstrap/css/bootstrap'); ?>
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <?php echo $this->Html->css('AdminLTE./plugins/font-awesome/css/font-awesome.min'); ?>
     <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <?php echo $this->Html->css('AdminLTE./plugins/ionics/css/ionicons.min'); ?>
     <!-- Theme style -->
     <?php echo $this->Html->css('AdminLTE.style.min'); ?>
 <!-- AdminLTE Skins. Choose a skin from the css/skins
