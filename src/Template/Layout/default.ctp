@@ -27,7 +27,7 @@
     <?php echo $this->Html->script('AdminLTE.respond.min'); ?>
     <![endif]-->
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-green-light sidebar-mini">
     <!-- Site wrapper -->
     <div class="wrapper">
         <header class="main-header">
