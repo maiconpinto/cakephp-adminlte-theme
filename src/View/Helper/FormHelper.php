@@ -114,7 +114,7 @@ class FormHelper extends CakeFormHelper {
                         <small>
                             <label>
                             <input type="checkbox" onclick="'.$function_name.'" />
-                            '. __("Click here to change the file.").'
+                            '. __("Click here to change the password.").'
                             </label>
                         </small>
 
