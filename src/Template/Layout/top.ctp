@@ -11,7 +11,7 @@
   <!-- Font Awesome -->
   <?php echo $this->Html->css('AdminLTE./plugins/font-awesome/css/font-awesome.min'); ?>
   <!-- Ionicons -->
-  <?php echo $this->Html->css('AdminLTE./plugins/ionics/css/ionicons.min'); ?>
+  <?php echo $this->Html->css('AdminLTE./plugins/ionicons/css/ionicons.min'); ?>
   <!-- Theme style -->
   <?php echo $this->Html->css('AdminLTE.style.min'); ?>
   <!-- AdminLTE Skins. Choose a skin from the css/skins
