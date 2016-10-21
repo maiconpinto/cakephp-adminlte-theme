@@ -24,7 +24,7 @@
     <?php echo $this->Html->script('AdminLTE.respond.min'); ?>
     <![endif]-->
   </head>
-  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+  <body class="skin-green-light fixed" data-spy="scroll" data-target="#scrollspy">
     <div class="wrapper">
 
     <header class="main-header">
