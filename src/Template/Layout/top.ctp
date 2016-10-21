@@ -16,7 +16,7 @@
   <?php echo $this->Html->css('AdminLTE.style.min'); ?>
   <!-- AdminLTE Skins. Choose a skin from the css/skins
       folder instead of downloading all of them to reduce the load. -->
-  <?php echo $this->Html->css('AdminLTE.skins/skin-blue'); ?>
+  <?php echo $this->Html->css('AdminLTE.skins/skin-green-light-min'); ?>
 
   <?php echo $this->fetch('css'); ?>
 

@@ -14,7 +14,7 @@
     <?php echo $this->Html->css('AdminLTE./plugins/ionics/css/ionicons.min'); ?>
     <!-- Theme style -->
     <?php echo $this->Html->css('AdminLTE.style.min'); ?>
-    <?php echo $this->Html->css('AdminLTE.skins/skin-blue'); ?>
+    <?php echo $this->Html->css('AdminLTE.skins/skin-green-light-min'); ?>
     <?php echo $this->Html->css('AdminLTE.documentation'); ?>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
