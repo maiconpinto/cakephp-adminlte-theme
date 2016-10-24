@@ -71,68 +71,11 @@ class FormHelper extends CakeFormHelper {
                 break;
             case 'file':
                 $options['templates']['inputContainer'] = '<div class="form-group {{type}}{{required}}">{{content}}</div>';
-                $options['templates']['label'] = '<label>{{input}}{{text}}</label>';
-                if (!empty($options['value'])) {
-                    $label = $options['label'] ? $options['label'] : Inflector::humanize($fieldName);
-                    $function_name = "enable_{$fieldName}()";
-
-                    $options['templates']['inputContainer'] = '<div class="form-group {{type}}{{required}}">
-                      {{content}}
-                      <div>
-                        <small>
-                            <label>
-                            <input type="checkbox" onclick="'.$function_name.'" />
-                            '. __("Click here to change the file.").'
-                            </label>
-                        </small>
-
-                        <script type="text/javascript">
-                            function '.$function_name.' {
-                                if (document.getElementById("'.$fieldName.'").disabled) {
-                                    document.getElementById("'.$fieldName.'").disabled = false;
-                                } else {
-                                    document.getElementById("'.$fieldName.'").disabled = true;
-                                }
-                            }
-                        </script>
-                      </div>
-                    </div>';
-
-                    $options['disabled'] = true;
-                }
+                $options['templates']['label'] = isset($options['templates']['label']) ? $options['templates']['label'] : '<label>{{input}}{{text}}</label>';
                 break;
             case 'password':
                 $options['templates']['inputContainer'] = '<div class="form-group {{type}}{{required}}">{{content}}</div>';
                 $options['templates']['label'] = isset($options['templates']['label']) ? $options['templates']['label'] : '<label>{{input}}{{text}}</label>';
-                if (!empty($options['value'])) {
-                    $label = $options['label'] ? $options['label'] : Inflector::humanize($fieldName);
-                    $function_name = "enable_{$fieldName}()";
-
-                    $options['templates']['inputContainer'] = '<div class="form-group {{type}}{{required}}">
-                      {{content}}
-                      <div>
-                        <small>
-                            <label>
-                            <input type="checkbox" onclick="'.$function_name.'" />
-                            '. __("Click here to change the password.").'
-                            </label>
-                        </small>
-
-                        <script type="text/javascript">
-                            function '.$function_name.' {
-                                if (document.getElementById("'.$fieldName.'").disabled) {
-                                    document.getElementById("'.$fieldName.'").disabled = false;
-                                } else {
-                                    document.getElementById("'.$fieldName.'").disabled = true;
-                                }
-                            }
-                        </script>
-                      </div>
-                    </div>';
-
-                    $options['disabled'] = true;
-                    $options['value'] = '';
-                }
                 break;
             default:
         }
