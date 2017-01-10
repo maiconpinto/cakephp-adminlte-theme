@@ -112,7 +112,7 @@ $this->Html->script([
 ?>
 
 
-<?php $this->start('scriptBotton'); ?>
+<?php $this->start('scriptBottom'); ?>
 <!-- page script -->
 <script>
   $(function () {

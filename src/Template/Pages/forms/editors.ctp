@@ -81,7 +81,7 @@ $this->Html->script([
 ['block' => 'script']);
 ?>
 
-<?php $this->start('scriptBotton'); ?>
+<?php $this->start('scriptBottom'); ?>
 <script>
   $(function () {
     // Replace the <textarea id="editor1"> with a CKEditor

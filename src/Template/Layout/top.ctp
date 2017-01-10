@@ -242,7 +242,7 @@
 <?php echo $this->Html->script('AdminLTE.AdminLTE.min'); ?>
 <!-- AdminLTE for demo purposes -->
 <?php echo $this->fetch('script'); ?>
-<?php echo $this->fetch('scriptBotton'); ?>
+<?php echo $this->fetch('scriptBottom'); ?>
 
 
 </body>
