@@ -16,7 +16,7 @@
   <?php echo $this->Html->css('AdminLTE.AdminLTE.min'); ?>
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <?php echo $this->Html->css('AdminLTE.skins/skin-blue'); ?>
+  <?php echo $this->Html->css('AdminLTE.skins/skin-'.(isset($theme['skin']) ? $theme['skin'] : 'blue').'.min'); ?>
 
   <?php echo $this->fetch('css'); ?>
 
@@ -28,7 +28,7 @@
   <![endif]-->
 </head>
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
-<body class="hold-transition skin-blue layout-top-nav">
+<body class="hold-transition skin-<?php echo isset($theme['skin']) ? $theme['skin'] : 'blue'; ?> layout-top-nav">
 <div class="wrapper">
 
   <header class="main-header">

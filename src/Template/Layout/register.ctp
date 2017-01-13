@@ -16,7 +16,7 @@
   <?php echo $this->Html->css('AdminLTE.AdminLTE.min'); ?>
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <?php echo $this->Html->css('AdminLTE.skins/skin-blue'); ?>
+  <?php echo $this->Html->css('AdminLTE.skins/skin-'.(isset($theme['skin']) ? $theme['skin'] : 'blue').'.min'); ?>
   <?php echo $this->Html->css('AdminLTE./plugins/iCheck/square/blue'); ?>
 
   <?php echo $this->fetch('css'); ?>

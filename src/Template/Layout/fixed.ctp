@@ -16,7 +16,7 @@
     <?php echo $this->Html->css('AdminLTE.AdminLTE.min'); ?>
 <!-- AdminLTE Skins. Choose a skin from the css/skins
     folder instead of downloading all of them to reduce the load. -->
-    <?php echo $this->Html->css('AdminLTE.skins/skin-blue'); ?>
+    <?php echo $this->Html->css('AdminLTE.skins/skin-'.(isset($theme['skin']) ? $theme['skin'] : 'blue').'.min'); ?>
 
     <?php echo $this->fetch('css'); ?>
 
@@ -30,7 +30,7 @@
 </head>
 <!-- ADD THE CLASS fixed TO GET A FIXED HEADER AND SIDEBAR LAYOUT -->
 <!-- the fixed layout is not compatible with sidebar-mini -->
-<body class="hold-transition skin-blue fixed sidebar-mini">
+<body class="hold-transition skin-<?php echo isset($theme['skin']) ? $theme['skin'] : 'blue'; ?> fixed sidebar-mini">
     <!-- Site wrapper -->
     <div class="wrapper">
 

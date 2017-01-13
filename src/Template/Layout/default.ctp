@@ -16,7 +16,7 @@
     <?php echo $this->Html->css('AdminLTE.AdminLTE.min'); ?>
 <!-- AdminLTE Skins. Choose a skin from the css/skins
     folder instead of downloading all of them to reduce the load. -->
-    <?php echo $this->Html->css('AdminLTE.skins/skin-blue'); ?>
+    <?php echo $this->Html->css('AdminLTE.skins/skin-'.(isset($theme['skin']) ? $theme['skin'] : 'blue').'.min'); ?>
 
     <?php echo $this->fetch('css'); ?>
 
@@ -27,7 +27,7 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-<?php echo isset($theme['skin']) ? $theme['skin'] : 'blue'; ?> sidebar-mini">
     <!-- Site wrapper -->
     <div class="wrapper">
         <header class="main-header">
