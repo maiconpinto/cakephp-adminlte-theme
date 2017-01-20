@@ -83,6 +83,8 @@ Replace the files according to the image.
 6. `src/Template/Element/aside-control-sidebar.ctp`
 7. `src/Template/Element/footer.ctp`
 
+Remember to remove the initial PHP block and the final closing brace when copying the desired template element to customize.
+
 ### Page debug
 
 Added link to default page of CakePHP.
