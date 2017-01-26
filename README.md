@@ -1,12 +1,14 @@
-[![Stories in Ready](https://badge.waffle.io/maiconpinto/cakephp-adminlte-theme.png?label=ready&title=Ready)](https://waffle.io/maiconpinto/cakephp-adminlte-theme)
 # CakePHP AdminLTE Theme
+
+## Disclaimer
+It's for my own project with some fixes because the owner is kinda slow respon on PR. The original source is in `http://github.com/maiconpinto/cakephp-adminlte-theme`
 
 ## Installation
 
 You can install using [composer](http://getcomposer.org).
 
 ```
-composer require maiconpinto/cakephp-adminlte-theme
+composer require iamthom/cakephp-adminlte-theme:dev-master
 ```
 
 ### Enable Plugin

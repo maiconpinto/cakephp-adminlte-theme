@@ -149,6 +149,12 @@ class FormHelper extends CakeFormHelper {
                 array_push($options['class'], $style);
             }
         }
+
+        /*re-implode the options class*/
+        if( $options['class'] && is_array($options['class'])){
+            $options['class'] = implode(' ', $options['class']);
+        }
+
         unset($options['skip']);
         return $options;
     }
