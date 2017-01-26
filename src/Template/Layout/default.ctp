@@ -81,7 +81,7 @@
 <?php echo $this->Html->script('AdminLTE.AdminLTE.min'); ?>
 <!-- AdminLTE for demo purposes -->
 <?php echo $this->fetch('script'); ?>
-<?php echo $this->fetch('scriptBotton'); ?>
+<?php echo $this->fetch('scriptBottom'); ?>
 <script type="text/javascript">
     $(document).ready(function(){
         $(".navbar .menu").slimscroll({

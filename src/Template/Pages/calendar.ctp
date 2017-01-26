@@ -102,7 +102,7 @@ $this->Html->script([
 ['block' => 'script']);
 ?>
 
-<?php $this->start('scriptBotton'); ?>
+<?php $this->start('scriptBottom'); ?>
 <script>
   $(function () {
 
