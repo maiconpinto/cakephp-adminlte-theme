@@ -9,12 +9,12 @@
     <!-- Bootstrap 3.3.5 -->
     <?php echo $this->Html->css('AdminLTE./bootstrap/css/bootstrap'); ?>
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
     <?php echo $this->Html->css('AdminLTE.AdminLTE.min'); ?>
-    <?php echo $this->Html->css('AdminLTE.skins/skin-blue'); ?>
+    <?php echo $this->Html->css('AdminLTE.skins/skin-'.(isset($theme['skin']) ? $theme['skin'] : 'blue').'.min'); ?>
     <?php echo $this->Html->css('AdminLTE.documentation'); ?>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -24,7 +24,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+  <body class="skin-<?php echo isset($theme['skin']) ? $theme['skin'] : 'blue'; ?> fixed" data-spy="scroll" data-target="#scrollspy">
     <div class="wrapper">
 
     <header class="main-header">
