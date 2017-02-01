@@ -150,6 +150,9 @@ class FormHelper extends CakeFormHelper {
             }
         }
         unset($options['skip']);
+
+        $options['class'] = implode(' ', $options['class']);
+
         return $options;
     }
 
