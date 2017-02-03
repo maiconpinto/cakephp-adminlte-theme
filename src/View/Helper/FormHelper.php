@@ -14,6 +14,8 @@ class FormHelper extends CakeFormHelper {
         'error' => '<div class="text-danger">{{content}}</div>',
         'inputContainer' => '<div class="form-group {{type}}{{required}}">{{content}}</div>',
         'inputContainerError' => '<div class="form-group {{type}}{{required}} error">{{content}}{{error}}</div>',
+        'formStart' => '<form{{attrs}}><div class="box-body">',
+        'formEnd' => '</div></form>'
     ];
 
     private $templates_horizontal = [
