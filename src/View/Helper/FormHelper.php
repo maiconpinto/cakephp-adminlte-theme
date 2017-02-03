@@ -10,21 +10,37 @@ use Cake\Utility\Inflector;
 class FormHelper extends CakeFormHelper {
 
     private $templates = [
-        'dateWidget' => '<span class="form-inline">{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}{{meridian}}</span>',
-        'error' => '<div class="text-danger">{{content}}</div>',
-        'inputContainer' => '<div class="form-group {{type}}{{required}}">{{content}}</div>',
-        'inputContainerError' => '<div class="form-group {{type}}{{required}} error">{{content}}{{error}}</div>',
-        'formStart' => '<form{{attrs}}><div class="box-body">',
-        'formEnd' => '</div></form>'
-    ];
-
-    private $templates_horizontal = [
-        'label' => '<label class="control-label col-md-2"{{attrs}}>{{text}}</label>',
-        'formGroup' => '{{label}}<div class=" col-md-10">{{input}}{{error}}{{help}}</div>',
-        'checkboxFormGroup' => '<div class="checkbox">{{label}}</div>{{error}}{{help}}',
-        'submitContainer' => '<div class="col-md-10 col-md-offset-2">{{content}}</div>',
-        'inputContainer' => '<div class="form-group {{type}}{{required}}">{{content}}</div>',
-        'inputContainerError' => '<div class="form-group {{type}}{{required}} has-error">{{content}}</div>',
+        'button' => '<button{{attrs}}>{{text}}</button>',
+        'checkbox' => '<input type="checkbox" name="{{name}}" value="{{value}}"{{attrs}}>',
+        'checkboxFormGroup' => '{{label}}',
+        'checkboxWrapper' => '<div class="checkbox">{{label}}</div>',
+        'dateWidget' => '{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}{{meridian}}',
+        'error' => '<div class="error-message">{{content}}</div>',
+        'errorList' => '<ul>{{content}}</ul>',
+        'errorItem' => '<li>{{text}}</li>',
+        'file' => '<input type="file" name="{{name}}"{{attrs}}>',
+        'fieldset' => '<fieldset{{attrs}}>{{content}}</fieldset>',
+        'formStart' => '<form{{attrs}}>',
+        'formEnd' => '</form>',
+        'formGroup' => '{{label}}{{input}}',
+        'hiddenBlock' => '<div style="display:none;">{{content}}</div>',
+        'input' => '<input type="{{type}}" name="{{name}}"{{attrs}}/>',
+        'inputSubmit' => '<input type="{{type}}"{{attrs}}/>',
+        'inputContainer' => '<div class="input {{type}}{{required}}">{{content}}</div>',
+        'inputContainerError' => '<div class="input {{type}}{{required}} error">{{content}}{{error}}</div>',
+        'label' => '<label{{attrs}}>{{text}}</label>',
+        'nestingLabel' => '{{hidden}}<label{{attrs}}>{{input}}{{text}}</label>',
+        'legend' => '<legend>{{text}}</legend>',
+        'multicheckboxTitle' => '<legend>{{text}}</legend>',
+        'multicheckboxWrapper' => '<fieldset{{attrs}}>{{content}}</fieldset>',
+        'option' => '<option value="{{value}}"{{attrs}}>{{text}}</option>',
+        'optgroup' => '<optgroup label="{{label}}"{{attrs}}>{{content}}</optgroup>',
+        'select' => '<select name="{{name}}"{{attrs}}>{{content}}</select>',
+        'selectMultiple' => '<select name="{{name}}[]" multiple="multiple"{{attrs}}>{{content}}</select>',
+        'radio' => '<input type="radio" name="{{name}}" value="{{value}}"{{attrs}}>',
+        'radioWrapper' => '{{label}}',
+        'textarea' => '<textarea name="{{name}}"{{attrs}}>{{value}}</textarea>',
+        'submitContainer' => '<div class="box-footer {{required}}">{{content}}</div>'
     ];
 
     public function __construct(View $View, array $config = []) {
@@ -34,10 +50,12 @@ class FormHelper extends CakeFormHelper {
 
     public function create($model = null, array $options = []) {
         $options += ['role' => 'form'];
-        if (isset($options['class']) and $options['class']=='form-horizontal') {
-            $options['templates'] = $this->templates_horizontal;
-        }
 
+        if (isset($options['adminlte']) && $options['adminlte']) {
+            $options['templates']['formStart'] = '<form{{attrs}}><div class="box-body">';
+            $options['templates']['formEnd'] = '</div></form>';
+        }
+        
         return parent::create($model, $options);
     }
 
@@ -46,7 +64,7 @@ class FormHelper extends CakeFormHelper {
     }
 
     public function submit($caption = null, array $options = []) {
-        return parent::submit($caption, $this->_injectStyles($options, 'btn btn-success'));
+        return parent::submit($caption, $this->_injectStyles($options, 'btn btn-primary'));
     }
 
     public function input($fieldName, array $options = []) {
@@ -78,6 +96,13 @@ class FormHelper extends CakeFormHelper {
             case 'password':
                 $options['templates']['inputContainer'] = '<div class="form-group {{type}}{{required}}">{{content}}</div>';
                 $options['templates']['label'] = isset($options['templates']['label']) ? $options['templates']['label'] : '<label>{{input}}{{text}}</label>';
+                break;
+            case 'email':
+                $options['templates']['inputContainer'] = '<div class="form-group {{type}}{{required}}">{{content}}</div>';
+                $options['templates']['label'] = isset($options['templates']['label']) ? $options['templates']['label'] : '<label>{{input}}{{text}}</label>';
+                break;
+            case 'submit':
+                $finalClasses = '';
                 break;
             default:
         }
