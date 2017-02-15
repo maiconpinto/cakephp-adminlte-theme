@@ -1,5 +1,7 @@
 <%
 use Cake\Utility\Inflector;
+   
+   $extras = [];
 %>
 <section class="content-header">
   <h1>
@@ -49,8 +51,9 @@ use Cake\Utility\Inflector;
       if (!in_array($field, ['created', 'modified', 'updated'])) {
         $fieldData = $schema->column($field);
         if (($fieldData['type'] === 'date') && (!empty($fieldData['null']))) {
+            $extras[] = 'datepicker';
 %>
-            echo $this->Form->input('<%= $field %>', ['empty' => true, 'default' => '']);
+            echo $this->Form->input('<%= $field %>', ['empty' => true, 'default' => '', 'class' => 'datepicker', 'type' => 'text']);
 <%
         } else {
 %>
@@ -78,3 +81,13 @@ use Cake\Utility\Inflector;
     </div>
   </div>
 </section>
+    
+<%
+    if (!empty($extras)) {
+        foreach($extras as $element) {
+        %>
+        <% echo $this->element($element); %>
+        <%
+        }
+    } 
+%>
