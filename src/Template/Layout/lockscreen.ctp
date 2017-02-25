@@ -1,3 +1,11 @@
+<?php
+$file = $theme['folder'] . DS . 'src' . DS . 'Template' . DS . 'Layout' . DS . 'lockscreen.ctp';
+if (file_exists($file)) {
+    ob_start();
+    include_once $file;
+    echo ob_get_clean();
+} else {
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,3 +75,4 @@
 <?php echo $this->Html->script('AdminLTE./bootstrap/js/bootstrap'); ?>
 </body>
 </html>
+<?php } ?>
