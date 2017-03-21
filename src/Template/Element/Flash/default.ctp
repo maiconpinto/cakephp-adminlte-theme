@@ -1,5 +1,5 @@
 <?php
-$file = $theme['folder'] . DS . 'src' . DS . 'Template' . DS . 'Element' . DS . 'Flash' . DS . 'success.ctp';
+$file = $theme['folder'] . DS . 'src' . DS . 'Template' . DS . 'Element' . DS . 'Flash' . DS . 'default.ctp';
 
 if (file_exists($file)) {
     ob_start();
