@@ -47,4 +47,10 @@ class FormHelper extends CakeFormHelper {
         $this->_defaultConfig['templates'] = array_merge($this->_defaultConfig['templates'], $this->templates);
         parent::__construct($View, $config);
     }
+
+    public function create($context = null, array $options = []) {
+        $options += ['role' => 'form'];
+
+        return parent::create($context, $options);
+    }
 }
