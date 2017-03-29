@@ -26,7 +26,7 @@ class FormHelper extends CakeFormHelper {
         'hiddenBlock' => '<div style="display:none;">{{content}}</div>',
         'input' => '<input type="{{type}}" name="{{name}}"{{attrs}}/>',
         'inputSubmit' => '<input type="{{type}}"{{attrs}}/>',
-        'inputContainer' => '<div class="input {{type}}{{required}}">{{content}}</div>',
+        'inputContainer' => '<div class="from-group input {{type}}{{required}}">{{content}}</div>',
         'inputContainerError' => '<div class="input {{type}}{{required}} error">{{content}}{{error}}</div>',
         'label' => '<label{{attrs}}>{{text}}</label>',
         'nestingLabel' => '{{hidden}}<label{{attrs}}>{{input}}{{text}}</label>',
@@ -38,29 +38,57 @@ class FormHelper extends CakeFormHelper {
         'select' => '<select name="{{name}}"{{attrs}}>{{content}}</select>',
         'selectMultiple' => '<select name="{{name}}[]" multiple="multiple"{{attrs}}>{{content}}</select>',
         'radio' => '<input type="radio" name="{{name}}" value="{{value}}"{{attrs}}>',
-        'radioWrapper' => '{{label}}',
+        'radioWrapper' => '<div class="radio">{{label}}</div>',
         'textarea' => '<textarea name="{{name}}"{{attrs}}>{{value}}</textarea>',
         'submitContainer' => '<div class="box-footer {{required}}">{{content}}</div>'
     ];
 
-    public function __construct(View $View, array $config = []) {
+    public function __construct(View $View, array $config = [])
+    {
         $this->_defaultConfig['templates'] = array_merge($this->_defaultConfig['templates'], $this->templates);
         parent::__construct($View, $config);
     }
 
-    public function create($context = null, array $options = []) {
+    public function create($context = null, array $options = [])
+    {
         $options += ['role' => 'form'];
         return parent::create($context, $options);
     }
 
-    public function button($title, array $options = array()) {
+    public function button($title, array $options = array())
+    {
         $options += ['escape' => false, 'secure' => false, 'class' => 'btn btn-success'];
         $options['text'] = $title;
         return $this->widget('button', $options);
     }
 
-    public function submit($caption = null, array $options = array()) {
+    public function submit($caption = null, array $options = array())
+    {
         $options += ['class' => 'btn btn-success'];
         return parent::submit($caption, $options);
+    }
+
+    public function input($fieldName, array $options = [])
+    {
+        $defaults = [];
+
+        if (!isset($options['type'])) {
+            $options['type'] = $this->_inputType($fieldName, $options);
+        }
+
+        switch($options['type']) {
+            case 'checkbox':
+            case 'radio':
+
+                break;
+            default:
+                $defaults = ['class' => 'form-control'];
+                break;
+
+        }
+
+        $options += $defaults;
+
+        return parent::input($fieldName, $options);
     }
 }
