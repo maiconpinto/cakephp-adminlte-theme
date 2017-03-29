@@ -50,7 +50,6 @@ class FormHelper extends CakeFormHelper {
 
     public function create($context = null, array $options = []) {
         $options += ['role' => 'form'];
-
         return parent::create($context, $options);
     }
 
@@ -60,4 +59,8 @@ class FormHelper extends CakeFormHelper {
         return $this->widget('button', $options);
     }
 
+    public function submit($caption = null, array $options = array()) {
+        $options += ['class' => 'btn btn-success'];
+        return parent::submit($caption, $options);
+    }
 }
