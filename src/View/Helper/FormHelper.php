@@ -14,7 +14,7 @@ class FormHelper extends CakeFormHelper {
         'checkbox' => '<input type="checkbox" name="{{name}}" value="{{value}}"{{attrs}}>',
         'checkboxFormGroup' => '{{label}}',
         'checkboxWrapper' => '<div class="checkbox">{{label}}</div>',
-        'dateWidget' => '{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}{{meridian}}',
+        'dateWidget' => '<div class="form-group">{{label}} {{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}{{meridian}}</div>',
         'error' => '<div class="error-message">{{content}}</div>',
         'errorList' => '<ul>{{content}}</ul>',
         'errorItem' => '<li>{{text}}</li>',
@@ -70,7 +70,7 @@ class FormHelper extends CakeFormHelper {
 
     public function input($fieldName, array $options = [])
     {
-        $defaults = [];
+        $_options = [];
 
         if (!isset($options['type'])) {
             $options['type'] = $this->_inputType($fieldName, $options);
@@ -79,15 +79,15 @@ class FormHelper extends CakeFormHelper {
         switch($options['type']) {
             case 'checkbox':
             case 'radio':
-
+            case 'date':
                 break;
             default:
-                $defaults = ['class' => 'form-control'];
+                $_options = ['class' => 'form-control'];
                 break;
 
         }
 
-        $options += $defaults;
+        $options += $_options;
 
         return parent::input($fieldName, $options);
     }
