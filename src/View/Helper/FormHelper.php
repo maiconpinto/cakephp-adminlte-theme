@@ -10,7 +10,7 @@ use Cake\Utility\Inflector;
 class FormHelper extends CakeFormHelper {
 
     private $templates = [
-        'button' => '<button{{attrs}}>{{text}}</button>',
+        'button' => '{{before}}<button{{attrs}}>{{text}}</button>{{after}}',
         'checkbox' => '<input type="checkbox" name="{{name}}" value="{{value}}"{{attrs}}>',
         'checkboxFormGroup' => '{{label}}',
         'checkboxWrapper' => '<div class="checkbox">{{label}}</div>',
@@ -53,4 +53,11 @@ class FormHelper extends CakeFormHelper {
 
         return parent::create($context, $options);
     }
+
+    public function button($title, array $options = array()) {
+        $options += ['escape' => false, 'secure' => false, 'class' => 'btn btn-success'];
+        $options['text'] = $title;
+        return $this->widget('button', $options);
+    }
+
 }
