@@ -1,5 +1,8 @@
-<?php
-$file = $theme['folder'] . DS . 'src' . DS . 'Template' . DS . 'Element' . DS . 'aside-control-sidebar.ctp';
+<?php 
+use Cake\Core\Configure;
+
+$file = Configure::read('folder') . DS . 'src' . DS . 'Template' . DS . 'Element' . DS . 'aside-control-sidebar.ctp';
+
 if (file_exists($file)) {
     ob_start();
     include_once $file;

@@ -1,5 +1,7 @@
-<?php
-$file = $theme['folder'] . DS . 'src' . DS . 'Template' . DS . 'Element' . DS . 'nav-top.ctp';
+<?php 
+use Cake\Core\Configure;
+
+$file = Configure::read('folder') . DS . 'src' . DS . 'Template' . DS . 'Element' . DS . 'nav-top.ctp';
 
 if (file_exists($file)) {
     ob_start();
