@@ -36,14 +36,17 @@ $fields = collection($fields)
         <!-- /.box-header -->
         <div class="box-body table-responsive no-padding">
           <table class="table table-hover">
-            <tr>
+            <thead>
+              <tr>
 <%  foreach ($fields as $field):
 if (!in_array($field, ['created', 'modified', 'updated'])) :%>
-              <th><?= $this->Paginator->sort('<%= $field %>') ?></th>
+                <th><?= $this->Paginator->sort('<%= $field %>') ?></th>
 <%  endif; %>
 <%  endforeach; %>
-              <th><?= __('Actions') ?></th>
-            </tr>
+                <th><?= __('Actions') ?></th>
+              </tr>
+            </thead>
+            <tbody>
             <?php foreach ($<%= $pluralVar %> as $<%= $singularVar %>): ?>
               <tr>
 <%  foreach ($fields as $field) {
@@ -83,6 +86,7 @@ if (!in_array($field, ['created', 'modified', 'updated'])) :%>
                 </td>
               </tr>
             <?php endforeach; ?>
+            </tbody>
           </table>
         </div>
         <!-- /.box-body -->
