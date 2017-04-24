@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><?php echo isset($theme['title']) ? $theme['title'] : 'AdminLTE 2'; ?></title>
+    <title><?php echo Configure::read('Theme.title'); ?></title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -16,7 +16,7 @@
     <?php echo $this->Html->css('AdminLTE.AdminLTE.min'); ?>
 <!-- AdminLTE Skins. Choose a skin from the css/skins
     folder instead of downloading all of them to reduce the load. -->
-    <?php echo $this->Html->css('AdminLTE.skins/skin-'.(isset($theme['skin']) ? $theme['skin'] : 'blue').'.min'); ?>
+    <?php echo $this->Html->css('AdminLTE.skins/skin-'. Configure::read('Theme.skin') .'.min'); ?>
 
     <?php echo $this->fetch('css'); ?>
 
@@ -27,16 +27,16 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body class="hold-transition skin-<?php echo isset($theme['skin']) ? $theme['skin'] : 'blue'; ?> sidebar-mini">
+<body class="hold-transition skin-<?php echo Configure::read('Theme.skin'); ?> sidebar-mini">
     <!-- Site wrapper -->
     <div class="wrapper">
         <header class="main-header">
             <!-- Logo -->
             <a href="<?php echo $this->Url->build('/'); ?>" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini"><?php echo $theme['logo']['mini'] ?></span>
+                <span class="logo-mini"><?php echo Configure::read('Theme.logo.mini'); ?></span>
                 <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg"><?php echo $theme['logo']['large'] ?></span>
+                <span class="logo-lg"><?php echo Configure::read('Theme.logo.large'); ?></span>
             </a>
             <!-- Header Navbar: style can be found in header.less -->
             <?php echo $this->element('nav-top') ?>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title><?php echo isset($theme['title']) ? $theme['title'] : 'AdminLTE 2 | Lockscreeen'; ?></title>
+  <title><?php echo Configure::read('Theme.title'); ?></title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -28,7 +28,7 @@
 <!-- Automatic element centering -->
 <div class="lockscreen-wrapper">
   <div class="lockscreen-logo">
-    <a href="<?php echo $this->Url->build('/'); ?>"><?php echo $theme['logo']['large'] ?></a>
+    <a href="<?php echo $this->Url->build('/'); ?>"><?php echo Configure::read('Theme.logo.large'); ?></a>
   </div>
   <!-- User name -->
   <div class="lockscreen-name">John Doe</div>

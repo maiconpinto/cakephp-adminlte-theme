@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title><?php echo isset($theme['title']) ? $theme['title'] : 'AdminLTE 2 | Log in'; ?></title>
+  <title><?php echo Configure::read('Theme.title'); ?></title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -27,7 +27,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'home')); ?>"><?php echo $theme['logo']['large'] ?></a>
+    <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'home')); ?>"><?php echo Configure::read('Theme.logo.large'); ?></a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
@@ -38,7 +38,7 @@
 <?php echo $this->fetch('content'); ?>
 
     <?php
-    if (isset($theme['login']['show_social']) && $theme['login']['show_social']) {
+    if (Configure::read('Theme.login.show_social')) {
         ?>
         <div class="social-auth-links text-center">
           <p>- <?php echo __('OR') ?> -</p>
@@ -50,12 +50,12 @@
     ?>
 
     <?php
-    if (isset($theme['login']['show_remember']) && $theme['login']['show_remember']) {
+    if (Configure::read('Theme.login.show_remember')) {
         ?>
         <a href="#"><?php echo __('I forgot my password') ?></a><br>
         <?php
     }
-    if (isset($theme['login']['show_register']) && $theme['login']['show_register']) {
+    if (Configure::read('Theme.login.show_register')) {
         ?>
         <a href="#" class="text-center"><?php echo __('Register a new membership') ?></a>
         <?php

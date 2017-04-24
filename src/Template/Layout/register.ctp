@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title><?php echo isset($theme['title']) ? $theme['title'] : 'AdminLTE 2 | Register'; ?></title>
+  <title><?php echo Configure::read('Theme.title'); ?></title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -16,7 +16,7 @@
   <?php echo $this->Html->css('AdminLTE.AdminLTE.min'); ?>
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <?php echo $this->Html->css('AdminLTE.skins/skin-'.(isset($theme['skin']) ? $theme['skin'] : 'blue').'.min'); ?>
+  <?php echo $this->Html->css('AdminLTE.skins/skin-'. Configure::read('Theme.skin') .'.min'); ?>
   <?php echo $this->Html->css('AdminLTE./plugins/iCheck/square/blue'); ?>
 
   <?php echo $this->fetch('css'); ?>
@@ -31,7 +31,7 @@
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
-    <a href="<?php echo $this->Url->build('/'); ?>"><b><?php echo $theme['logo']['large'] ?></a>
+    <a href="<?php echo $this->Url->build('/'); ?>"><b><?php echo Configure::read('Theme.logo.large') ?></a>
   </div>
 
   <div class="register-box-body">
