@@ -1,3 +1,11 @@
+<?php
+$file = $theme['folder'] . DS . 'src' . DS . 'Template' . DS . 'Layout' . DS . 'print.ctp';
+if (file_exists($file)) {
+    ob_start();
+    include_once $file;
+    echo ob_get_clean();
+} else {
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,3 +43,4 @@
 </div>
 </body>
 </html>
+<?php } ?>
