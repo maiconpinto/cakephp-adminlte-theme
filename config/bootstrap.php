@@ -14,5 +14,6 @@ Configure::write('Theme', [
         'show_register' => true,
         'show_social' => true
     ],
-    'folder' => ROOT
+    'folder' => ROOT,
+    'skin' => 'blue'
 ]);
