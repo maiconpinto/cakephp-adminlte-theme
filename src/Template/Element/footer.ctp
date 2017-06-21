@@ -1,7 +1,7 @@
-<?php 
+<?php
 use Cake\Core\Configure;
 
-$file = Configure::read('folder') . DS . 'src' . DS . 'Template' . DS . 'Element' . DS . 'footer.ctp';
+$file = Configure::read('Theme.folder') . DS . 'src' . DS . 'Template' . DS . 'Element' . DS . 'footer.ctp';
 
 if (file_exists($file)) {
     ob_start();

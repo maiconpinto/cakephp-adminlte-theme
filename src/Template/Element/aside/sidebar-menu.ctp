@@ -1,8 +1,7 @@
-<?php 
+<?php
 use Cake\Core\Configure;
 
-$file = Configure::read('folder'). DS . 'src' . DS . 'Template' . DS . 'Element' . DS . 'aside' . DS . 'sidebar-menu.ctp';
-
+$file = Configure::read('Theme.folder'). DS . 'src' . DS . 'Template' . DS . 'Element' . DS . 'aside' . DS . 'sidebar-menu.ctp';
 if (file_exists($file)) {
     ob_start();
     include_once $file;
