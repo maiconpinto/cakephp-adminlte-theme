@@ -26,7 +26,7 @@ class FormHelper extends CakeFormHelper {
         'hiddenBlock' => '<div style="display:none;">{{content}}</div>',
         'input' => '<input type="{{type}}" name="{{name}}"{{attrs}}/>',
         'inputSubmit' => '<input type="{{type}}"{{attrs}}/>',
-        'inputContainer' => '<div class="from-group input {{type}}{{required}}">{{content}}</div>',
+        'inputContainer' => '<div class="form-group input {{type}}{{required}}">{{content}}</div>',
         'inputContainerError' => '<div class="input {{type}}{{required}} error">{{content}}{{error}}</div>',
         'label' => '<label{{attrs}}>{{text}}</label>',
         'nestingLabel' => '{{hidden}}<label{{attrs}}>{{input}}{{text}}</label>',
