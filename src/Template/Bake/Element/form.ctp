@@ -1,6 +1,6 @@
 <%
 use Cake\Utility\Inflector;
-   
+
    $extras = [];
 %>
 <section class="content-header">
@@ -53,7 +53,7 @@ use Cake\Utility\Inflector;
         if (($fieldData['type'] === 'date') && (!empty($fieldData['null']))) {
             $extras[] = 'datepicker';
 %>
-            echo $this->Form->input('<%= $field %>', ['empty' => true, 'default' => '', 'class' => 'datepicker', 'type' => 'text']);
+            echo $this->Form->input('<%= $field %>', ['empty' => true, 'default' => '', 'class' => 'datepicker form-control', 'type' => 'text']);
 <%
         } else {
 %>
@@ -81,7 +81,7 @@ use Cake\Utility\Inflector;
     </div>
   </div>
 </section>
-    
+
 <%
     if (!empty($extras)) {
         foreach($extras as $element) {
@@ -89,5 +89,5 @@ use Cake\Utility\Inflector;
         <% echo $this->element($element); %>
         <%
         }
-    } 
+    }
 %>
