@@ -50,7 +50,7 @@ use Cake\Utility\Inflector;
       }
       if (!in_array($field, ['created', 'modified', 'updated'])) {
         $fieldData = $schema->column($field);
-        if (($fieldData['type'] === 'date') && (!empty($fieldData['null']))) {
+        if (($fieldData['type'] === 'date')) {
             $extras[] = 'datepicker';
 %>
             echo $this->Form->input('<%= $field %>', ['empty' => true, 'default' => '', 'class' => 'datepicker form-control', 'type' => 'text']);
