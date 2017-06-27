@@ -5,6 +5,7 @@ use \Cake\ORM\Behavior;
 use \Cake\Event\Event;
 use \Cake\ORM\Table;
 use \ArrayObject;
+use \Cake\Core\Configure;
 
 class DatepickerBehavior extends Behavior
 {
@@ -39,11 +40,17 @@ class DatepickerBehavior extends Behavior
     public function beforeMarshal(Event $event, ArrayObject $data, ArrayObject $options) {
         if (!empty($this->_config) && !empty($this->_config['fields'])) {
             $separator = $this->_config['date_separator'] ? : '/';
+            $locale = Configure::read('App.defaultLocale');
 
             foreach ($this->_config['fields'] as $key) {
                 if (isset($data[$key])) {
-                    list($month, $day, $year) = explode($separator, $data[$key]);
-                    $data[$key] = $year .'-'. $month .'-'. $day;
+                    if ($locale == 'pt_BR') {
+                        list($d, $m, $y) = explode($separator, $data[$key]);
+                    } else {
+                        list($m, $d, $y) = explode($separator, $data[$key]);
+                    }
+
+                    $data[$key] = $y .'-'. $m .'-'. $d;
                 }
             }
         }
