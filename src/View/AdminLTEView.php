@@ -14,6 +14,8 @@ class AdminLTEView extends View
 
         $templatePaths = App::path(static::NAME_TEMPLATE);
 
+        $pluginPaths = [];
+
         foreach ($templatePaths as $templateCurrent) {
             if (!empty($theme)) {
                 if (!empty($plugin)) {
