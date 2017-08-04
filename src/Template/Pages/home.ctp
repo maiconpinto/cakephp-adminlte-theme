@@ -512,7 +512,7 @@ $this->Html->css([
     'AdminLTE./plugins/morris/morris',
     'AdminLTE./plugins/jvectormap/jquery-jvectormap-1.2.2',
     'AdminLTE./plugins/datepicker/datepicker3',
-    'AdminLTE./plugins/daterangepicker/daterangepicker-bs3',
+    'AdminLTE./plugins/daterangepicker/daterangepicker',
     'AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min'
   ],
   ['block' => 'css']);
