@@ -833,7 +833,7 @@ $this->Html->css([
     'AdminLTE./plugins/morris/morris',
     'AdminLTE./plugins/jvectormap/jquery-jvectormap-1.2.2',
     'AdminLTE./plugins/datepicker/datepicker3',
-    'AdminLTE./plugins/daterangepicker/daterangepicker-bs3',
+    'AdminLTE./plugins/daterangepicker/daterangepicker',
     'AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min'
   ],
   ['block' => 'css']);
@@ -844,8 +844,8 @@ $this->Html->script([
   'AdminLTE./plugins/jvectormap/jquery-jvectormap-world-mill-en',
   'AdminLTE./plugins/chartjs/Chart.min',
 
-], 
-['block' => 'script']); 
+],
+['block' => 'script']);
 ?>
 
 <?php $this->start('scriptBottom'); ?>
@@ -930,7 +930,7 @@ $this->Html->script([
       //---------------------------
       //- END MONTHLY SALES CHART -
       //---------------------------
-      
+
       //-------------
       //- PIE CHART -
       //-------------
