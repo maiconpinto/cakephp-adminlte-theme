@@ -96,7 +96,7 @@ $this->Html->css('AdminLTE./plugins/fullcalendar/fullcalendar.print', ['block' =
 
 $this->Html->script([
   'https://code.jquery.com/ui/1.11.4/jquery-ui.min.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js',
+  'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js',
   'AdminLTE./plugins/fullcalendar/fullcalendar.min',
 ],
 ['block' => 'script']);
