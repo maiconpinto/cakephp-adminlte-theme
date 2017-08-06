@@ -117,6 +117,7 @@ $this->Html->script([
 ?>
 
 <?php $this->start('scriptBottom'); ?>
+<!-- page script -->
 <script>
   $(function () {
     "use strict";

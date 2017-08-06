@@ -135,7 +135,6 @@
     <!-- /.content -->
 <?php
 $this->Html->script([
-  'https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js',
   'AdminLTE./plugins/flot/jquery.flot.min',
   'AdminLTE./plugins/flot/jquery.flot.resize.min',
   'AdminLTE./plugins/flot/jquery.flot.pie.min',
