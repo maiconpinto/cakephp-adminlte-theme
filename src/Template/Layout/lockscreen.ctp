@@ -56,7 +56,7 @@
     <a href="<?php echo $this->Url->build('/pages/examples/login'); ?>">Or sign in as a different user</a>
   </div>
   <div class="lockscreen-footer text-center">
-    Copyright &copy; 2014-2015 <b><a href="http://almsaeedstudio.com" class="text-black">Almsaeed Studio</a></b><br>
+    Copyright &copy; 2014-2017 <b><a href="http://almsaeedstudio.com" class="text-black">Almsaeed Studio</a></b><br>
     All rights reserved
   </div>
 </div>
@@ -65,6 +65,6 @@
 <!-- jQuery 2.1.4 -->
 <?php echo $this->Html->script('AdminLTE./plugins/jQuery/jQuery-2.2.3.min'); ?>
 <!-- Bootstrap 3.3.5 -->
-<?php echo $this->Html->script('AdminLTE./bootstrap/js/bootstrap'); ?>
+<?php echo $this->Html->script('AdminLTE./bootstrap/js/bootstrap.min'); ?>
 </body>
 </html>
