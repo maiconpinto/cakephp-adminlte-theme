@@ -75,7 +75,7 @@ $this->Html->css([
   ['block' => 'css']);
 
 $this->Html->script([
-  'https://cdn.ckeditor.com/4.4.3/standard/ckeditor.js',
+  'https://cdn.ckeditor.com/4.5.7/standard/ckeditor.js',
   'AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min',
 ],
 ['block' => 'script']);
