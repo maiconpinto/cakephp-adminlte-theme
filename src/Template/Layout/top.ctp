@@ -17,7 +17,7 @@
   <?php echo $this->Html->css('AdminLTE.AdminLTE.min'); ?>
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <?php echo $this->Html->css('AdminLTE.skins/skin-'.(isset($theme['skin']) ? $theme['skin'] : 'blue').'.min'); ?>
+    <?php echo $this->Html->css('AdminLTE.skins/skin-'. Configure::read('Theme.skin') .'.min'); ?>
 
   <?php echo $this->fetch('css'); ?>
 
@@ -29,7 +29,7 @@
   <![endif]-->
 </head>
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
-<body class="hold-transition skin-<?php echo isset($theme['skin']) ? $theme['skin'] : 'blue'; ?> layout-top-nav">
+<body class="hold-transition skin-<?php echo Configure::read('Theme.skin'); ?> layout-top-nav">
 <div class="wrapper">
 
   <header class="main-header">
@@ -231,10 +231,10 @@
 </div>
 <!-- ./wrapper -->
 
-<!-- jQuery 2.1.4 -->
-<?php echo $this->Html->script('AdminLTE./plugins/jQuery/jQuery-2.2.3.min'); ?>
+<!-- jQuery 2.2.2-->
+<?php echo $this->Html->script('AdminLTE./plugins/jQuery/jquery-2.2.3.min'); ?>
 <!-- Bootstrap 3.3.5 -->
-<?php echo $this->Html->script('AdminLTE./bootstrap/js/bootstrap'); ?>
+<?php echo $this->Html->script('AdminLTE./bootstrap/js/bootstrap.min'); ?>
 <!-- SlimScroll -->
 <?php echo $this->Html->script('AdminLTE./plugins/slimScroll/jquery.slimscroll.min'); ?>
 <!-- FastClick -->
