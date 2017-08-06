@@ -26,7 +26,9 @@ if (file_exists($file)) {
         <a href="#">
             <i class="fa fa-files-o"></i>
             <span>Layout Options</span>
-            <span class="label label-primary pull-right">4</span>
+            <span class="pull-right-container">
+                <span class="label label-primary pull-right">4</span>
+            </span>
         </a>
         <ul class="treeview-menu">
             <li><a href="<?php echo $this->Url->build('/pages/layout/top-nav'); ?>"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
