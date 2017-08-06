@@ -233,6 +233,20 @@
               <h3 class="box-title">Date picker</h3>
             </div>
             <div class="box-body">
+              <!-- Date -->
+              <div class="form-group">
+                <label>Date:</label>
+
+                <div class="input-group date">
+                  <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                  </div>
+                  <input type="text" class="form-control pull-right" id="datepicker">
+                </div>
+                <!-- /.input group -->
+              </div>
+              <!-- /.form group -->
+
               <!-- Date range -->
               <div class="form-group">
                 <label>Date range:</label>
@@ -267,7 +281,9 @@
 
                 <div class="input-group">
                   <button type="button" class="btn btn-default pull-right" id="daterange-btn">
-                    <i class="fa fa-calendar"></i> Date range picker
+                    <span>
+                      <i class="fa fa-calendar"></i> Date range picker
+                    </span>
                     <i class="fa fa-caret-down"></i>
                   </button>
                 </div>
@@ -391,6 +407,7 @@
 <?php
 $this->Html->css([
     'AdminLTE./plugins/daterangepicker/daterangepicker',
+    'AdminLTE./plugins/datepicker/datepicker3',
     'AdminLTE./plugins/iCheck/all',
     'AdminLTE./plugins/colorpicker/bootstrap-colorpicker.min',
     'AdminLTE./plugins/timepicker/bootstrap-timepicker.min',
@@ -403,8 +420,9 @@ $this->Html->script([
   'AdminLTE./plugins/input-mask/jquery.inputmask',
   'AdminLTE./plugins/input-mask/jquery.inputmask.date.extensions',
   'AdminLTE./plugins/input-mask/jquery.inputmask.extensions',
-  'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js',
+  'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js',
   'AdminLTE./plugins/daterangepicker/daterangepicker',
+  'AdminLTE./plugins/datepicker/bootstrap-datepicker',
   'AdminLTE./plugins/colorpicker/bootstrap-colorpicker.min',
   'AdminLTE./plugins/timepicker/bootstrap-timepicker.min',
   'AdminLTE./plugins/iCheck/icheck.min',
@@ -443,9 +461,14 @@ $this->Html->script([
           endDate: moment()
         },
         function (start, end) {
-          $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+          $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
         }
     );
+
+    //Date picker
+    $('#datepicker').datepicker({
+      autoclose: true
+    });
 
     //iCheck for checkbox and radio inputs
     $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
