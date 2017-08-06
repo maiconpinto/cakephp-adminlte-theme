@@ -73,8 +73,8 @@
             <div class="box-body no-padding">
               <div class="mailbox-read-info">
                 <h3>Message Subject Is Placed Here</h3>
-                <h5>From: support@almsaeedstudio.com
-                  <span class="mailbox-read-time pull-right">15 Feb. 2015 11:03 PM</span></h5>
+                <h5>From: help@example.com
+                  <span class="mailbox-read-time pull-right">15 Feb. 2016 11:03 PM</span></h5>
               </div>
               <!-- /.mailbox-read-info -->
               <div class="mailbox-controls with-border text-center">
@@ -203,10 +203,4 @@
 <?php
 $this->Html->css('AdminLTE./plugins/fullcalendar/fullcalendar.min', ['block' => 'css']);
 $this->Html->css('AdminLTE./plugins/fullcalendar/fullcalendar.print', ['block' => 'css', 'media' => 'print']);
-$this->Html->css('AdminLTE./plugins/iCheck/flat/blue', ['block' => 'css']);
-
-$this->Html->script([
-  'AdminLTE./plugins/iCheck/icheck.min',
-],
-['block' => 'script']);
 ?>
