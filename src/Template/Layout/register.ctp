@@ -17,7 +17,6 @@
   <?php echo $this->Html->css('AdminLTE.AdminLTE.min'); ?>
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <?php echo $this->Html->css('AdminLTE.skins/skin-'. Configure::read('Theme.skin') .'.min'); ?>
   <?php echo $this->Html->css('AdminLTE./plugins/iCheck/square/blue'); ?>
 
   <?php echo $this->fetch('css'); ?>
@@ -55,9 +54,9 @@
 <!-- /.register-box -->
 
 <!-- jQuery 2.1.4 -->
-<?php echo $this->Html->script('AdminLTE./plugins/jQuery/jQuery-2.2.3.min'); ?>
+<?php echo $this->Html->script('AdminLTE./plugins/jQuery/jquery-2.2.3.min'); ?>
 <!-- Bootstrap 3.3.5 -->
-<?php echo $this->Html->script('AdminLTE./bootstrap/js/bootstrap'); ?>
+<?php echo $this->Html->script('AdminLTE./bootstrap/js/bootstrap.min'); ?>
 <!-- iCheck -->
 <?php echo $this->Html->script('AdminLTE./plugins/iCheck/icheck.min'); ?>
 
