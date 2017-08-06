@@ -73,8 +73,8 @@
 </div>
 <!-- ./wrapper -->
 
-<!-- jQuery 2.1.4 -->
-<?php echo $this->Html->script('AdminLTE./plugins/jQuery/jQuery-2.2.3.min'); ?>
+<!-- jQuery 2.2.3 -->
+<?php echo $this->Html->script('AdminLTE./plugins/jQuery/jquery-2.2.3.min'); ?>
 <!-- Bootstrap 3.3.5 -->
 <?php echo $this->Html->script('AdminLTE./bootstrap/js/bootstrap.min'); ?>
 <!-- SlimScroll -->
