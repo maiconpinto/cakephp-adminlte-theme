@@ -13,7 +13,6 @@ if (file_exists($file)) {
     <!-- Create the tabs -->
     <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
         <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-
         <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
     </ul>
     <!-- Tab panes -->
@@ -23,7 +22,7 @@ if (file_exists($file)) {
             <h3 class="control-sidebar-heading">Recent Activity</h3>
             <ul class="control-sidebar-menu">
                 <li>
-                    <a href="javascript::;">
+                    <a href="javascript:void(0)">
                         <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
                         <div class="menu-info">
@@ -34,7 +33,7 @@ if (file_exists($file)) {
                     </a>
                 </li>
                 <li>
-                    <a href="javascript::;">
+                    <a href="javascript:void(0)">
                         <i class="menu-icon fa fa-user bg-yellow"></i>
 
                         <div class="menu-info">
@@ -45,7 +44,7 @@ if (file_exists($file)) {
                     </a>
                 </li>
                 <li>
-                    <a href="javascript::;">
+                    <a href="javascript:void(0)">
                         <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
 
                         <div class="menu-info">
@@ -56,7 +55,7 @@ if (file_exists($file)) {
                     </a>
                 </li>
                 <li>
-                    <a href="javascript::;">
+                    <a href="javascript:void(0)">
                         <i class="menu-icon fa fa-file-code-o bg-green"></i>
 
                         <div class="menu-info">
@@ -72,7 +71,7 @@ if (file_exists($file)) {
             <h3 class="control-sidebar-heading">Tasks Progress</h3>
             <ul class="control-sidebar-menu">
                 <li>
-                    <a href="javascript::;">
+                    <a href="javascript:void(0)">
                         <h4 class="control-sidebar-subheading">
                             Custom Template Design
                             <span class="label label-danger pull-right">70%</span>
@@ -84,7 +83,7 @@ if (file_exists($file)) {
                     </a>
                 </li>
                 <li>
-                    <a href="javascript::;">
+                    <a href="javascript:void(0)">
                         <h4 class="control-sidebar-subheading">
                             Update Resume
                             <span class="label label-success pull-right">95%</span>
@@ -96,7 +95,7 @@ if (file_exists($file)) {
                     </a>
                 </li>
                 <li>
-                    <a href="javascript::;">
+                    <a href="javascript:void(0)">
                         <h4 class="control-sidebar-subheading">
                             Laravel Integration
                             <span class="label label-warning pull-right">50%</span>
@@ -108,7 +107,7 @@ if (file_exists($file)) {
                     </a>
                 </li>
                 <li>
-                    <a href="javascript::;">
+                    <a href="javascript:void(0)">
                         <h4 class="control-sidebar-subheading">
                             Back End Framework
                             <span class="label label-primary pull-right">68%</span>
@@ -189,7 +188,7 @@ if (file_exists($file)) {
                 <div class="form-group">
                     <label class="control-sidebar-subheading">
                         Delete chat history
-                        <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+                        <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
                     </label>
                 </div>
                 <!-- /.form-group -->
