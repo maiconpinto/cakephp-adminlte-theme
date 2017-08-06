@@ -12,7 +12,10 @@ if (file_exists($file)) {
     <li class="header">MAIN NAVIGATION</li>
     <li class="treeview">
         <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
         </a>
         <ul class="treeview-menu">
             <li><a href="<?php echo $this->Url->build('/'); ?>"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
@@ -35,14 +38,18 @@ if (file_exists($file)) {
     <li>
         <a href="<?php echo $this->Url->build('/pages/widgets'); ?>">
             <i class="fa fa-th"></i> <span>Widgets</span>
-            <small class="label pull-right bg-green">Hot</small>
+            <span class="pull-right-container">
+                <small class="label pull-right bg-green">new</small>
+            </span>
         </a>
     </li>
     <li class="treeview">
         <a href="#">
             <i class="fa fa-pie-chart"></i>
             <span>Charts</span>
-            <i class="fa fa-angle-left pull-right"></i>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
         </a>
         <ul class="treeview-menu">
             <li><a href="<?php echo $this->Url->build('/pages/charts/chartjs'); ?>"><i class="fa fa-circle-o"></i> ChartJS</a></li>
@@ -55,7 +62,9 @@ if (file_exists($file)) {
         <a href="#">
             <i class="fa fa-laptop"></i>
             <span>UI Elements</span>
-            <i class="fa fa-angle-left pull-right"></i>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
         </a>
         <ul class="treeview-menu">
             <li><a href="<?php echo $this->Url->build('/pages/ui/general'); ?>"><i class="fa fa-circle-o"></i> General</a></li>
@@ -69,7 +78,9 @@ if (file_exists($file)) {
     <li class="treeview">
         <a href="#">
             <i class="fa fa-edit"></i> <span>Forms</span>
-            <i class="fa fa-angle-left pull-right"></i>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
         </a>
         <ul class="treeview-menu">
             <li><a href="<?php echo $this->Url->build('/pages/forms/general'); ?>"><i class="fa fa-circle-o"></i> General Elements</a></li>
@@ -80,7 +91,9 @@ if (file_exists($file)) {
     <li class="treeview">
         <a href="#">
             <i class="fa fa-table"></i> <span>Tables</span>
-            <i class="fa fa-angle-left pull-right"></i>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
         </a>
         <ul class="treeview-menu">
             <li><a href="<?php echo $this->Url->build('/pages/tables/simple'); ?>"><i class="fa fa-circle-o"></i> Simple tables</a></li>
@@ -90,13 +103,20 @@ if (file_exists($file)) {
     <li>
         <a href="<?php echo $this->Url->build('/pages/calendar'); ?>">
             <i class="fa fa-calendar"></i> <span>Calendar</span>
-            <small class="label pull-right bg-red">3</small>
+            <span class="pull-right-container">
+                <small class="label pull-right bg-red">3</small>
+                <small class="label pull-right bg-blue">17</small>
+            </span>
         </a>
     </li>
     <li class="treeview">
         <a href="#">
             <i class="fa fa-envelope"></i> <span>Mailbox</span>
-            <small class="label pull-right bg-yellow">12</small>
+            <span class="pull-right-container">
+                <small class="label pull-right bg-yellow">12</small>
+                <small class="label pull-right bg-green">16</small>
+                <small class="label pull-right bg-red">5</small>
+            </span>
         </a>
         <ul class="treeview-menu">
             <li><a href="<?php echo $this->Url->build('/pages/mailbox/mailbox'); ?>">Inbox <span class="label label-primary pull-right">13</span></a></li>
@@ -107,7 +127,9 @@ if (file_exists($file)) {
     <li class="treeview">
         <a href="#">
             <i class="fa fa-folder"></i> <span>Examples</span>
-            <i class="fa fa-angle-left pull-right"></i>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
         </a>
         <ul class="treeview-menu">
             <li><a href="<?php echo $this->Url->build('/pages/starter'); ?>"><i class="fa fa-circle-o"></i> Starter</a></li>
@@ -125,16 +147,28 @@ if (file_exists($file)) {
     <li class="treeview">
         <a href="#">
             <i class="fa fa-share"></i> <span>Multilevel</span>
-            <i class="fa fa-angle-left pull-right"></i>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
         </a>
         <ul class="treeview-menu">
             <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
             <li>
-                <a href="#"><i class="fa fa-circle-o"></i> Level One <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#">
+                <i class="fa fa-circle-o"></i> Level One
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+                </a>
                 <ul class="treeview-menu">
                     <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
                     <li>
-                        <a href="#"><i class="fa fa-circle-o"></i> Level Two <i class="fa fa-angle-left pull-right"></i></a>
+                        <a href="#">
+                            <i class="fa fa-circle-o"></i> Level Two
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
                         <ul class="treeview-menu">
                             <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
                             <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
