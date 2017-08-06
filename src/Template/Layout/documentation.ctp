@@ -67,7 +67,7 @@
             <li><a href="#layout"><i class="fa fa-circle-o"></i> Layout</a></li>
             <li><a href="#adminlte-options"><i class="fa fa-circle-o"></i> Javascript Options</a></li>
             <li class="treeview" id="scrollspy-components">
-              <a href="javascript::;"><i class="fa fa-circle-o"></i> Components</a>
+              <a href="javascript:void(0)"><i class="fa fa-circle-o"></i> Components</a>
               <ul class="nav treeview-menu">
                 <li><a href="#component-main-header">Main Header</a></li>
                 <li><a href="#component-sidebar">Sidebar</a></li>
@@ -94,7 +94,7 @@
         <div class="content-header">
           <h1>
             AdminLTE Documentation
-            <small>Current version 2.3.0</small>
+            <small>Version 2.3</small>
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
