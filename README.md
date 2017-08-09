@@ -100,7 +100,7 @@ public function beforeRender(Event $event)
 }
 ```
 
-After you enable the AdminLTEView class in the AppController.php file, you can overwrite any View file, only by creating the Plugin / AdminLTE / folder inside the Template folder.
+After you enable the AdminLTEView class in the AppController.php file, you can overwrite any View file, only by creating the `Plugin/AdminLTE/` folder inside the `Template` folder.
 
 For example, to overwrite the elements files, you must create them as follows:
 
@@ -118,6 +118,34 @@ For example:
 
 1. `src/Template/Plugin/AdminLTE/Element/footer.ctp`
 1. `src/Template/Plugin/AdminLTE/Admin/Element/footer.ctp`
+
+In summary, the sequence of folders in which to check if that file exists is as follows:
+
+1. `src/Template/Plugin/$theme/Plugin/$plugin/$prefix/`
+2. `src/Template/Plugin/$theme/Plugin/$plugin/`
+3. `src/Template/Plugin/$theme/$prefix/`
+4. `src/Template/Plugin/$theme/`
+
+For example, Let's say:
+
+* $theme = 'AdminLTE';
+* $plugin = 'SupportTicket';
+* $prefix = 'Admin';
+
+Therefore, the sequence that would verify the existence of a file, would be the following:
+
+1. `src/Template/Plugin/AdminLTE/Plugin/SupportTicket/Admin/`
+2. `src/Template/Plugin/AdminLTE/Plugin/SupportTicket/`
+3. `src/Template/Plugin/AdminLTE/Admin/`
+4. `src/Template/Plugin/AdminLTE/`
+
+For the sake of clarity, let's say you have two environments separated by different prefixes: *Panel* and *Admin*.
+
+The *Dashboard* enviroment has no menu and footer, but Admin has.
+
+To solve this situation is very simple. You should create in the folder `src/Template/Plugin/AdminLTE/Panel/` the elements `aside/sidebar-menu.ctp` and` footer.ctp` with empty content.
+
+However, for *Admin*, you should create `aside/sidebar-menu.ctp` in `src/Template/Plugin/AdminLTE/Admin/` or if you want to leave general, regardless of prefix, you should create in `src/Template/Plugin/AdminLTE/`. Similarly with the `footer.ctp`.
 
 ### Page debug
 
