@@ -24,7 +24,7 @@ Plugin::load('AdminLTE', ['bootstrap' => true, 'routes' => true]);
 
 public function beforeRender(Event $event)
 {
-    $this->viewBuilder()->theme('AdminLTE');
+    $this->viewBuilder()->setTheme('AdminLTE');
 }
 ```
 
@@ -96,7 +96,7 @@ use Cake\Core\Configure;
 public function beforeRender(Event $event)
 {
     // ...
-    $this->viewBuilder()->className('AdminLTE.AdminLTE');
+    $this->viewBuilder()->setClassName('AdminLTE.AdminLTE');
 }
 ```
 
