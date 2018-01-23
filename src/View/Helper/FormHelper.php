@@ -24,6 +24,7 @@ class FormHelper extends CakeFormHelper {
         'formEnd' => '</form>',
         'formGroup' => '{{label}}{{input}}',
         'hiddenBlock' => '<div style="display:none;">{{content}}</div>',
+        'control' => '<input type="{{type}}" name="{{name}}"{{attrs}}/>',
         'input' => '<input type="{{type}}" name="{{name}}"{{attrs}}/>',
         'inputSubmit' => '<input type="{{type}}"{{attrs}}/>',
         'inputContainer' => '<div class="form-group input {{type}}{{required}}">{{content}}</div>',
@@ -92,4 +93,28 @@ class FormHelper extends CakeFormHelper {
 
         return parent::input($fieldName, $options);
     }
+	public function control($fieldName, array $options = [])
+	{
+		
+		$_options = [];
+		
+		if (!isset($options['type'])) {
+			$options['type'] = $this->_inputType($fieldName, $options);
+		}
+		
+		switch($options['type']) {
+			case 'checkbox':
+			case 'radio':
+			case 'date':
+				break;
+			default:
+				$_options = ['class' => 'form-control'];
+				break;
+			
+		}
+		
+		$options += $_options;
+		
+		return parent::control($fieldName, $options);
+	}
 }
