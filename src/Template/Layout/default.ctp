@@ -1,6 +1,6 @@
 <?php use Cake\Core\Configure; 
 
-$file = Configure::read('Theme.folder'). DS . 'src' . DS . 'Template' . DS . 'Layout' . DS . 'default.ctp';
+$file = Configure::read('Theme.folder') . DS . 'src' . DS . 'Template' . DS . 'Plugin' . DS . 'AdminLTE' . DS . 'Layout' . DS . 'default.ctp';
 if (file_exists($file)) {
     ob_start();
     include_once $file;
