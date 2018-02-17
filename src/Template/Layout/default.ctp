@@ -1,4 +1,12 @@
-<?php use Cake\Core\Configure; ?>
+<?php use Cake\Core\Configure; 
+
+$file = Configure::read('Theme.folder'). DS . 'src' . DS . 'Template' . DS . 'Layout' . DS . 'default.ctp';
+if (file_exists($file)) {
+    ob_start();
+    include_once $file;
+    echo ob_get_clean();
+} else {
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -99,3 +107,4 @@
 </script>
 </body>
 </html>
+<?php } ?>
