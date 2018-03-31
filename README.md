@@ -1,4 +1,3 @@
-[![Stories in Ready](https://badge.waffle.io/maiconpinto/cakephp-adminlte-theme.png?label=ready&title=Ready)](https://waffle.io/maiconpinto/cakephp-adminlte-theme)
 # CakePHP AdminLTE Theme
 
 ## Installation
