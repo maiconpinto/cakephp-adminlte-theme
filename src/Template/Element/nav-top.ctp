@@ -1,17 +1,6 @@
-<?php
-use Cake\Core\Configure;
-
-$file = Configure::read('Theme.folder') . DS . 'src' . DS . 'Template' . DS . 'Element' . DS . 'nav-top.ctp';
-
-if (file_exists($file)) {
-    ob_start();
-    include_once $file;
-    echo ob_get_clean();
-} else {
-?>
 <nav class="navbar navbar-static-top">
   <!-- Sidebar toggle button-->
-  <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+  <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
     <span class="sr-only">Toggle navigation</span>
   </a>
 
@@ -154,7 +143,8 @@ if (file_exists($file)) {
                     <small class="pull-right">20%</small>
                   </h3>
                   <div class="progress xs">
-                    <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
+                         aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                       <span class="sr-only">20% Complete</span>
                     </div>
                   </div>
@@ -168,7 +158,8 @@ if (file_exists($file)) {
                     <small class="pull-right">40%</small>
                   </h3>
                   <div class="progress xs">
-                    <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar"
+                         aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                       <span class="sr-only">40% Complete</span>
                     </div>
                   </div>
@@ -182,7 +173,8 @@ if (file_exists($file)) {
                     <small class="pull-right">60%</small>
                   </h3>
                   <div class="progress xs">
-                    <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar"
+                         aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                       <span class="sr-only">60% Complete</span>
                     </div>
                   </div>
@@ -196,7 +188,8 @@ if (file_exists($file)) {
                     <small class="pull-right">80%</small>
                   </h3>
                   <div class="progress xs">
-                    <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar"
+                         aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                       <span class="sr-only">80% Complete</span>
                     </div>
                   </div>
@@ -259,6 +252,3 @@ if (file_exists($file)) {
     </ul>
   </div>
 </nav>
-<?php
-}
-?>
