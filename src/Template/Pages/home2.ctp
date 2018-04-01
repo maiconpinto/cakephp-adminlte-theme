@@ -271,7 +271,8 @@
                 <span data-toggle="tooltip" title="3 New Messages" class="badge bg-yellow">3</span>
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                 </button>
-                <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="Contacts" data-widget="chat-pane-toggle">
+                <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="Contacts"
+                        data-widget="chat-pane-toggle">
                   <i class="fa fa-comments"></i></button>
                 <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
                 </button>
@@ -349,7 +350,7 @@
                 <ul class="contacts-list">
                   <li>
                     <a href="#">
-                      <?php echo $this->Html->image('user1-128x128.jpg', array('class' => 'contacts-list-img')); ?>
+                      <?php echo $this->Html->image('user1-128x128.jpg', array('class' => 'contacts-list-img', 'alt' => 'User Image')); ?>
                       <div class="contacts-list-info">
                             <span class="contacts-list-name">
                               Count Dracula
@@ -363,7 +364,7 @@
                   <!-- End Contact Item -->
                   <li>
                     <a href="#">
-                    <?php echo $this->Html->image('user7-128x128.jpg', array('class' => 'contacts-list-img')); ?>
+                    <?php echo $this->Html->image('user7-128x128.jpg', array('class' => 'contacts-list-img', 'alt' => 'User Image')); ?>
 
                       <div class="contacts-list-info">
                             <span class="contacts-list-name">
@@ -378,7 +379,7 @@
                   <!-- End Contact Item -->
                   <li>
                     <a href="#">
-                    <?php echo $this->Html->image('user3-128x128.jpg', array('class' => 'contacts-list-img')); ?>
+                    <?php echo $this->Html->image('user3-128x128.jpg', array('class' => 'contacts-list-img', 'alt' => 'User Image')); ?>
 
                       <div class="contacts-list-info">
                             <span class="contacts-list-name">
@@ -393,7 +394,7 @@
                   <!-- End Contact Item -->
                   <li>
                     <a href="#">
-                    <?php echo $this->Html->image('user5-128x128.jpg', array('class' => 'contacts-list-img')); ?>
+                    <?php echo $this->Html->image('user5-128x128.jpg', array('class' => 'contacts-list-img', 'alt' => 'User Image')); ?>
 
                       <div class="contacts-list-info">
                             <span class="contacts-list-name">
@@ -408,7 +409,7 @@
                   <!-- End Contact Item -->
                   <li>
                     <a href="#">
-                    <?php echo $this->Html->image('user6-128x128.jpg', array('class' => 'contacts-list-img')); ?>
+                    <?php echo $this->Html->image('user6-128x128.jpg', array('class' => 'contacts-list-img', 'alt' => 'User Image')); ?>
 
                       <div class="contacts-list-info">
                             <span class="contacts-list-name">
@@ -423,7 +424,7 @@
                   <!-- End Contact Item -->
                   <li>
                     <a href="#">
-                    <?php echo $this->Html->image('user8-128x128.jpg', array('class' => 'contacts-list-img')); ?>
+                    <?php echo $this->Html->image('user8-128x128.jpg', array('class' => 'contacts-list-img', 'alt' => 'User Image')); ?>
 
                       <div class="contacts-list-info">
                             <span class="contacts-list-name">
@@ -791,7 +792,8 @@
               <?php echo $this->Html->image('default-50x50.gif', array('alt' => 'Product Image')); ?>
               </div>
               <div class="product-info">
-                <a href="javascript:void(0)" class="product-title">Xbox One <span class="label label-danger pull-right">$350</span></a>
+                <a href="javascript:void(0)" class="product-title">Xbox One <span
+                    class="label label-danger pull-right">$350</span></a>
                     <span class="product-description">
                       Xbox One Console Bundle with Halo Master Chief Collection.
                     </span>
@@ -827,24 +829,14 @@
 </section>
 <!-- /.content -->
 
-<?php
-$this->Html->css([
-    'AdminLTE./plugins/iCheck/flat/blue',
-    'AdminLTE./plugins/morris/morris',
-    'AdminLTE./plugins/jvectormap/jquery-jvectormap-1.2.2',
-    'AdminLTE./plugins/datepicker/datepicker3',
-    'AdminLTE./plugins/daterangepicker/daterangepicker',
-    'AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min'
-  ],
-  ['block' => 'css']);
-
-$this->Html->script([
-  'AdminLTE./plugins/sparkline/jquery.sparkline.min',
-  'AdminLTE./plugins/jvectormap/jquery-jvectormap-1.2.2.min',
-  'AdminLTE./plugins/jvectormap/jquery-jvectormap-world-mill-en',
-  'AdminLTE./plugins/chartjs/Chart.min',
-  'AdminLTE./js/pages/dashboard2',
-
-],
-['block' => 'script']);
-?>
+<!-- jvectormap -->
+<?php echo $this->Html->css('AdminLTE./bower_components/jvectormap/jquery-jvectormap', ['block' => 'css']); ?>
+<!-- Sparkline -->
+<?php echo $this->Html->script('AdminLTE./bower_components/jquery-sparkline/dist/jquery.sparkline.min', ['block' => 'script']); ?>
+<!-- jvectormap -->
+<?php echo $this->Html->script('AdminLTE./plugins/jvectormap/jquery-jvectormap-1.2.2.min', ['block' => 'script']); ?>
+<?php echo $this->Html->script('AdminLTE./plugins/jvectormap/jquery-jvectormap-world-mill-en', ['block' => 'script']); ?>
+<!-- ChartJS -->
+<?php echo $this->Html->script('AdminLTE./bower_components/chart.js/Chart', ['block' => 'script']); ?>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<?php echo $this->Html->script('AdminLTE.pages/dashboard2', ['block' => 'script']); ?>
