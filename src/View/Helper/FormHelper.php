@@ -10,12 +10,12 @@ use Cake\Utility\Inflector;
 class FormHelper extends CakeFormHelper {
 
     private $templates = [
-        'button' => '{{before}}<button{{attrs}}>{{text}}</button>{{after}}',
+        'button' => '<button{{attrs}}>{{text}}</button>',
         'checkbox' => '<input type="checkbox" name="{{name}}" value="{{value}}"{{attrs}}>',
         'checkboxFormGroup' => '{{label}}',
         'checkboxWrapper' => '<div class="checkbox">{{label}}</div>',
         'dateWidget' => '<div class="form-group">{{label}} {{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}{{meridian}}</div>',
-        'error' => '<div class="error-message">{{content}}</div>',
+        'error' => '<span class="help-block">{{content}}</span>',
         'errorList' => '<ul>{{content}}</ul>',
         'errorItem' => '<li>{{text}}</li>',
         'file' => '<input type="file" name="{{name}}"{{attrs}}>',
@@ -28,8 +28,8 @@ class FormHelper extends CakeFormHelper {
         'input' => '<input type="{{type}}" name="{{name}}"{{attrs}}/>',
         'inputSubmit' => '<input type="{{type}}"{{attrs}}/>',
         'inputContainer' => '<div class="form-group input {{type}}{{required}}">{{content}}</div>',
-        'inputContainerError' => '<div class="input {{type}}{{required}} error">{{content}}{{error}}</div>',
-        'label' => '<label{{attrs}}>{{text}}</label>',
+        'inputContainerError' => '<div class="input {{type}}{{required}} has-error">{{content}}{{error}}</div>',
+        'label' => '<label class="control-label" {{attrs}}>{{text}}</label>',
         'nestingLabel' => '{{hidden}}<label{{attrs}}>{{input}}{{text}}</label>',
         'legend' => '<legend>{{text}}</legend>',
         'multicheckboxTitle' => '<legend>{{text}}</legend>',
@@ -95,13 +95,13 @@ class FormHelper extends CakeFormHelper {
     }
 	public function control($fieldName, array $options = [])
 	{
-		
+
 		$_options = [];
-		
+
 		if (!isset($options['type'])) {
 			$options['type'] = $this->_inputType($fieldName, $options);
 		}
-		
+
 		switch($options['type']) {
 			case 'checkbox':
 			case 'radio':
@@ -110,11 +110,11 @@ class FormHelper extends CakeFormHelper {
 			default:
 				$_options = ['class' => 'form-control'];
 				break;
-			
+
 		}
-		
+
 		$options += $_options;
-		
+
 		return parent::control($fieldName, $options);
 	}
 }
