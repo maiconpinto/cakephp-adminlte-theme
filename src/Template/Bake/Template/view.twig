@@ -1,0 +1,144 @@
+{#
+/**
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
+ * @since         2.0.0
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ */
+#}
+{% set associations = {'BelongsTo': [], 'HasOne': [], 'HasMany': [], 'BelongsToMany': []}|merge(associations) %}
+{% set fieldsData = Bake.getViewFieldsData(fields, schema, associations) %}
+{% set associationFields = fieldsData.associationFields %}
+{% set groupedFields = fieldsData.groupedFields %}
+{% set pK = '$' ~ singularVar ~ '->' ~ primaryKey[0] %}
+<section class="content-header">
+  <h1>
+    {{ singularHumanName }}
+    <small><?php echo __('View'); ?></small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="<?php echo $this->Url->build(['action' => 'index']); ?>"><i class="fa fa-dashboard"></i> <?php echo __('Home'); ?></a></li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box box-solid">
+        <div class="box-header with-border">
+          <i class="fa fa-info"></i>
+          <h3 class="box-title"><?php echo __('Information'); ?></h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <dl class="dl-horizontal">
+{% if groupedFields['string'] %}
+{% for field in groupedFields['string'] %}
+{% if associationFields[field] %}
+{% set details = associationFields[field] %}
+            <dt scope="row"><?= __('{{ details.property|humanize }}') ?></dt>
+            <dd><?= ${{ singularVar }}->has('{{ details.property }}') ? $this->Html->link(${{ singularVar }}->{{ details.property }}->{{ details.displayField }}, ['controller' => '{{ details.controller }}', 'action' => 'view', ${{ singularVar }}->{{ details.property }}->{{ details.primaryKey[0] }}]) : '' ?></dd>
+{% else %}
+            <dt scope="row"><?= __('{{ field|humanize }}') ?></dt>
+            <dd><?= h(${{ singularVar }}->{{ field }}) ?></dd>
+{% endif %}
+{% endfor %}
+{% endif %}
+{% if associations.HasOne %}
+{% for alias, details in associations.HasOne %}
+            <dt scope="row"><?= __('{{ alias|underscore|singularize|humanize }}') ?></dt>
+            <dd><?= ${{ singularVar }}->has('{{ details.property }}') ? $this->Html->link(${{ singularVar }}->{{ details.property }}->{{ details.displayField }}, ['controller' => '{{ details.controller }}', 'action' => 'view', ${{ singularVar }}->{{ details.property }}->{{ details.primaryKey[0] }}]) : '' ?></dd>
+{% endfor %}
+{% endif %}
+{% if groupedFields.number %}
+{% for field in groupedFields.number %}
+            <dt scope="row"><?= __('{{ field|humanize }}') ?></dt>
+            <dd><?= $this->Number->format(${{ singularVar }}->{{ field }}) ?></dd>
+{% endfor %}
+{% endif %}
+{% if groupedFields.date %}
+{% for field in groupedFields.date %}
+            <dt scope="row"><?= __('{{ field|humanize }}') ?></dt>
+            <dd><?= h(${{ singularVar }}->{{ field }}) ?></dd>
+{% endfor %}
+{% endif %}
+{% if groupedFields.boolean %}
+{% for field in groupedFields.boolean %}
+            <dt scope="row"><?= __('{{ field|humanize }}') ?></dt>
+            <dd><?= ${{ singularVar }}->{{ field }} ? __('Yes') : __('No'); ?></dd>
+{% endfor %}
+{% endif %}
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% if groupedFields.text %}
+{% for field in groupedFields.text %}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box box-solid">
+        <div class="box-header with-border">
+          <i class="fa fa-text-width"></i>
+          <h3 class="box-title"><?= __('{{ field|humanize }}') ?></h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <?= $this->Text->autoParagraph(${{ singularVar }}->{{ field }}); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+{% endif %}
+{% set relations = associations.BelongsToMany|merge(associations.HasMany) %}
+{% for alias, details in relations %}
+{% set otherSingularVar = alias|variable %}
+{% set otherPluralHumanName = details.controller|underscore|humanize %}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box box-solid">
+        <div class="box-header with-border">
+          <i class="fa fa-share-alt"></i>
+          <h3 class="box-title"><?= __('{{ otherPluralHumanName }}') ?></h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <?php if (!empty(${{ singularVar }}->{{ details.property }})): ?>
+          <table class="table table-hover">
+              <tr>
+  {% for field in details.fields %}
+                  <th scope="col"><?= __('{{ field|humanize }}') ?></th>
+  {% endfor %}
+                  <th scope="col" class="actions text-center"><?= __('Actions') ?></th>
+              </tr>
+              <?php foreach (${{ singularVar }}->{{ details.property }} as ${{ otherSingularVar }}): ?>
+              <tr>
+  {% for field in details.fields %}
+                  <td><?= h(${{ otherSingularVar }}->{{ field }}) ?></td>
+  {% endfor %}
+  {% set otherPk = '$' ~ otherSingularVar ~ '->' ~ details.primaryKey[0] %}
+                  <td class="actions text-right">
+                      <?= $this->Html->link(__('View'), ['controller' => '{{ details.controller }}', 'action' => 'view', {{ otherPk|raw }}], ['class'=>'btn btn-info btn-xs']) ?>
+                      <?= $this->Html->link(__('Edit'), ['controller' => '{{ details.controller }}', 'action' => 'edit', {{ otherPk|raw }}], ['class'=>'btn btn-warning btn-xs']) ?>
+                      <?= $this->Form->postLink(__('Delete'), ['controller' => '{{ details.controller }}', 'action' => 'delete', {{ otherPk|raw }}], ['confirm' => __('Are you sure you want to delete # {0}?', {{ otherPk|raw }}), 'class'=>'btn btn-danger btn-xs']) ?>
+                  </td>
+              </tr>
+              <?php endforeach; ?>
+          </table>
+          <?php endif; ?>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</section>
