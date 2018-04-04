@@ -117,11 +117,11 @@
       <div class="row">
         <!-- accepted payments column -->
         <div class="col-xs-6">
-            <p class="lead">Payment Methods:</p>
-            <?php echo $this->Html->image('credit/visa.png', array('alt' => 'Visa')); ?>
-            <?php echo $this->Html->image('credit/mastercard.png', array('alt' => 'Mastercard')); ?>
-            <?php echo $this->Html->image('credit/american-express.png', array('alt' => 'American Express')); ?>
-            <?php echo $this->Html->image('credit/paypal2.png', array('alt' => 'Paypal')); ?>
+          <p class="lead">Payment Methods:</p>
+          <?php echo $this->Html->image('credit/visa.png', array('alt' => 'Visa')); ?>
+          <?php echo $this->Html->image('credit/mastercard.png', array('alt' => 'Mastercard')); ?>
+          <?php echo $this->Html->image('credit/american-express.png', array('alt' => 'American Express')); ?>
+          <?php echo $this->Html->image('credit/paypal2.png', array('alt' => 'Paypal')); ?>
 
           <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
             Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg
@@ -160,7 +160,7 @@
       <!-- this row will not appear when printing -->
       <div class="row no-print">
         <div class="col-xs-12">
-          <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'examples', 'invoice-print')); ?>" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
+          <a href="<?php echo $this->Url->build(['controller' => 'pages', 'action' => 'display', 'examples', 'invoice-print']); ?>" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
           <button type="button" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment
           </button>
           <button type="button" class="btn btn-primary pull-right" style="margin-right: 5px;">
