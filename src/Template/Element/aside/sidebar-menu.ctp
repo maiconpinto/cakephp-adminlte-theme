@@ -59,12 +59,12 @@
       </span>
     </a>
     <ul class="treeview-menu">
-      <li><a href="<?php echo $this->Url->build('pages/UI/general'); ?>"><i class="fa fa-circle-o"></i> General</a></li>
-      <li><a href="<?php echo $this->Url->build('pages/UI/icons'); ?>"><i class="fa fa-circle-o"></i> Icons</a></li>
-      <li><a href="<?php echo $this->Url->build('pages/UI/buttons'); ?>"><i class="fa fa-circle-o"></i> Buttons</a></li>
-      <li><a href="<?php echo $this->Url->build('pages/UI/sliders'); ?>"><i class="fa fa-circle-o"></i> Sliders</a></li>
-      <li><a href="<?php echo $this->Url->build('pages/UI/timeline'); ?>"><i class="fa fa-circle-o"></i> Timeline</a></li>
-      <li><a href="<?php echo $this->Url->build('pages/UI/modals'); ?>"><i class="fa fa-circle-o"></i> Modals</a></li>
+      <li><a href="<?php echo $this->Url->build('pages/ui/general'); ?>"><i class="fa fa-circle-o"></i> General</a></li>
+      <li><a href="<?php echo $this->Url->build('pages/ui/icons'); ?>"><i class="fa fa-circle-o"></i> Icons</a></li>
+      <li><a href="<?php echo $this->Url->build('pages/ui/buttons'); ?>"><i class="fa fa-circle-o"></i> Buttons</a></li>
+      <li><a href="<?php echo $this->Url->build('pages/ui/sliders'); ?>"><i class="fa fa-circle-o"></i> Sliders</a></li>
+      <li><a href="<?php echo $this->Url->build('pages/ui/timeline'); ?>"><i class="fa fa-circle-o"></i> Timeline</a></li>
+      <li><a href="<?php echo $this->Url->build('pages/ui/modals'); ?>"><i class="fa fa-circle-o"></i> Modals</a></li>
     </ul>
   </li>
   <li class="treeview">
