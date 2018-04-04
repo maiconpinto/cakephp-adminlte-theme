@@ -180,7 +180,7 @@
     </section>
     <!-- /.content -->
 
-<?php echo $this->Html->script('demo', ['block' => 'script']); ?>
+<?php echo $this->Html->script('AdminLTE.demo', ['block' => 'script']); ?>
 
 <?php $this->start('css'); ?>
   <style>
