@@ -104,17 +104,12 @@
     </section>
     <!-- /.content -->
 
-<?php
-$this->Html->css([
-  'AdminLTE./plugins/morris/morris',
-],
-['block' => 'css']);
-$this->Html->script([
-  'https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js',
-  'AdminLTE./plugins/morris/morris.min',
-],
-['block' => 'script']);
-?>
+<!-- Morris charts -->
+<?php echo $this->Html->css('AdminLTE./bower_components/morris.js/morris', ['block' => 'css']); ?>
+
+<!-- Morris.js charts -->
+<?php echo $this->Html->script('AdminLTE./bower_components/raphael/raphael.min', ['block' => 'script']); ?>
+<?php echo $this->Html->script('AdminLTE./bower_components/morris.js/morris.min', ['block' => 'script']); ?>
 
 <?php $this->start('scriptBottom'); ?>
 <!-- page script -->
