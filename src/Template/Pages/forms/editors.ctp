@@ -68,27 +68,23 @@
     </section>
     <!-- /.content -->
 
-<?php
-$this->Html->css([
-    'AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min',
-  ],
-  ['block' => 'css']);
+<!-- bootstrap wysihtml5 - text editor -->
+<?php echo $this->Html->css('AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min', ['block' => 'css']); ?>
 
-$this->Html->script([
-  'https://cdn.ckeditor.com/4.5.7/standard/ckeditor.js',
-  'AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min',
-],
-['block' => 'script']);
-?>
+<!-- CK Editor -->
+<?php echo $this->Html->script('AdminLTE./bower_components/ckeditor/ckeditor', ['block' => 'script']); ?>
+<!-- Bootstrap WYSIHTML5 -->
+<?php echo $this->Html->script('AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min', ['block' => 'script']); ?>
+
 
 <?php $this->start('scriptBottom'); ?>
 <script>
   $(function () {
     // Replace the <textarea id="editor1"> with a CKEditor
     // instance, using default configuration.
-    CKEDITOR.replace('editor1');
+    CKEDITOR.replace('editor1')
     //bootstrap WYSIHTML5 - text editor
-    $(".textarea").wysihtml5();
-  });
+    $('.textarea').wysihtml5()
+  })
 </script>
 <?php $this->end(); ?>
