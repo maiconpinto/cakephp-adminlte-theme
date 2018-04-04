@@ -19,8 +19,34 @@
         <a href="http://getbootstrap.com/javascript/#modals">Bootstrap documentation</a>
       </div>
 
-      <div class="example-modal">
-        <div class="modal">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box box-default">
+            <div class="box-header with-border">
+              <h3 class="box-title">Modal Examples</h3>
+            </div>
+            <div class="box-body">
+              <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
+                Launch Default Modal
+              </button>
+              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">
+                Launch Info Modal
+              </button>
+              <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-danger">
+                Launch Danger Modal
+              </button>
+              <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-warning">
+                Launch Warning Modal
+              </button>
+              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-success">
+                Launch Success Modal
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="modal fade" id="modal-default">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -41,11 +67,8 @@
           <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
-      </div>
-      <!-- /.example-modal -->
 
-      <div class="example-modal">
-        <div class="modal modal-primary">
+        <div class="modal modal-primary fade" id="modal-primary">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -66,11 +89,8 @@
           <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
-      </div>
-      <!-- /.example-modal -->
 
-      <div class="example-modal">
-        <div class="modal modal-info">
+        <div class="modal modal-info fade" id="modal-info">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -91,11 +111,8 @@
           <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
-      </div>
-      <!-- /.example-modal -->
 
-      <div class="example-modal">
-        <div class="modal modal-warning">
+        <div class="modal modal-warning fade" id="modal-warning">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -116,11 +133,8 @@
           <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
-      </div>
-      <!-- /.example-modal -->
 
-      <div class="example-modal">
-        <div class="modal modal-success">
+        <div class="modal modal-success fade" id="modal-success">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -141,11 +155,8 @@
           <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
-      </div>
-      <!-- /.example-modal -->
 
-      <div class="example-modal">
-        <div class="modal modal-danger">
+        <div class="modal modal-danger fade" id="modal-danger">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -166,10 +177,10 @@
           <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
-      </div>
-      <!-- /.example-modal -->
     </section>
     <!-- /.content -->
+
+<?php echo $this->Html->script('demo', ['block' => 'script']); ?>
 
 <?php $this->start('css'); ?>
   <style>
