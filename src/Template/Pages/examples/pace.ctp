@@ -28,17 +28,17 @@
         </div>
         <div class="box-body">
           Pace loading works automatically on page. You can still implement it with ajax requests by adding this js:
-          <br /><code>$(document).ajaxStart(function() { Pace.restart(); });</code>
-          <br />
+          <br/><code>$(document).ajaxStart(function() { Pace.restart(); });</code>
+          <br/>
           <div class="row">
-          <div class="col-xs-12 text-center">
-          <button type="button" class="btn btn-default btn-lrg ajax" title="Ajax Request">
-            <i class="fa fa-spin fa-refresh"></i>&nbsp; Get External Content
-          </button>
-          </div>
-          </div>
-            <div class="ajax-content">
+            <div class="col-xs-12 text-center">
+              <button type="button" class="btn btn-default btn-lrg ajax" title="Ajax Request">
+                <i class="fa fa-spin fa-refresh"></i>&nbsp; Get External Content
+              </button>
             </div>
+          </div>
+          <div class="ajax-content">
+          </div>
         </div>
         <!-- /.box-body -->
         <div class="box-footer">
@@ -50,26 +50,25 @@
 
     </section>
     <!-- /.content -->
-<?php
-$this->Html->css([
-    'AdminLTE./plugins/pace/pace.min',
-  ],
-  ['block' => 'css']);
 
-$this->Html->script([
-    'AdminLTE./plugins/pace/pace.min',
-  ],
-  ['block' => 'script']);
-?>
+<!-- Pace style -->
+<?php echo $this->Html->css('AdminLTE./plugins/pace/pace.min', ['block' => 'css']); ?>
+
+<!-- PACE -->
+<?php echo $this->Html->script('AdminLTE./bower_components/PACE/pace.min', ['block' => 'script']); ?>
 
 <?php $this->start('scriptBottom'); ?>
 <script type="text/javascript">
-    // To make Pace works on Ajax calls
-    $(document).ajaxStart(function() { Pace.restart(); });
-    $('.ajax').click(function(){
-        $.ajax({url: '#', success: function(result){
-            $('.ajax-content').html('<hr>Ajax Request Completed !');
-        }});
-    });
+  // To make Pace works on Ajax calls
+  $(document).ajaxStart(function () {
+    Pace.restart()
+  })
+  $('.ajax').click(function () {
+    $.ajax({
+      url: '#', success: function (result) {
+        $('.ajax-content').html('<hr>Ajax Request Completed !')
+      }
+    })
+  })
 </script>
 <?php $this->end(); ?>
