@@ -908,8 +908,6 @@
 <?php echo $this->Html->script('AdminLTE./bower_components/datatables.net/js/jquery.dataTables.min', ['block' => 'script']); ?>
 <?php echo $this->Html->script('AdminLTE./bower_components/datatables.net-bs/js/dataTables.bootstrap.min', ['block' => 'script']); ?>
 
-<?php echo $this->Html->script('AdminLTE.demo', ['block' => 'script']); ?>
-
 <?php $this->start('scriptBottom'); ?>
 <script>
   $(function () {

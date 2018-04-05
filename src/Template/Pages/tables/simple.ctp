@@ -338,5 +338,3 @@
       </div>
     </section>
     <!-- /.content -->
-
-<?php echo $this->Html->script('AdminLTE.demo', ['block' => 'script']); ?>
