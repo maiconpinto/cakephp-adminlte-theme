@@ -1,5 +1,5 @@
 <?php $this->layout = 'AdminLTE.register'; ?>
-<?php echo $this->Form->create('User'); ?>
+<?php echo $this->Form->create(); ?>
   <div class="form-group has-feedback">
     <input type="text" class="form-control" placeholder="Full name">
     <span class="glyphicon glyphicon-user form-control-feedback"></span>
