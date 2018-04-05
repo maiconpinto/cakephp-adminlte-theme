@@ -21,7 +21,7 @@
 
           <p>
             We will work on fixing that right away.
-            Meanwhile, you may <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'home')); ?>">return to dashboard</a> or try using the search form.
+            Meanwhile, you may <a href="<?php echo $this->Url->build('pages/home'); ?>">return to dashboard</a> or try using the search form.
           </p>
 
           <form class="search-form">
