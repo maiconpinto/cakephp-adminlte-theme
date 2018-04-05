@@ -1,6 +1,6 @@
 <?php $this->layout = 'AdminLTE.login'; ?>
 
-<form action="<?php echo $this->Url->build(array('controller' => 'users', 'action' => 'login')); ?>" method="post">
+<form action="<?php echo $this->Url->build(['controller' => 'users', 'action' => 'login']); ?>" method="post">
   <div class="form-group has-feedback">
     <input type="text" class="form-control" placeholder="E-mail" name="email">
     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
