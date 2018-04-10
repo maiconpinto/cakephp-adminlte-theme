@@ -1,8 +1,4 @@
-<?php
-
-use Cake\Core\Configure;
-
-?>
+<?php use Cake\Core\Configure; ?>
 <nav class="navbar navbar-static-top">
 
   <?php if (isset($layout) && $layout == 'top'): ?>
