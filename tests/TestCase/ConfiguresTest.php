@@ -31,5 +31,26 @@ class ConfiguresTest extends TestCase
         include dirname(dirname(dirname(__FILE__))) . '/config/bootstrap.php';
         $this->assertEquals($expected, Configure::read('Theme'));
     }
-}
 
+    public function testNotOverridingUserConfigures()
+    {
+        $expected = [
+            'title' => 'my site name',
+            'logo' => [
+                'mini' => 'ALT',
+                'large' => 'AdminLTE'
+            ],
+            'login' => [
+                'show_remember' => false,
+                'show_register' => false,
+                'show_social' => false
+            ],
+            'folder' => ROOT . DS . 'sub',
+            'skin' => 'red'
+        ];
+
+        Configure::write('Theme', $expected);
+        include dirname(dirname(dirname(__FILE__))) . '/config/bootstrap.php';
+        $this->assertEquals($expected, Configure::read('Theme'));
+    }
+}
