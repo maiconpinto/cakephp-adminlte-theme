@@ -13,20 +13,22 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
+title: CakePHP AdminLTE Theme
+email: maiconsilva.pinto@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  A CakePHP Theme based on AdminLTE Template. This theme was created thinking to facility the life of many developers that need to do aplications faster and better, like CakePHP filosofy. 
+  Some steps and you already to start new elegant Panel. Join in group that use this simple and practical theme.
+  The theme was installed more than 55K times.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: maiconpinto
+github_username:  maiconpinto
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-prettydocs
+# for theme hosted on github
+#remote_theme: jekyll-theme-prettydocs
 plugins:
   - jekyll-feed
 
@@ -41,3 +43,16 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+
+branding_title: <span class="text-highlight">CakePHP</span><span class="text-bold">AdminLTE</span>
+tagline_subtitle: >-
+  A CakePHP Theme based on AdminLTE Template.
+socials: true
+github_repository: cakephp-adminlte-theme
+download_url: https://github.com/maiconpinto/cakephp-adminlte-theme/archive/master.zip
+card_components: false
+card_charts: false
+card_faqs: false
+card_showcase: false
+card_license: false
