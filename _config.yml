@@ -26,9 +26,9 @@ github_username:  maiconpinto
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-prettydocs
+#theme: jekyll-theme-prettydocs
 # for theme hosted on github
-#remote_theme: jekyll-theme-prettydocs
+remote_theme: maiconpinto/jekyll-theme-prettydocs
 plugins:
   - jekyll-feed
 
