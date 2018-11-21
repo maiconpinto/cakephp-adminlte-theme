@@ -19,7 +19,7 @@
           <!-- Profile Image -->
           <div class="box box-primary">
             <div class="box-body box-profile">
-              <?php echo $this->Html->image('user4-128x128.jpg', array('class' => 'profile-user-img img-responsive img-circle', 'alt' => 'User profile picture')); ?>
+              <?php echo $this->Html->image('user4-128x128.jpg', ['class' => 'profile-user-img img-responsive img-circle', 'alt' => 'User profile picture']); ?>
 
               <h3 class="profile-username text-center">Nina Mcintire</h3>
 
@@ -97,7 +97,7 @@
                 <!-- Post -->
                 <div class="post">
                   <div class="user-block">
-                    <?php echo $this->Html->image('user1-128x128.jpg', array('class' => 'img-circle img-bordered-sm', 'alt' => 'User Image')); ?>
+                    <?php echo $this->Html->image('user1-128x128.jpg', ['class' => 'img-circle img-bordered-sm', 'alt' => 'User Image']); ?>
                         <span class="username">
                           <a href="#">Jonathan Burke Jr.</a>
                           <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
@@ -128,7 +128,7 @@
                 <!-- Post -->
                 <div class="post clearfix">
                   <div class="user-block">
-                    <?php echo $this->Html->image('user7-128x128.jpg', array('class' => 'img-circle img-bordered-sm', 'alt' => 'User Image')); ?>
+                    <?php echo $this->Html->image('user7-128x128.jpg', ['class' => 'img-circle img-bordered-sm', 'alt' => 'User Image']); ?>
                         <span class="username">
                           <a href="#">Sarah Ross</a>
                           <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
@@ -160,7 +160,7 @@
                 <!-- Post -->
                 <div class="post">
                   <div class="user-block">
-                    <?php echo $this->Html->image('user6-128x128.jpg', array('class' => 'img-circle img-bordered-sm', 'alt' => 'user image')); ?>
+                    <?php echo $this->Html->image('user6-128x128.jpg', ['class' => 'img-circle img-bordered-sm', 'alt' => 'user image']); ?>
                         <span class="username">
                           <a href="#">Adam Jones</a>
                           <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
@@ -170,21 +170,21 @@
                   <!-- /.user-block -->
                   <div class="row margin-bottom">
                     <div class="col-sm-6">
-                      <?php echo $this->Html->image('photo1.png', array('class' => 'img-responsive', 'alt' => 'Photo')); ?>
+                      <?php echo $this->Html->image('photo1.png', ['class' => 'img-responsive', 'alt' => 'Photo']); ?>
                     </div>
                     <!-- /.col -->
                     <div class="col-sm-6">
                       <div class="row">
                         <div class="col-sm-6">
-                          <?php echo $this->Html->image('photo2.png', array('class' => 'img-responsive', 'alt' => 'Photo')); ?>
-                      <br>
-                      <?php echo $this->Html->image('photo3.jpg', array('class' => 'img-responsive', 'alt' => 'Photo')); ?>
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-sm-6">
-                      <?php echo $this->Html->image('photo4.jpg', array('class' => 'img-responsive', 'alt' => 'Photo')); ?>
-                      <br>
-                      <?php echo $this->Html->image('photo1.png', array('class' => 'img-responsive', 'alt' => 'Photo')); ?>
+                          <?php echo $this->Html->image('photo2.png', ['class' => 'img-responsive', 'alt' => 'Photo']); ?>
+                          <br>
+                          <?php echo $this->Html->image('photo3.png', ['class' => 'img-responsive', 'alt' => 'Photo']); ?>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-6">
+                          <?php echo $this->Html->image('photo4.png', ['class' => 'img-responsive', 'alt' => 'Photo']); ?>
+                          <br>
+                          <?php echo $this->Html->image('photo1.png', ['class' => 'img-responsive', 'alt' => 'Photo']); ?>
                         </div>
                         <!-- /.col -->
                       </div>

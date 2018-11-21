@@ -1,19 +1,13 @@
-<?php
-use Cake\Core\Configure;
-
-$file = Configure::read('Theme.folder') . DS . 'src' . DS . 'Template' . DS . 'Element' . DS . 'footer.ctp';
-
-if (file_exists($file)) {
-    ob_start();
-    include_once $file;
-    echo ob_get_clean();
-} else {
-?>
 <footer class="main-footer">
+  <?php if (isset($layout) && $layout == 'top'): ?>
+  <div class="container">
+  <?php endif; ?>
     <div class="pull-right hidden-xs">
-        <b>Version</b> 2.3.11
+      <b>Version</b> 2.4.3
     </div>
-    <strong>Copyright &copy; 2014-2017 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
+    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
     reserved.
+  <?php if (isset($layout) && $layout == 'top'): ?>
+  </div>
+  <?php endif; ?>
 </footer>
-<?php } ?>

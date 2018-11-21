@@ -13,7 +13,7 @@
     <section class="content">
       <div class="row">
         <div class="col-md-3">
-          <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'mailbox', 'compose')); ?>" class="btn btn-primary btn-block margin-bottom">Compose</a>
+          <a href="<?php echo $this->Url->build(['controller' => 'pages', 'action' => 'display', 'mailbox', 'compose']); ?>" class="btn btn-primary btn-block margin-bottom">Compose</a>
 
           <div class="box box-solid">
             <div class="box-header with-border">
@@ -155,9 +155,7 @@
                   </div>
                 </li>
                 <li>
-                  <span class="mailbox-attachment-icon has-img">
-                    <?php echo $this->Html->image('photo1.png', ['alt' => 'Attachment']); ?>
-                  </span>
+                  <span class="mailbox-attachment-icon has-img"><?php echo $this->Html->image('photo1.png', ['alt' => 'Attachment']); ?></span>
 
                   <div class="mailbox-attachment-info">
                     <a href="#" class="mailbox-attachment-name"><i class="fa fa-camera"></i> photo1.png</a>
@@ -168,9 +166,7 @@
                   </div>
                 </li>
                 <li>
-                  <span class="mailbox-attachment-icon has-img">
-                    <?php echo $this->Html->image('photo2.png', ['alt' => 'Attachment']); ?>
-                  </span>
+                  <span class="mailbox-attachment-icon has-img"><?php echo $this->Html->image('photo2.png', ['alt' => 'Attachment']); ?></span>
 
                   <div class="mailbox-attachment-info">
                     <a href="#" class="mailbox-attachment-name"><i class="fa fa-camera"></i> photo2.png</a>
@@ -200,7 +196,6 @@
       <!-- /.row -->
     </section>
     <!-- /.content -->
-<?php
-$this->Html->css('AdminLTE./plugins/fullcalendar/fullcalendar.min', ['block' => 'css']);
-$this->Html->css('AdminLTE./plugins/fullcalendar/fullcalendar.print', ['block' => 'css', 'media' => 'print']);
-?>
+
+<!-- iCheck -->
+<?php echo $this->Html->css('AdminLTE./plugins/iCheck/flat/blue', ['block' => 'css']); ?>

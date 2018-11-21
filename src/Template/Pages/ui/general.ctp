@@ -910,7 +910,6 @@
     </section>
     <!-- /.content -->
 
-
 <?php $this->start('css'); ?>
 <style>
     .color-palette {

@@ -1,2 +1,0 @@
-<%
-echo $this->element('form');

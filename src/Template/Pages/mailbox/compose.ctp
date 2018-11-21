@@ -14,7 +14,7 @@
     <section class="content">
       <div class="row">
         <div class="col-md-3">
-          <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'mailbox', 'mailbox')); ?>" class="btn btn-primary btn-block margin-bottom">Back to Inbox</a>
+          <a href="<?php echo $this->Url->build(['controller' => 'pages', 'action' => 'display', 'mailbox', 'mailbox']); ?>" class="btn btn-primary btn-block margin-bottom">Back to Inbox</a>
 
           <div class="box box-solid">
             <div class="box-header with-border">
@@ -27,7 +27,7 @@
             </div>
             <div class="box-body no-padding">
               <ul class="nav nav-pills nav-stacked">
-                <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'mailbox', 'mailbox')); ?>"><i class="fa fa-inbox"></i> Inbox
+                <li><a href="<?php echo $this->Url->build(['controller' => 'pages', 'action' => 'display', 'mailbox', 'mailbox']); ?>"><i class="fa fa-inbox"></i> Inbox
                   <span class="label label-primary pull-right">12</span></a></li>
                 <li><a href="#"><i class="fa fa-envelope-o"></i> Sent</a></li>
                 <li><a href="#"><i class="fa fa-file-text-o"></i> Drafts</a></li>
@@ -127,18 +127,15 @@
     </section>
     <!-- /.content -->
 
-<?php
-$this->Html->css('AdminLTE./plugins/fullcalendar/fullcalendar.min', ['block' => 'css']);
-$this->Html->css('AdminLTE./plugins/fullcalendar/fullcalendar.print', ['block' => 'css', 'media' => 'print']);
-$this->Html->css('AdminLTE./plugins/iCheck/flat/blue', ['block' => 'css']);
-$this->Html->css('AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min', ['block' => 'css']);
+<!-- iCheck -->
+<?php echo $this->Html->css('AdminLTE./plugins/iCheck/flat/blue', ['block' => 'css']); ?>
+<!-- bootstrap wysihtml5 - text editor -->
+<?php echo $this->Html->css('AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihutml5.min', ['block' => 'css']); ?>
 
-$this->Html->script([
-  'AdminLTE./plugins/iCheck/icheck.min',
-  'AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min',
-],
-['block' => 'script']);
-?>
+<!-- iCheck -->
+<?php echo $this->Html->script('AdminLTE./plugins/iCheck/icheck.min', ['block' => 'script']); ?>
+<!-- Bootstrap WYSIHTML5 -->
+<?php echo $this->Html->script('AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min', ['block' => 'script']); ?>
 
 <?php $this->start('scriptBottom'); ?>
 <script>

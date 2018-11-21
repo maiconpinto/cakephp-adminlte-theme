@@ -901,31 +901,25 @@
     </section>
     <!-- /.content -->
 
-<?php
-$this->Html->css([
-    'AdminLTE./plugins/datatables/dataTables.bootstrap',
-  ],
-  ['block' => 'css']);
+<!-- DataTables -->
+<?php echo $this->Html->css('AdminLTE./bower_components/datatables.net-bs/css/dataTables.bootstrap.min', ['block' => 'css']); ?>
 
-$this->Html->script([
-  'AdminLTE./plugins/datatables/jquery.dataTables.min',
-  'AdminLTE./plugins/datatables/dataTables.bootstrap.min',
-],
-['block' => 'script']);
-?>
+<!-- DataTables -->
+<?php echo $this->Html->script('AdminLTE./bower_components/datatables.net/js/jquery.dataTables.min', ['block' => 'script']); ?>
+<?php echo $this->Html->script('AdminLTE./bower_components/datatables.net-bs/js/dataTables.bootstrap.min', ['block' => 'script']); ?>
 
 <?php $this->start('scriptBottom'); ?>
 <script>
   $(function () {
-    $("#example1").DataTable();
+    $('#example1').DataTable()
     $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false
-    });
-  });
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
 </script>
 <?php $this->end(); ?>

@@ -14,7 +14,7 @@
     <section class="content">
       <div class="row">
         <div class="col-md-3">
-          <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'mailbox', 'compose')); ?>" class="btn btn-primary btn-block margin-bottom">Compose</a>
+          <a href="<?php echo $this->Url->build(['controller' => 'pages', 'action' => 'display', 'mailbox', 'compose']); ?>" class="btn btn-primary btn-block margin-bottom">Compose</a>
 
           <div class="box box-solid">
             <div class="box-header with-border">
@@ -102,7 +102,7 @@
                   <tr>
                     <td><input type="checkbox"></td>
                     <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
-                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail')); ?>">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(['controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail']); ?>">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"></td>
@@ -111,7 +111,7 @@
                   <tr>
                     <td><input type="checkbox"></td>
                     <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
-                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail')); ?>">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(['controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail']); ?>">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
@@ -120,7 +120,7 @@
                   <tr>
                     <td><input type="checkbox"></td>
                     <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
-                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail')); ?>">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(['controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail']); ?>">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
@@ -129,7 +129,7 @@
                   <tr>
                     <td><input type="checkbox"></td>
                     <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
-                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail')); ?>">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(['controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail']); ?>">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"></td>
@@ -138,7 +138,7 @@
                   <tr>
                     <td><input type="checkbox"></td>
                     <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
-                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail')); ?>">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(['controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail']); ?>">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
@@ -147,7 +147,7 @@
                   <tr>
                     <td><input type="checkbox"></td>
                     <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
-                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail')); ?>">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(['controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail']); ?>">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
@@ -156,7 +156,7 @@
                   <tr>
                     <td><input type="checkbox"></td>
                     <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
-                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail')); ?>">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(['controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail']); ?>">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
@@ -165,7 +165,7 @@
                   <tr>
                     <td><input type="checkbox"></td>
                     <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
-                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail')); ?>">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(['controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail']); ?>">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"></td>
@@ -174,7 +174,7 @@
                   <tr>
                     <td><input type="checkbox"></td>
                     <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
-                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail')); ?>">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(['controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail']); ?>">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"></td>
@@ -183,7 +183,7 @@
                   <tr>
                     <td><input type="checkbox"></td>
                     <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
-                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail')); ?>">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(['controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail']); ?>">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"></td>
@@ -192,7 +192,7 @@
                   <tr>
                     <td><input type="checkbox"></td>
                     <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
-                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail')); ?>">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(['controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail']); ?>">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
@@ -201,7 +201,7 @@
                   <tr>
                     <td><input type="checkbox"></td>
                     <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
-                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail')); ?>">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(['controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail']); ?>">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"></td>
@@ -210,7 +210,7 @@
                   <tr>
                     <td><input type="checkbox"></td>
                     <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
-                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail')); ?>">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(['controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail']); ?>">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
@@ -219,7 +219,7 @@
                   <tr>
                     <td><input type="checkbox"></td>
                     <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
-                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail')); ?>">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(['controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail']); ?>">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
@@ -228,7 +228,7 @@
                   <tr>
                     <td><input type="checkbox"></td>
                     <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
-                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail')); ?>">Alexander Pierce</a></td>
+                    <td class="mailbox-name"><a href="<?php echo $this->Url->build(['controller' => 'pages', 'action' => 'display', 'mailbox', 'read-mail']); ?>">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
@@ -273,16 +273,11 @@
     </section>
     <!-- /.content -->
 
-<?php
-$this->Html->css('AdminLTE./plugins/fullcalendar/fullcalendar.min', ['block' => 'css']);
-$this->Html->css('AdminLTE./plugins/fullcalendar/fullcalendar.print', ['block' => 'css', 'media' => 'print']);
-$this->Html->css('AdminLTE./plugins/iCheck/flat/blue', ['block' => 'css']);
+<!-- iCheck -->
+<?php echo $this->Html->css('AdminLTE./plugins/iCheck/flat/blue', ['block' => 'css']); ?>
 
-$this->Html->script([
-  'AdminLTE./plugins/iCheck/icheck.min',
-],
-['block' => 'script']);
-?>
+<!-- iCheck -->
+<?php echo $this->Html->script('AdminLTE./plugins/iCheck/icheck.min', ['block' => 'script']); ?>
 
 <?php $this->start('scriptBottom'); ?>
 <script>

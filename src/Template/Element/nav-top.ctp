@@ -1,19 +1,51 @@
-<?php
-use Cake\Core\Configure;
-
-$file = Configure::read('Theme.folder') . DS . 'src' . DS . 'Template' . DS . 'Element' . DS . 'nav-top.ctp';
-
-if (file_exists($file)) {
-    ob_start();
-    include_once $file;
-    echo ob_get_clean();
-} else {
-?>
+<?php use Cake\Core\Configure; ?>
 <nav class="navbar navbar-static-top">
-  <!-- Sidebar toggle button-->
-  <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-    <span class="sr-only">Toggle navigation</span>
-  </a>
+
+  <?php if (isset($layout) && $layout == 'top'): ?>
+  <div class="container">
+
+    <div class="navbar-header">
+      <a href="<?php echo $this->Url->build('/'); ?>" class="navbar-brand"><?php echo Configure::read('Theme.logo.large') ?></a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" id="navbar-search-input" placeholder="Search">
+        </div>
+      </form>
+    </div>
+    <!-- /.navbar-collapse -->
+  <?php else: ?>
+
+    <!-- Sidebar toggle button-->
+    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+      <span class="sr-only">Toggle navigation</span>
+    </a>
+
+  <?php endif; ?>
+
+
 
   <div class="navbar-custom-menu">
     <ul class="nav navbar-nav">
@@ -154,7 +186,8 @@ if (file_exists($file)) {
                     <small class="pull-right">20%</small>
                   </h3>
                   <div class="progress xs">
-                    <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
+                         aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                       <span class="sr-only">20% Complete</span>
                     </div>
                   </div>
@@ -168,7 +201,8 @@ if (file_exists($file)) {
                     <small class="pull-right">40%</small>
                   </h3>
                   <div class="progress xs">
-                    <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar"
+                         aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                       <span class="sr-only">40% Complete</span>
                     </div>
                   </div>
@@ -182,7 +216,8 @@ if (file_exists($file)) {
                     <small class="pull-right">60%</small>
                   </h3>
                   <div class="progress xs">
-                    <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar"
+                         aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                       <span class="sr-only">60% Complete</span>
                     </div>
                   </div>
@@ -196,7 +231,8 @@ if (file_exists($file)) {
                     <small class="pull-right">80%</small>
                   </h3>
                   <div class="progress xs">
-                    <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar"
+                         aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                       <span class="sr-only">80% Complete</span>
                     </div>
                   </div>
@@ -253,12 +289,15 @@ if (file_exists($file)) {
         </ul>
       </li>
       <!-- Control Sidebar Toggle Button -->
+      <?php if (!isset($layout)): ?>
       <li>
         <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
       </li>
+      <?php endif; ?>
     </ul>
   </div>
+
+  <?php if (isset($layout) && $layout == 'top'): ?>
+  </div>
+  <?php endif; ?>
 </nav>
-<?php
-}
-?>

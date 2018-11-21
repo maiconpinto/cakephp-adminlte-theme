@@ -373,13 +373,10 @@
     </section>
     <!-- /.content -->
 
-<?php
-$this->Html->script([
-  'AdminLTE./plugins/knob/jquery.knob',
-  'AdminLTE./plugins/sparkline/jquery.sparkline.min',
-],
-['block' => 'script']);
-?>
+<!-- jQuery Knob -->
+<?php echo $this->Html->script('AdminLTE./bower_components/jquery-knob/js/jquery.knob', ['block' => 'script']); ?>
+<!-- Sparkline -->
+<?php echo $this->Html->script('AdminLTE./bower_components/jquery-sparkline/dist/jquery.sparkline.min', ['block' => 'script']); ?>
 
 <?php $this->start('scriptBottom'); ?>
 <script>
