@@ -1,37 +1,37 @@
 <?php
 /**
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * @link          https://cakephp.org CakePHP(tm) Project
  * @since         0.10.0
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 use Cake\Cache\Cache;
 use Cake\Core\Configure;
 use Cake\Core\Plugin;
 use Cake\Datasource\ConnectionManager;
 use Cake\Error\Debugger;
-use Cake\Network\Exception\NotFoundException;
+use Cake\Http\Exception\NotFoundException;
 
 //$this->layout = false;
 
-if (!Configure::read('debug')):
-    throw new NotFoundException('Please replace src/Template/Pages/home.ctp with your own version.');
+if (!Configure::read('debug')) :
+    throw new NotFoundException(
+        'Please replace src/Template/Pages/home.ctp with your own version or re-enable debug mode.'
+    );
 endif;
 
 ?>
 
 <!-- Content Header (Page header) -->
 <section class="content-header">
-  <h1>
-    Get the Ovens Ready
-  </h1>
+  <h1>Welcome to CakePHP <?= Configure::version() ?> Red Velvet. Build fast. Grow solid.</h1>
 </section>
 
 <!-- Main content -->
@@ -40,7 +40,7 @@ endif;
     <div class="row">
         <div class="col-md-12">
             <div class="callout callout-info">
-                Please be aware that this page will not be shown if you turn off debug mode unless you replace src/Template/Pages/home.ctp with your own version.
+                <p>Please be aware that this page will not be shown if you turn off debug mode unless you replace src/Template/Pages/home.ctp with your own version.</p>
             </div>
         </div>
     </div>
@@ -51,10 +51,10 @@ endif;
                 <?php Debugger::checkSecurityKeys(); ?>
                 <p class="problem">URL rewriting is not properly configured on your server.</p>
                 <p>
-                    1) <a target="_blank" href="http://book.cakephp.org/3.0/en/installation.html#url-rewriting">Help me configure it</a>
+                    1) <a target="_blank" href="https://book.cakephp.org/3.0/en/installation.html#url-rewriting">Help me configure it</a>
                 </p>
                 <p>
-                    2) <a target="_blank" href="http://book.cakephp.org/3.0/en/development/configuration.html#general-configuration">I don't / can't use URL rewriting</a>
+                    2) <a target="_blank" href="https://book.cakephp.org/3.0/en/development/configuration.html#general-configuration">I don't / can't use URL rewriting</a>
                 </p>
             </div>
         </div>
@@ -65,16 +65,16 @@ endif;
             <?php
             $class = 'callout-warning';
 
-            if (version_compare(PHP_VERSION, '5.5.9', '>=') && extension_loaded('mbstring') && (extension_loaded('openssl') || extension_loaded('mcrypt')) && extension_loaded('intl')) {
+            if (version_compare(PHP_VERSION, '5.6.0', '>=') && extension_loaded('mbstring') && (extension_loaded('openssl') || extension_loaded('mcrypt')) && extension_loaded('intl')) {
                 $class = 'callout-success';
             }
             ?>
             <div class="callout <?= $class ?>">
                 <h4>Environment</h4>
-                    <?php if (version_compare(PHP_VERSION, '5.5.9', '>=')): ?>
-                        <p class="success">Your version of PHP is 5.5.9 or higher (detected <?= phpversion() ?>).</p>
+                    <?php if (version_compare(PHP_VERSION, '5.6.0', '>=')): ?>
+                        <p class="success">Your version of PHP is 5.6.0 or higher (detected <?= PHP_VERSION ?>).</p>
                     <?php else: ?>
-                        <p class="problem">Your version of PHP is too low. You need PHP 5.5.9 or higher to use CakePHP (detected <?= phpversion() ?>).</p>
+                        <p class="problem">Your version of PHP is too low. You need PHP 5.6.0 or higher to use CakePHP (detected <?= PHP_VERSION ?>).</p>
                     <?php endif; ?>
 
                     <?php if (extension_loaded('mbstring')): ?>
@@ -195,8 +195,7 @@ endif;
                 <h3>Getting Started</h3>
                 <ul>
                     <li><a target="_blank" href="http://book.cakephp.org/3.0/en/">CakePHP 3.0 Docs</a></li>
-                    <li><a target="_blank" href="http://book.cakephp.org/3.0/en/tutorials-and-examples/bookmarks/intro.html">The 15 min Bookmarker Tutorial</a></li>
-                    <li><a target="_blank" href="http://book.cakephp.org/3.0/en/tutorials-and-examples/blog/blog.html">The 15 min Blog Tutorial</a></li>
+                    <li><a target="_blank" href="https://book.cakephp.org/3.0/en/tutorials-and-examples/cms/installation.html">The 20 min CMS Tutorial</a></li>
                 </ul>
             </div>
         </div>
@@ -220,12 +219,16 @@ endif;
                         <ul><li>Live chat about CakePHP</li></ul>
                     </li>
                     <li>
+                        <a href="http://cakesf.herokuapp.com/">Slack</a>
+                        <ul><li>CakePHP Slack support</li></ul>
+                    </li>
+                    <li>
                         <a href="https://github.com/cakephp/cakephp/issues">CakePHP Issues</a>
                         <ul><li>CakePHP issues and pull requests</li></ul>
                     </li>
                     <li>
-                        <a href="https://groups.google.com/group/cake-php">CakePHP Google Group</a>
-                        <ul><li>Community mailing list</li></ul>
+                        <a href="http://discourse.cakephp.org">CakePHP Forum</a>
+                        <ul><li>CakePHP official discussion forum</li></ul>
                     </li>
                 </ul>
 
