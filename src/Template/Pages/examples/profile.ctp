@@ -178,11 +178,11 @@
                         <div class="col-sm-6">
                           <?php echo $this->Html->image('photo2.png', ['class' => 'img-responsive', 'alt' => 'Photo']); ?>
                           <br>
-                          <?php echo $this->Html->image('photo3.png', ['class' => 'img-responsive', 'alt' => 'Photo']); ?>
+                          <?php echo $this->Html->image('photo3.jpg', ['class' => 'img-responsive', 'alt' => 'Photo']); ?>
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-6">
-                          <?php echo $this->Html->image('photo4.png', ['class' => 'img-responsive', 'alt' => 'Photo']); ?>
+                          <?php echo $this->Html->image('photo4.jpg', ['class' => 'img-responsive', 'alt' => 'Photo']); ?>
                           <br>
                           <?php echo $this->Html->image('photo1.png', ['class' => 'img-responsive', 'alt' => 'Photo']); ?>
                         </div>
