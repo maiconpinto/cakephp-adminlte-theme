@@ -130,7 +130,7 @@
 <!-- iCheck -->
 <?php echo $this->Html->css('AdminLTE./plugins/iCheck/flat/blue', ['block' => 'css']); ?>
 <!-- bootstrap wysihtml5 - text editor -->
-<?php echo $this->Html->css('AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihutml5.min', ['block' => 'css']); ?>
+<?php echo $this->Html->css('AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min', ['block' => 'css']); ?>
 
 <!-- iCheck -->
 <?php echo $this->Html->script('AdminLTE./plugins/iCheck/icheck.min', ['block' => 'script']); ?>
