@@ -65,7 +65,7 @@ endif;
             <?php
             $class = 'callout-warning';
 
-            if (version_compare(PHP_VERSION, '5.5.9', '>=') && extension_loaded('mbstring') && extension_loaded('openssl') && extension_loaded('mcrypt') && extension_loaded('intl')) {
+            if (version_compare(PHP_VERSION, '5.5.9', '>=') && extension_loaded('mbstring') && (extension_loaded('openssl') || extension_loaded('mcrypt')) && extension_loaded('intl')) {
                 $class = 'callout-success';
             }
             ?>
@@ -103,7 +103,7 @@ endif;
     <div class="row">
         <div class="col-md-12">
             <?php
-            $settings = Cache::config('_cake_core_');
+            $settings = Cache::getConfig('_cake_core_');
             $class = 'callout-warning';
 
             if (is_writable(TMP) && is_writable(LOGS) && !empty($settings)) {
@@ -166,7 +166,7 @@ endif;
 
     <div class="row">
         <div class="col-md-12">
-            <?php if (Plugin::loaded('DebugKit')): ?>
+            <?php if (Plugin::isLoaded('DebugKit')): ?>
                 <div class="callout callout-success">
                     <h4>DebugKit</h4>
                         <p class="success">DebugKit is loaded.</p>
