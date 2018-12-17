@@ -1,4 +1,12 @@
-# CakePHP AdminLTE Theme
+# CakePHP AdminLTE Theme (1.1.0)
+
+New theme version is coming.
+
+The AdminLTE was updated version to 2.4.5.
+
+The CakePHP was updated version to 3.7.0.
+
+Everything in CakePHP AdminLTE Theme version 1.1.0.
 
 ## Installation
 
