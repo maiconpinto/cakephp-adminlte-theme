@@ -11,10 +11,18 @@ composer require maiconpinto/cakephp-adminlte-theme
 ### Enable Plugin
 
 ```php
+// src/Application.php
+
+public function bootstrap()
+{
+    $this->addPlugin('AdminLTE');
+}
+
+For CakePHP before 3.7
+
 // config/bootstrap.php
 
 Plugin::load('AdminLTE', ['bootstrap' => true, 'routes' => true]);
-
 ```
 
 ### Enable theme
@@ -45,6 +53,33 @@ public function initialize()
 ### Configure
 
 ```php
+// config/adminlte.php
+
+return [
+    'Theme' => [
+        'title' => 'AdminLTE',
+        'logo' => [
+            'mini' => '<b>A</b>LT',
+            'large' => '<b>Admin</b>LTE'
+        ],
+        'login' => [
+            'show_remember' => true,
+            'show_register' => true,
+            'show_social' => true
+        ],
+        'folder' => ROOT,
+        'skin' => 'blue'
+    ]
+];
+
+// config/bootstrap.php
+
+Configure::load('adminlte', 'default');
+```
+
+```php
+// For CakePHP before 3.7
+
 // To customize configuration paste it at end of file config/bootstrap.php
 
 Configure::write('Theme', [
