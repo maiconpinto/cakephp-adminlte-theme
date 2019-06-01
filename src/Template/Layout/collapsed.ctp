@@ -94,7 +94,7 @@
             size: "3px"
         }).css("width", "100%");
 
-        var a = $('a[href="<?php echo $this->request->webroot . $this->request->url ?>"]');
+        var a = $('a[href="<?php echo $this->request->getAttribute('webroot') . $this->request->getPath() ?>"]');
         if (!a.parent().hasClass('treeview')) {
             a.parent().addClass('active').parents('.treeview').addClass('active');
         }
