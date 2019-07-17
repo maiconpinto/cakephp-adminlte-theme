@@ -69,6 +69,12 @@ class FormHelper extends CakeFormHelper {
         return parent::submit($caption, $options);
     }
 
+    /**
+     * 
+     * {@inheritDoc}
+     * @see \Cake\View\Helper\FormHelper::input()
+     * @deprecated 1.1.1 Use FormHelper::control() instead, due to \Cake\View\Helper\FormHelper::input() deprecation 
+     */
     public function input($fieldName, array $options = [])
     {
 
@@ -91,7 +97,7 @@ class FormHelper extends CakeFormHelper {
 
         $options += $_options;
 
-        return parent::input($fieldName, $options);
+        return parent::control($fieldName, $options);
     }
 	public function control($fieldName, array $options = [])
 	{
