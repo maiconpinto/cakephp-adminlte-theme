@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  install:
+    image: jekyll/jekyll
+    command: bundle install
+    volumes:
+      - ./vendor/bundle:/usr/local/bundle
+      - ./:/srv/jekyll
+  server:
+    image: jekyll/jekyll
+    command: jekyll s
+    ports:
+      - 4000:4000
+    volumes:
+      - ./vendor/bundle:/usr/local/bundle
+      - ./:/srv/jekyll
