@@ -9,7 +9,7 @@ services:
       - ./:/srv/jekyll
   server:
     image: jekyll/jekyll
-    command: jekyll s
+    command: jekyll s --config _config.yml,_config.dev.yml
     ports:
       - 4000:4000
     volumes:
