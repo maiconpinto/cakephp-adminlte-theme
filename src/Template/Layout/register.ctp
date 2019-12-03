@@ -7,28 +7,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title><?php echo Configure::read('Theme.title'); ?> | <?php echo $this->fetch('title'); ?></title>
   <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.7 -->
-  <?php echo $this->Html->css('AdminLTE./bower_components/bootstrap/dist/css/bootstrap.min'); ?>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
-  <?php echo $this->Html->css('AdminLTE./bower_components/font-awesome/css/font-awesome.min'); ?>
+  <?php echo $this->Html->css('AdminLTE./plugins/fontawesome-free/css/all.min'); ?>
   <!-- Ionicons -->
-  <?php echo $this->Html->css('AdminLTE./bower_components/Ionicons/css/ionicons.min'); ?>
+  <?php echo $this->Html->css('//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'); ?>
+  <!-- icheck bootstrap -->
+  <?php echo $this->Html->css('AdminLTE./plugins/icheck-bootstrap/icheck-bootstrap.min'); ?>
   <!-- Theme style -->
-  <?php echo $this->Html->css('AdminLTE.AdminLTE.min'); ?>
-  <!-- iCheck -->
-  <?php echo $this->Html->css('AdminLTE./plugins/iCheck/square/blue'); ?>
+  <?php echo $this->Html->css('AdminLTE.adminlte.min'); ?>
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
-  <!-- Google Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <?php echo $this->fetch('css'); ?>
 
 </head>
@@ -37,45 +27,20 @@
   <div class="register-logo">
     <a href="<?php echo $this->Url->build(); ?>"><?php echo Configure::read('Theme.logo.large') ?></a>
   </div>
-
-  <div class="register-box-body">
-    <p class="login-box-msg">Register a new membership</p>
-
-    <?php echo $this->fetch('content'); ?>
-
-    <div class="social-auth-links text-center">
-      <p>- OR -</p>
-      <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign up using
-        Facebook</a>
-      <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign up using
-        Google+</a>
-    </div>
-
-    <a href="<?php echo $this->Url->build('pages/examples/login'); ?>" class="text-center">I already have a membership</a>
-  </div>
+  <?php echo $this->fetch('content'); ?>
   <!-- /.form-box -->
 </div>
 <!-- /.register-box -->
 
-<!-- jQuery 3 -->
-<?php echo $this->Html->script('AdminLTE./bower_components/jquery/dist/jquery.min'); ?>
-<!-- Bootstrap 3.3.7 -->
-<?php echo $this->Html->script('AdminLTE./bower_components/bootstrap/dist/js/bootstrap.min'); ?>
-<!-- iCheck -->
-<?php echo $this->Html->script('AdminLTE./plugins/iCheck/icheck.min'); ?>
+<!-- jQuery -->
+<?php echo $this->Html->script('AdminLTE./plugins/jquery/jquery.min'); ?>
+<!-- Bootstrap 4 -->
+<?php echo $this->Html->script('AdminLTE./plugins/bootstrap/js/bootstrap.bundle.min'); ?>
+<!-- AdminLTE App -->
+<?php echo $this->Html->script('AdminLTE.adminlte.min'); ?>
 
 <?php echo $this->fetch('script'); ?>
 
 <?php echo $this->fetch('scriptBottom'); ?>
-
-<script>
-  $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' /* optional */
-    });
-  });
-</script>
 </body>
 </html>
