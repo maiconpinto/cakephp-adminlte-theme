@@ -1,147 +1,162 @@
 <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Flot Charts
-        <small>preview sample</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Charts</a></li>
-        <li class="active">Flot</li>
-      </ol>
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
-      <div class="row">
-        <div class="col-xs-12">
-          <!-- interactive chart -->
-          <div class="box box-primary">
-            <div class="box-header with-border">
-              <i class="fa fa-bar-chart-o"></i>
-
-              <h3 class="box-title">Interactive Area Chart</h3>
-
-              <div class="box-tools pull-right">
-                Real time
-                <div class="btn-group" id="realtime" data-toggle="btn-toggle">
-                  <button type="button" class="btn btn-default btn-xs active" data-toggle="on">On</button>
-                  <button type="button" class="btn btn-default btn-xs" data-toggle="off">Off</button>
-                </div>
-              </div>
-            </div>
-            <div class="box-body">
-              <div id="interactive" style="height: 300px;"></div>
-            </div>
-            <!-- /.box-body-->
-          </div>
-          <!-- /.box -->
-
-        </div>
-        <!-- /.col -->
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1>Flot Charts</h1>
       </div>
-      <!-- /.row -->
-
-      <div class="row">
-        <div class="col-md-6">
-          <!-- Line chart -->
-          <div class="box box-primary">
-            <div class="box-header with-border">
-              <i class="fa fa-bar-chart-o"></i>
-
-              <h3 class="box-title">Line Chart</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <div class="box-body">
-              <div id="line-chart" style="height: 300px;"></div>
-            </div>
-            <!-- /.box-body-->
-          </div>
-          <!-- /.box -->
-
-          <!-- Area chart -->
-          <div class="box box-primary">
-            <div class="box-header with-border">
-              <i class="fa fa-bar-chart-o"></i>
-
-              <h3 class="box-title">Full Width Area Chart</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <div class="box-body">
-              <div id="area-chart" style="height: 338px;" class="full-width-chart"></div>
-            </div>
-            <!-- /.box-body-->
-          </div>
-          <!-- /.box -->
-
-        </div>
-        <!-- /.col -->
-
-        <div class="col-md-6">
-          <!-- Bar chart -->
-          <div class="box box-primary">
-            <div class="box-header with-border">
-              <i class="fa fa-bar-chart-o"></i>
-
-              <h3 class="box-title">Bar Chart</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <div class="box-body">
-              <div id="bar-chart" style="height: 300px;"></div>
-            </div>
-            <!-- /.box-body-->
-          </div>
-          <!-- /.box -->
-
-          <!-- Donut chart -->
-          <div class="box box-primary">
-            <div class="box-header with-border">
-              <i class="fa fa-bar-chart-o"></i>
-
-              <h3 class="box-title">Donut Chart</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <div class="box-body">
-              <div id="donut-chart" style="height: 300px;"></div>
-            </div>
-            <!-- /.box-body-->
-          </div>
-          <!-- /.box -->
-        </div>
-        <!-- /.col -->
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">Flot</li>
+        </ol>
       </div>
-      <!-- /.row -->
-    </section>
-    <!-- /.content -->
+    </div>
+  </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <!-- interactive chart -->
+        <div class="card card-primary card-outline">
+          <div class="card-header">
+            <h3 class="card-title">
+              <i class="far fa-chart-bar"></i>
+              Interactive Area Chart
+            </h3>
+
+            <div class="card-tools">
+              Real time
+              <div class="btn-group" id="realtime" data-toggle="btn-toggle">
+                <button type="button" class="btn btn-default btn-sm active" data-toggle="on">On</button>
+                <button type="button" class="btn btn-default btn-sm" data-toggle="off">Off</button>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div id="interactive" style="height: 300px;"></div>
+          </div>
+          <!-- /.card-body-->
+        </div>
+        <!-- /.card -->
+
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Line chart -->
+        <div class="card card-primary card-outline">
+          <div class="card-header">
+            <h3 class="card-title">
+              <i class="far fa-chart-bar"></i>
+              Line Chart
+            </h3>
+
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div id="line-chart" style="height: 300px;"></div>
+          </div>
+          <!-- /.card-body-->
+        </div>
+        <!-- /.card -->
+
+        <!-- Area chart -->
+        <div class="card card-primary card-outline">
+          <div class="card-header">
+            <h3 class="card-title">
+              <i class="far fa-chart-bar"></i>
+              Area Chart
+            </h3>
+
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div id="area-chart" style="height: 338px;" class="full-width-chart"></div>
+          </div>
+          <!-- /.card-body-->
+        </div>
+        <!-- /.card -->
+
+      </div>
+      <!-- /.col -->
+
+      <div class="col-md-6">
+        <!-- Bar chart -->
+        <div class="card card-primary card-outline">
+          <div class="card-header">
+            <h3 class="card-title">
+              <i class="far fa-chart-bar"></i>
+              Bar Chart
+            </h3>
+
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-tool" data-card-widget="remove">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div id="bar-chart" style="height: 300px;"></div>
+          </div>
+          <!-- /.card-body-->
+        </div>
+        <!-- /.card -->
+
+        <!-- Donut chart -->
+        <div class="card card-primary card-outline">
+          <div class="card-header">
+            <h3 class="card-title">
+              <i class="far fa-chart-bar"></i>
+              Donut Chart
+            </h3>
+
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div id="donut-chart" style="height: 300px;"></div>
+          </div>
+          <!-- /.card-body-->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->
 
 <!-- FLOT CHARTS -->
-<?php echo $this->Html->script('AdminLTE./bower_components/Flot/jquery.flot', ['block' => 'script']); ?>
+<?php echo $this->Html->script('AdminLTE./plugins/flot/jquery.flot', ['block' => true]); ?>
 <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
-<?php echo $this->Html->script('AdminLTE./bower_components/Flot/jquery.flot.resize', ['block' => 'script']); ?>
+<?php echo $this->Html->script('AdminLTE./plugins/flot-old/jquery.flot.resize.min', ['block' => true]); ?>
 <!-- FLOT PIE PLUGIN - also used to draw donut charts -->
-<?php echo $this->Html->script('AdminLTE./bower_components/Flot/jquery.flot.pie', ['block' => 'script']); ?>
-<!-- FLOT CATEGORIES PLUGIN - Used to draw bar charts -->
-<?php echo $this->Html->script('AdminLTE./bower_components/Flot/jquery.flot.categories', ['block' => 'script']); ?>
+<?php echo $this->Html->script('AdminLTE./plugins/flot-old/jquery.flot.pie.min', ['block' => true]); ?>
 
 <?php $this->start('scriptBottom'); ?>
 <script>
@@ -152,12 +167,14 @@
      */
     // We use an inline data source in the example, usually data would
     // be fetched from a server
-    var data = [], totalPoints = 100
+    var data        = [],
+        totalPoints = 100
 
     function getRandomData() {
 
-      if (data.length > 0)
+      if (data.length > 0) {
         data = data.slice(1)
+      }
 
       // Do a random walk
       while (data.length < totalPoints) {
@@ -183,29 +200,35 @@
       return res
     }
 
-    var interactive_plot = $.plot('#interactive', [getRandomData()], {
-      grid  : {
-        borderColor: '#f3f3f3',
-        borderWidth: 1,
-        tickColor  : '#f3f3f3'
-      },
-      series: {
-        shadowSize: 0, // Drawing is faster without shadows
-        color     : '#3c8dbc'
-      },
-      lines : {
-        fill : true, //Converts the line chart to area chart
-        color: '#3c8dbc'
-      },
-      yaxis : {
-        min : 0,
-        max : 100,
-        show: true
-      },
-      xaxis : {
-        show: true
+    var interactive_plot = $.plot('#interactive', [
+        {
+          data: getRandomData(),
+        }
+      ],
+      {
+        grid: {
+          borderColor: '#f3f3f3',
+          borderWidth: 1,
+          tickColor: '#f3f3f3'
+        },
+        series: {
+          color: '#3c8dbc',
+          lines: {
+            lineWidth: 2,
+            show: true,
+            fill: true,
+          },
+        },
+        yaxis: {
+          min: 0,
+          max: 100,
+          show: true
+        },
+        xaxis: {
+          show: true
+        }
       }
-    })
+    )
 
     var updateInterval = 500 //Fetch data ever x milliseconds
     var realtime       = 'on' //If == to on then fetch data every x seconds. else stop fetching
@@ -215,8 +238,9 @@
 
       // Since the axes don't change, we don't need to call plot.setupGrid()
       interactive_plot.draw()
-      if (realtime === 'on')
+      if (realtime === 'on') {
         setTimeout(update, updateInterval)
+      }
     }
 
     //INITIALIZE REALTIME DATA FETCHING
@@ -237,13 +261,15 @@
      * END INTERACTIVE CHART
      */
 
+
     /*
      * LINE CHART
      * ----------
      */
     //LINE randomly generated data
 
-    var sin = [], cos = []
+    var sin = [],
+        cos = []
     for (var i = 0; i < 14; i += 0.5) {
       sin.push([i, Math.sin(i)])
       cos.push([i, Math.cos(i)])
@@ -296,7 +322,10 @@
             y = item.datapoint[1].toFixed(2)
 
         $('#line-chart-tooltip').html(item.series.label + ' of ' + x + ' = ' + y)
-          .css({ top: item.pageY + 5, left: item.pageX + 5 })
+          .css({
+            top : item.pageY + 5,
+            left: item.pageX + 5
+          })
           .fadeIn(200)
       } else {
         $('#line-chart-tooltip').hide()
@@ -318,10 +347,10 @@
       },
       series: {
         shadowSize: 0, // Drawing is faster without shadows
-        color     : '#00c0ef'
-      },
-      lines : {
-        fill: true //Converts the line chart to area chart
+        color     : '#00c0ef',
+        lines : {
+          fill: true //Converts the line chart to area chart
+        },
       },
       yaxis : {
         show: false
@@ -339,8 +368,8 @@
      */
 
     var bar_data = {
-      data : [['January', 10], ['February', 8], ['March', 4], ['April', 13], ['May', 17], ['June', 9]],
-      color: '#3c8dbc'
+      data : [[1,10], [2,8], [3,4], [4,13], [5,17], [6,9]],
+      bars: { show: true }
     }
     $.plot('#bar-chart', [bar_data], {
       grid  : {
@@ -349,15 +378,13 @@
         tickColor  : '#f3f3f3'
       },
       series: {
-        bars: {
-          show    : true,
-          barWidth: 0.5,
-          align   : 'center'
-        }
+         bars: {
+          show: true, barWidth: 0.5, align: 'center',
+        },
       },
+      colors: ['#3c8dbc'],
       xaxis : {
-        mode      : 'categories',
-        tickLength: 0
+        ticks: [[1,'January'], [2,'February'], [3,'March'], [4,'April'], [5,'May'], [6,'June']]
       }
     })
     /* END BAR CHART */
@@ -368,9 +395,21 @@
      */
 
     var donutData = [
-      { label: 'Series2', data: 30, color: '#3c8dbc' },
-      { label: 'Series3', data: 20, color: '#0073b7' },
-      { label: 'Series4', data: 50, color: '#00c0ef' }
+      {
+        label: 'Series2',
+        data : 30,
+        color: '#3c8dbc'
+      },
+      {
+        label: 'Series3',
+        data : 20,
+        color: '#0073b7'
+      },
+      {
+        label: 'Series4',
+        data : 50,
+        color: '#00c0ef'
+      }
     ]
     $.plot('#donut-chart', donutData, {
       series: {

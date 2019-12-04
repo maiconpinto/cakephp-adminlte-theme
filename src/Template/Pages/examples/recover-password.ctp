@@ -32,9 +32,6 @@
     <p class="mt-3 mb-1">
       <a href="<?= $this->Url->build('/pages/examples/login') ?>">Login</a>
     </p>
-    <p class="mb-0">
-      <a href="<?= $this->Url->build('/pages/examples/register') ?>" class="text-center">Register a new membership</a>
-    </p>
   </div>
   <!-- /.login-card-body -->
 </div>

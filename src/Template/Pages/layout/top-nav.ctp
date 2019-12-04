@@ -1,41 +1,84 @@
-<?php $this->layout = 'AdminLTE.top'; ?>
-  <!-- Content Header (Page header) -->
-  <section class="content-header">
-    <h1>
-      Top Navigation
-      <small>Example 2.0</small>
-    </h1>
-    <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li><a href="#">Layout</a></li>
-      <li class="active">Top Navigation</li>
-    </ol>
-  </section>
+<?php $this->setLayout('AdminLTE.top'); ?>
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0 text-dark"> Top Navigation <small>Example 3.0</small></h1>
+      </div><!-- /.col -->
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Layout</a></li>
+          <li class="breadcrumb-item active">Top Navigation</li>
+        </ol>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
 
-  <!-- Main content -->
-  <section class="content">
-    <div class="callout callout-info">
-      <h4>Tip!</h4>
+<!-- Main content -->
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
 
-      <p>Add the layout-top-nav class to the body tag to get this layout. This feature can also be used with a
-        sidebar! So use this class if you want to remove the custom dropdown menus from the navbar and use regular
-        links instead.</p>
-    </div>
-    <div class="callout callout-danger">
-      <h4>Warning!</h4>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of the card's
+              content.
+            </p>
 
-      <p>The construction of this layout differs from the normal one. In other words, the HTML markup of the navbar
-        and the content will slightly differ than that of the normal layout.</p>
-    </div>
-    <div class="box box-default">
-      <div class="box-header with-border">
-        <h3 class="box-title">Blank Box</h3>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+
+        <div class="card card-primary card-outline">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of the card's
+              content.
+            </p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div><!-- /.card -->
       </div>
-      <div class="box-body">
-        The great content goes here
+      <!-- /.col-md-6 -->
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title m-0">Featured</h5>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Special title treatment</h6>
+
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="card card-primary card-outline">
+          <div class="card-header">
+            <h5 class="card-title m-0">Featured</h5>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Special title treatment</h6>
+
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
       </div>
-      <!-- /.box-body -->
+      <!-- /.col-md-6 -->
     </div>
-    <!-- /.box -->
-  </section>
-  <!-- /.content -->
+    <!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content -->

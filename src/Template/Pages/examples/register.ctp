@@ -1,6 +1,6 @@
 <?php $this->setLayout('AdminLTE.register'); ?>
 <div class="card">
-  <div class="card-body register-box-body">
+  <div class="card-body register-card-body">
     <p class="login-box-msg">Register a new membership</p>
     <?php echo $this->Form->create(); ?>
       <div class="input-group mb-3">

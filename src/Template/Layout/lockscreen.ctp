@@ -50,7 +50,7 @@
     <a href="<?php echo $this->Url->build('/pages/examples/login'); ?>">Or sign in as a different user</a>
   </div>
   <div class="lockscreen-footer text-center">
-    Copyright &copy; 2014-2019 <b><a href="https://adminlte.io" class="text-black">Almsaeed Studio</a></b><br>
+    Copyright &copy; 2014-2019 <b><a href="https://adminlte.io" class="text-black">AdminLTE.io</a></b><br>
     All rights reserved
   </div>
 </div>

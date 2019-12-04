@@ -1,65 +1,120 @@
 <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Advanced Form Elements
-        <small>Preview</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Forms</a></li>
-        <li class="active">Advanced Elements</li>
-      </ol>
-    </section>
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1>Advanced Form</h1>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">Advanced Form</li>
+        </ol>
+      </div>
+    </div>
+  </div><!-- /.container-fluid -->
+</section>
 
-    <!-- Main content -->
-    <section class="content">
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+    <!-- SELECT2 EXAMPLE -->
+    <div class="card card-default">
+      <div class="card-header">
+        <h3 class="card-title">Select2 (Default Theme)</h3>
 
-      <!-- SELECT2 EXAMPLE -->
-      <div class="box box-default">
-        <div class="box-header with-border">
-          <h3 class="box-title">Select2</h3>
-
-          <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
-          </div>
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+          <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-remove"></i></button>
         </div>
-        <!-- /.box-header -->
-        <div class="box-body">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label>Minimal</label>
-                <select class="form-control select2" style="width: 100%;">
-                  <option selected="selected">Alabama</option>
-                  <option>Alaska</option>
-                  <option>California</option>
-                  <option>Delaware</option>
-                  <option>Tennessee</option>
-                  <option>Texas</option>
-                  <option>Washington</option>
-                </select>
-              </div>
-              <!-- /.form-group -->
-              <div class="form-group">
-                <label>Disabled</label>
-                <select class="form-control select2" disabled="disabled" style="width: 100%;">
-                  <option selected="selected">Alabama</option>
-                  <option>Alaska</option>
-                  <option>California</option>
-                  <option>Delaware</option>
-                  <option>Tennessee</option>
-                  <option>Texas</option>
-                  <option>Washington</option>
-                </select>
-              </div>
-              <!-- /.form-group -->
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Minimal</label>
+              <select class="form-control select2" style="width: 100%;">
+                <option selected="selected">Alabama</option>
+                <option>Alaska</option>
+                <option>California</option>
+                <option>Delaware</option>
+                <option>Tennessee</option>
+                <option>Texas</option>
+                <option>Washington</option>
+              </select>
             </div>
-            <!-- /.col -->
-            <div class="col-md-6">
-              <div class="form-group">
-                <label>Multiple</label>
-                <select class="form-control select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
+            <!-- /.form-group -->
+            <div class="form-group">
+              <label>Disabled</label>
+              <select class="form-control select2" disabled="disabled" style="width: 100%;">
+                <option selected="selected">Alabama</option>
+                <option>Alaska</option>
+                <option>California</option>
+                <option>Delaware</option>
+                <option>Tennessee</option>
+                <option>Texas</option>
+                <option>Washington</option>
+              </select>
+            </div>
+            <!-- /.form-group -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Multiple</label>
+              <select class="select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
+                <option>Alabama</option>
+                <option>Alaska</option>
+                <option>California</option>
+                <option>Delaware</option>
+                <option>Tennessee</option>
+                <option>Texas</option>
+                <option>Washington</option>
+              </select>
+            </div>
+            <!-- /.form-group -->
+            <div class="form-group">
+              <label>Disabled Result</label>
+              <select class="form-control select2" style="width: 100%;">
+                <option selected="selected">Alabama</option>
+                <option>Alaska</option>
+                <option disabled="disabled">California (disabled)</option>
+                <option>Delaware</option>
+                <option>Tennessee</option>
+                <option>Texas</option>
+                <option>Washington</option>
+              </select>
+            </div>
+            <!-- /.form-group -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+        <h5>Custom Color Variants</h5>
+        <div class="row">
+          <div class="col-12 col-sm-6">
+            <div class="form-group">
+              <label>Minimal (.select2-danger)</label>
+              <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" style="width: 100%;">
+                <option selected="selected">Alabama</option>
+                <option>Alaska</option>
+                <option>California</option>
+                <option>Delaware</option>
+                <option>Tennessee</option>
+                <option>Texas</option>
+                <option>Washington</option>
+              </select>
+            </div>
+            <!-- /.form-group -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6">
+            <div class="form-group">
+              <label>Multiple (.select2-purple)</label>
+              <div class="select2-purple">
+                <select class="select2" multiple="multiple" data-placeholder="Select a State" data-dropdown-css-class="select2-purple" style="width: 100%;">
                   <option>Alabama</option>
                   <option>Alaska</option>
                   <option>California</option>
@@ -69,378 +124,540 @@
                   <option>Washington</option>
                 </select>
               </div>
-              <!-- /.form-group -->
-              <div class="form-group">
-                <label>Disabled Result</label>
-                <select class="form-control select2" style="width: 100%;">
-                  <option selected="selected">Alabama</option>
-                  <option>Alaska</option>
-                  <option disabled="disabled">California (disabled)</option>
-                  <option>Delaware</option>
-                  <option>Tennessee</option>
-                  <option>Texas</option>
-                  <option>Washington</option>
-                </select>
-              </div>
-              <!-- /.form-group -->
             </div>
-            <!-- /.col -->
+            <!-- /.form-group -->
           </div>
-          <!-- /.row -->
+          <!-- /.col -->
         </div>
-        <!-- /.box-body -->
-        <div class="box-footer">
-          Visit <a href="https://select2.github.io/">Select2 documentation</a> for more examples and information about
-          the plugin.
+        <!-- /.row -->
+      </div>
+      <!-- /.card-body -->
+      <div class="card-footer">
+        Visit <a href="https://select2.github.io/">Select2 documentation</a> for more examples and information about
+        the plugin.
+      </div>
+    </div>
+    <!-- /.card -->
+
+    <!-- SELECT2 EXAMPLE -->
+    <div class="card card-default">
+      <div class="card-header">
+        <h3 class="card-title">Select2 (Bootstrap4 Theme)</h3>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+          <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-remove"></i></button>
         </div>
       </div>
-      <!-- /.box -->
-
-      <div class="row">
-        <div class="col-md-6">
-
-          <div class="box box-danger">
-            <div class="box-header">
-              <h3 class="box-title">Input masks</h3>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Minimal</label>
+              <select class="form-control select2bs4" style="width: 100%;">
+                <option selected="selected">Alabama</option>
+                <option>Alaska</option>
+                <option>California</option>
+                <option>Delaware</option>
+                <option>Tennessee</option>
+                <option>Texas</option>
+                <option>Washington</option>
+              </select>
             </div>
-            <div class="box-body">
-              <!-- Date dd/mm/yyyy -->
-              <div class="form-group">
-                <label>Date masks:</label>
-
-                <div class="input-group">
-                  <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
-                  </div>
-                  <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <!-- Date mm/dd/yyyy -->
-              <div class="form-group">
-                <div class="input-group">
-                  <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
-                  </div>
-                  <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask>
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <!-- phone mask -->
-              <div class="form-group">
-                <label>US phone mask:</label>
-
-                <div class="input-group">
-                  <div class="input-group-addon">
-                    <i class="fa fa-phone"></i>
-                  </div>
-                  <input type="text" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask>
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <!-- phone mask -->
-              <div class="form-group">
-                <label>Intl US phone mask:</label>
-
-                <div class="input-group">
-                  <div class="input-group-addon">
-                    <i class="fa fa-phone"></i>
-                  </div>
-                  <input type="text" class="form-control" data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask>
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <!-- IP mask -->
-              <div class="form-group">
-                <label>IP mask:</label>
-
-                <div class="input-group">
-                  <div class="input-group-addon">
-                    <i class="fa fa-laptop"></i>
-                  </div>
-                  <input type="text" class="form-control" data-inputmask="'alias': 'ip'" data-mask>
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
+            <!-- /.form-group -->
+            <div class="form-group">
+              <label>Disabled</label>
+              <select class="form-control select2bs4" disabled="disabled" style="width: 100%;">
+                <option selected="selected">Alabama</option>
+                <option>Alaska</option>
+                <option>California</option>
+                <option>Delaware</option>
+                <option>Tennessee</option>
+                <option>Texas</option>
+                <option>Washington</option>
+              </select>
             </div>
-            <!-- /.box-body -->
+            <!-- /.form-group -->
           </div>
-          <!-- /.box -->
-
-          <div class="box box-info">
-            <div class="box-header">
-              <h3 class="box-title">Color & Time Picker</h3>
+          <!-- /.col -->
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Multiple</label>
+              <select class="select2bs4" multiple="multiple" data-placeholder="Select a State"
+                      style="width: 100%;">
+                <option>Alabama</option>
+                <option>Alaska</option>
+                <option>California</option>
+                <option>Delaware</option>
+                <option>Tennessee</option>
+                <option>Texas</option>
+                <option>Washington</option>
+              </select>
             </div>
-            <div class="box-body">
-              <!-- Color Picker -->
-              <div class="form-group">
-                <label>Color picker:</label>
-                <input type="text" class="form-control my-colorpicker1">
-              </div>
-              <!-- /.form group -->
-
-              <!-- Color Picker -->
-              <div class="form-group">
-                <label>Color picker with addon:</label>
-
-                <div class="input-group my-colorpicker2">
-                  <input type="text" class="form-control">
-
-                  <div class="input-group-addon">
-                    <i></i>
-                  </div>
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <!-- time Picker -->
-              <div class="bootstrap-timepicker">
-                <div class="form-group">
-                  <label>Time picker:</label>
-
-                  <div class="input-group">
-                    <input type="text" class="form-control timepicker">
-
-                    <div class="input-group-addon">
-                      <i class="fa fa-clock-o"></i>
-                    </div>
-                  </div>
-                  <!-- /.input group -->
-                </div>
-                <!-- /.form group -->
-              </div>
+            <!-- /.form-group -->
+            <div class="form-group">
+              <label>Disabled Result</label>
+              <select class="form-control select2bs4" style="width: 100%;">
+                <option selected="selected">Alabama</option>
+                <option>Alaska</option>
+                <option disabled="disabled">California (disabled)</option>
+                <option>Delaware</option>
+                <option>Tennessee</option>
+                <option>Texas</option>
+                <option>Washington</option>
+              </select>
             </div>
-            <!-- /.box-body -->
+            <!-- /.form-group -->
           </div>
-          <!-- /.box -->
-
+          <!-- /.col -->
         </div>
-        <!-- /.col (left) -->
-        <div class="col-md-6">
-          <div class="box box-primary">
-            <div class="box-header">
-              <h3 class="box-title">Date picker</h3>
-            </div>
-            <div class="box-body">
-              <!-- Date -->
-              <div class="form-group">
-                <label>Date:</label>
-
-                <div class="input-group date">
-                  <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
-                  </div>
-                  <input type="text" class="form-control pull-right" id="datepicker">
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <!-- Date range -->
-              <div class="form-group">
-                <label>Date range:</label>
-
-                <div class="input-group">
-                  <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
-                  </div>
-                  <input type="text" class="form-control pull-right" id="reservation">
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <!-- Date and time range -->
-              <div class="form-group">
-                <label>Date and time range:</label>
-
-                <div class="input-group">
-                  <div class="input-group-addon">
-                    <i class="fa fa-clock-o"></i>
-                  </div>
-                  <input type="text" class="form-control pull-right" id="reservationtime">
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <!-- Date and time range -->
-              <div class="form-group">
-                <label>Date range button:</label>
-
-                <div class="input-group">
-                  <button type="button" class="btn btn-default pull-right" id="daterange-btn">
-                    <span>
-                      <i class="fa fa-calendar"></i> Date range picker
-                    </span>
-                    <i class="fa fa-caret-down"></i>
-                  </button>
-                </div>
-              </div>
-              <!-- /.form group -->
-
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-
-          <!-- iCheck -->
-          <div class="box box-success">
-            <div class="box-header">
-              <h3 class="box-title">iCheck - Checkbox &amp; Radio Inputs</h3>
-            </div>
-            <div class="box-body">
-              <!-- Minimal style -->
-
-              <!-- checkbox -->
-              <div class="form-group">
-                <label>
-                  <input type="checkbox" class="minimal" checked>
-                </label>
-                <label>
-                  <input type="checkbox" class="minimal">
-                </label>
-                <label>
-                  <input type="checkbox" class="minimal" disabled>
-                  Minimal skin checkbox
-                </label>
-              </div>
-
-              <!-- radio -->
-              <div class="form-group">
-                <label>
-                  <input type="radio" name="r1" class="minimal" checked>
-                </label>
-                <label>
-                  <input type="radio" name="r1" class="minimal">
-                </label>
-                <label>
-                  <input type="radio" name="r1" class="minimal" disabled>
-                  Minimal skin radio
-                </label>
-              </div>
-
-              <!-- Minimal red style -->
-
-              <!-- checkbox -->
-              <div class="form-group">
-                <label>
-                  <input type="checkbox" class="minimal-red" checked>
-                </label>
-                <label>
-                  <input type="checkbox" class="minimal-red">
-                </label>
-                <label>
-                  <input type="checkbox" class="minimal-red" disabled>
-                  Minimal red skin checkbox
-                </label>
-              </div>
-
-              <!-- radio -->
-              <div class="form-group">
-                <label>
-                  <input type="radio" name="r2" class="minimal-red" checked>
-                </label>
-                <label>
-                  <input type="radio" name="r2" class="minimal-red">
-                </label>
-                <label>
-                  <input type="radio" name="r2" class="minimal-red" disabled>
-                  Minimal red skin radio
-                </label>
-              </div>
-
-              <!-- Minimal red style -->
-
-              <!-- checkbox -->
-              <div class="form-group">
-                <label>
-                  <input type="checkbox" class="flat-red" checked>
-                </label>
-                <label>
-                  <input type="checkbox" class="flat-red">
-                </label>
-                <label>
-                  <input type="checkbox" class="flat-red" disabled>
-                  Flat green skin checkbox
-                </label>
-              </div>
-
-              <!-- radio -->
-              <div class="form-group">
-                <label>
-                  <input type="radio" name="r3" class="flat-red" checked>
-                </label>
-                <label>
-                  <input type="radio" name="r3" class="flat-red">
-                </label>
-                <label>
-                  <input type="radio" name="r3" class="flat-red" disabled>
-                  Flat green skin radio
-                </label>
-              </div>
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer">
-              Many more skins available. <a href="http://fronteed.com/iCheck/">Documentation</a>
-            </div>
-          </div>
-          <!-- /.box -->
-        </div>
-        <!-- /.col (right) -->
+        <!-- /.row -->
       </div>
-      <!-- /.row -->
+      <!-- /.card-body -->
+      <div class="card-footer">
+        Visit <a href="https://select2.github.io/">Select2 documentation</a> for more examples and information about
+        the plugin.
+      </div>
+    </div>
+    <!-- /.card -->
 
-    </section>
-    <!-- /.content -->
+    <div class="card card-default">
+      <div class="card-header">
+        <h3 class="card-title">Bootstrap Duallistbox</h3>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+          <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-remove"></i></button>
+        </div>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <label>Multiple</label>
+              <select class="duallistbox" multiple="multiple">
+                <option selected>Alabama</option>
+                <option>Alaska</option>
+                <option>California</option>
+                <option>Delaware</option>
+                <option>Tennessee</option>
+                <option>Texas</option>
+                <option>Washington</option>
+              </select>
+            </div>
+            <!-- /.form-group -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.card-body -->
+      <div class="card-footer">
+        Visit <a href="https://select2.github.io/">Select2 documentation</a> for more examples and information about
+        the plugin.
+      </div>
+    </div>
+    <!-- /.card -->
+
+    <div class="row">
+      <div class="col-md-6">
+
+        <div class="card card-danger">
+          <div class="card-header">
+            <h3 class="card-title">Input masks</h3>
+          </div>
+          <div class="card-body">
+            <!-- Date dd/mm/yyyy -->
+            <div class="form-group">
+              <label>Date masks:</label>
+
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                </div>
+                <input type="text" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
+              </div>
+              <!-- /.input group -->
+            </div>
+            <!-- /.form group -->
+
+            <!-- Date mm/dd/yyyy -->
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                </div>
+                <input type="text" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="mm/dd/yyyy" data-mask>
+              </div>
+              <!-- /.input group -->
+            </div>
+            <!-- /.form group -->
+
+            <!-- phone mask -->
+            <div class="form-group">
+              <label>US phone mask:</label>
+
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                </div>
+                <input type="text" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask>
+              </div>
+              <!-- /.input group -->
+            </div>
+            <!-- /.form group -->
+
+            <!-- phone mask -->
+            <div class="form-group">
+              <label>Intl US phone mask:</label>
+
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                </div>
+                <input type="text" class="form-control"
+                       data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask>
+              </div>
+              <!-- /.input group -->
+            </div>
+            <!-- /.form group -->
+
+            <!-- IP mask -->
+            <div class="form-group">
+              <label>IP mask:</label>
+
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-laptop"></i></span>
+                </div>
+                <input type="text" class="form-control" data-inputmask="'alias': 'ip'" data-mask>
+              </div>
+              <!-- /.input group -->
+            </div>
+            <!-- /.form group -->
+
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+
+        <div class="card card-info">
+          <div class="card-header">
+            <h3 class="card-title">Color & Time Picker</h3>
+          </div>
+          <div class="card-body">
+            <!-- Color Picker -->
+            <div class="form-group">
+              <label>Color picker:</label>
+              <input type="text" class="form-control my-colorpicker1">
+            </div>
+            <!-- /.form group -->
+
+            <!-- Color Picker -->
+            <div class="form-group">
+              <label>Color picker with addon:</label>
+
+              <div class="input-group my-colorpicker2">
+                <input type="text" class="form-control">
+
+                <div class="input-group-append">
+                  <span class="input-group-text"><i class="fas fa-square"></i></span>
+                </div>
+              </div>
+              <!-- /.input group -->
+            </div>
+            <!-- /.form group -->
+
+            <!-- time Picker -->
+            <div class="bootstrap-timepicker">
+              <div class="form-group">
+                <label>Time picker:</label>
+
+                <div class="input-group date" id="timepicker" data-target-input="nearest">
+                  <input type="text" class="form-control datetimepicker-input" data-target="#timepicker"/>
+                  <div class="input-group-append" data-target="#timepicker" data-toggle="datetimepicker">
+                      <div class="input-group-text"><i class="far fa-clock"></i></div>
+                  </div>
+                  </div>
+                <!-- /.input group -->
+              </div>
+              <!-- /.form group -->
+            </div>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+
+      </div>
+      <!-- /.col (left) -->
+      <div class="col-md-6">
+        <div class="card card-primary">
+          <div class="card-header">
+            <h3 class="card-title">Date picker</h3>
+          </div>
+          <div class="card-body">
+            <!-- Date range -->
+            <div class="form-group">
+              <label>Date range:</label>
+
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="far fa-calendar-alt"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control float-right" id="reservation">
+              </div>
+              <!-- /.input group -->
+            </div>
+            <!-- /.form group -->
+
+            <!-- Date and time range -->
+            <div class="form-group">
+              <label>Date and time range:</label>
+
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="far fa-clock"></i></span>
+                </div>
+                <input type="text" class="form-control float-right" id="reservationtime">
+              </div>
+              <!-- /.input group -->
+            </div>
+            <!-- /.form group -->
+
+            <!-- Date and time range -->
+            <div class="form-group">
+              <label>Date range button:</label>
+
+              <div class="input-group">
+                <button type="button" class="btn btn-default float-right" id="daterange-btn">
+                  <i class="far fa-calendar-alt"></i> Date range picker
+                  <i class="fas fa-caret-down"></i>
+                </button>
+              </div>
+            </div>
+            <!-- /.form group -->
+
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+
+        <!-- iCheck -->
+        <div class="card card-success">
+          <div class="card-header">
+            <h3 class="card-title">iCheck Bootstrap - Checkbox &amp; Radio Inputs</h3>
+          </div>
+          <div class="card-body">
+            <!-- Minimal style -->
+            <div class="row">
+              <div class="col-sm-6">
+                <!-- checkbox -->
+                <div class="form-group clearfix">
+                  <div class="icheck-primary d-inline">
+                    <input type="checkbox" id="checkboxPrimary1" checked>
+                    <label for="checkboxPrimary1">
+                    </label>
+                  </div>
+                  <div class="icheck-primary d-inline">
+                    <input type="checkbox" id="checkboxPrimary2">
+                    <label for="checkboxPrimary2">
+                    </label>
+                  </div>
+                  <div class="icheck-primary d-inline">
+                    <input type="checkbox" id="checkboxPrimary3" disabled>
+                    <label for="checkboxPrimary3">
+                      Primary checkbox
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <!-- radio -->
+                <div class="form-group clearfix">
+                  <div class="icheck-primary d-inline">
+                    <input type="radio" id="radioPrimary1" name="r1" checked>
+                    <label for="radioPrimary1">
+                    </label>
+                  </div>
+                  <div class="icheck-primary d-inline">
+                    <input type="radio" id="radioPrimary2" name="r1">
+                    <label for="radioPrimary2">
+                    </label>
+                  </div>
+                  <div class="icheck-primary d-inline">
+                    <input type="radio" id="radioPrimary3" name="r1" disabled>
+                    <label for="radioPrimary3">
+                      Primary radio
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Minimal red style -->
+            <div class="row">
+              <div class="col-sm-6">
+                <!-- checkbox -->
+                <div class="form-group clearfix">
+                  <div class="icheck-danger d-inline">
+                    <input type="checkbox" checked id="checkboxDanger1">
+                    <label for="checkboxDanger1">
+                    </label>
+                  </div>
+                  <div class="icheck-danger d-inline">
+                    <input type="checkbox" id="checkboxDanger2">
+                    <label for="checkboxDanger2">
+                    </label>
+                  </div>
+                  <div class="icheck-danger d-inline">
+                    <input type="checkbox" disabled id="checkboxDanger3">
+                    <label for="checkboxDanger3">
+                      Danger checkbox
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <!-- radio -->
+                <div class="form-group clearfix">
+                  <div class="icheck-danger d-inline">
+                    <input type="radio" name="r2" checked id="radioDanger1">
+                    <label for="radioDanger1">
+                    </label>
+                  </div>
+                  <div class="icheck-danger d-inline">
+                    <input type="radio" name="r2" id="radioDanger2">
+                    <label for="radioDanger2">
+                    </label>
+                  </div>
+                  <div class="icheck-danger d-inline">
+                    <input type="radio" name="r2" disabled id="radioDanger3">
+                    <label for="radioDanger3">
+                      Danger radio
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Minimal red style -->
+            <div class="row">
+              <div class="col-sm-6">
+                <!-- checkbox -->
+                <div class="form-group clearfix">
+                  <div class="icheck-success d-inline">
+                    <input type="checkbox" checked id="checkboxSuccess1">
+                    <label for="checkboxSuccess1">
+                    </label>
+                  </div>
+                  <div class="icheck-success d-inline">
+                    <input type="checkbox" id="checkboxSuccess2">
+                    <label for="checkboxSuccess2">
+                    </label>
+                  </div>
+                  <div class="icheck-success d-inline">
+                    <input type="checkbox" disabled id="checkboxSuccess3">
+                    <label for="checkboxSuccess3">
+                      Success checkbox
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <!-- radio -->
+                <div class="form-group clearfix">
+                  <div class="icheck-success d-inline">
+                    <input type="radio" name="r3" checked id="radioSuccess1">
+                    <label for="radioSuccess1">
+                    </label>
+                  </div>
+                  <div class="icheck-success d-inline">
+                    <input type="radio" name="r3" id="radioSuccess2">
+                    <label for="radioSuccess2">
+                    </label>
+                  </div>
+                  <div class="icheck-success d-inline">
+                    <input type="radio" name="r3" disabled id="radioSuccess3">
+                    <label for="radioSuccess3">
+                      Success radio
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.card-body -->
+          <div class="card-footer">
+            Many more skins available. <a href="http://fronteed.com/iCheck/">Documentation</a>
+          </div>
+        </div>
+        <!-- /.card -->
+
+        <!-- Bootstrap Switch -->
+        <div class="card card-secondary">
+          <div class="card-header">
+            <h3 class="card-title">Bootstrap Switch</h3>
+          </div>
+          <div class="card-body">
+            <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch>
+            <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch data-off-color="danger" data-on-color="success">
+          </div>
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col (right) -->
+    </div>
+    <!-- /.row -->
+  </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->
 
 <!-- daterange picker -->
-<?php echo $this->Html->css('AdminLTE./bower_components/bootstrap-daterangepicker/daterangepicker', ['block' => 'css']); ?>
-<!-- bootstrap datepicker -->
-<?php echo $this->Html->css('AdminLTE./bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min', ['block' => 'css']); ?>
+<?php echo $this->Html->css('AdminLTE./plugins/daterangepicker/daterangepicker', ['block' => true]); ?>
 <!-- iCheck for checkboxes and radio inputs -->
-<?php echo $this->Html->css('AdminLTE./plugins/iCheck/all', ['block' => 'css']); ?>
+<?php echo $this->Html->css('AdminLTE./plugins/icheck-bootstrap/icheck-bootstrap.min', ['block' => true]); ?>
 <!-- Bootstrap Color Picker -->
-<?php echo $this->Html->css('AdminLTE./bower_components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min', ['block' => 'css']); ?>
-<!-- Bootstrap time Picker -->
-<?php echo $this->Html->css('AdminLTE./plugins/timepicker/bootstrap-timepicker.min', ['block' => 'css']); ?>
+<?php echo $this->Html->css('AdminLTE./plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min', ['block' => true]); ?>
+<!-- Tempusdominus Bbootstrap 4 -->
+<?php echo $this->Html->css('AdminLTE./plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min', ['block' => true]); ?>
 <!-- Select2 -->
-<?php echo $this->Html->css('AdminLTE./bower_components/select2/dist/css/select2.min', ['block' => 'css']); ?>
+<?php echo $this->Html->css([
+  'AdminLTE./plugins/select2/css/select2.min',
+  'AdminLTE./plugins/select2-bootstrap4-theme/select2-bootstrap4.min'
+], ['block' => true]); ?>
+<!-- Bootstrap4 Duallistbox -->
+<?php echo $this->Html->css('AdminLTE./plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min', ['block' => true]); ?>
 
 <!-- Select2 -->
-<?php echo $this->Html->script('AdminLTE./bower_components/select2/dist/js/select2.full.min', ['block' => 'script']); ?>
+<?php echo $this->Html->script('AdminLTE./plugins/select2/js/select2.full.min', ['block' => true]); ?>
+<!-- Bootstrap4 Duallistbox -->
+<?php echo $this->Html->script('AdminLTE./plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min', ['block' => true]); ?>
 <!-- InputMask -->
-<?php echo $this->Html->script('AdminLTE./plugins/input-mask/jquery.inputmask', ['block' => 'script']); ?>
-<?php echo $this->Html->script('AdminLTE./plugins/input-mask/jquery.inputmask.date.extensions', ['block' => 'script']); ?>
-<?php echo $this->Html->script('AdminLTE./plugins/input-mask/jquery.inputmask.extensions', ['block' => 'script']); ?>
+<?php echo $this->Html->script([
+  'AdminLTE./plugins/moment/moment.min',
+  'AdminLTE./plugins/inputmask/min/jquery.inputmask.bundle.min'
+], ['block' => true]); ?>
 <!-- date-range-picker -->
-<?php echo $this->Html->script('AdminLTE./bower_components/moment/min/moment.min', ['block' => 'script']); ?>
-<?php echo $this->Html->script('AdminLTE./bower_components/bootstrap-daterangepicker/daterangepicker', ['block' => 'script']); ?>
-<!-- bootstrap datepicker -->
-<?php echo $this->Html->script('AdminLTE./bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min', ['block' => 'script']); ?>
+<?php echo $this->Html->script('AdminLTE./plugins/daterangepicker/daterangepicker', ['block' => true]); ?>
 <!-- bootstrap color picker -->
-<?php echo $this->Html->script('AdminLTE./bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min', ['block' => 'script']); ?>
-<!-- bootstrap time picker -->
-<?php echo $this->Html->script('AdminLTE./plugins/timepicker/bootstrap-timepicker.min', ['block' => 'script']); ?>
-<!-- iCheck 1.0.1 -->
-<?php echo $this->Html->script('AdminLTE./plugins/iCheck/icheck.min', ['block' => 'script']); ?>
+<?php echo $this->Html->script('AdminLTE./plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min', ['block' => true]); ?>
+<!-- Tempusdominus Bootstrap 4 -->
+<?php echo $this->Html->script('AdminLTE./plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min', ['block' => true]); ?>
+<!-- Bootstrap Switch -->
+<?php echo $this->Html->script('AdminLTE./plugins/bootstrap-switch/js/bootstrap-switch.min', ['block' => true]); ?>
 
 <?php $this->start('scriptBottom'); ?>
 <script>
   $(function () {
     //Initialize Select2 Elements
     $('.select2').select2()
+
+    //Initialize Select2 Elements
+    $('.select2bs4').select2({
+      theme: 'bootstrap4'
+    })
 
     //Datemask dd/mm/yyyy
     $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
@@ -452,7 +669,13 @@
     //Date range picker
     $('#reservation').daterangepicker()
     //Date range picker with time picker
-    $('#reservationtime').daterangepicker({ timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A' })
+    $('#reservationtime').daterangepicker({
+      timePicker: true,
+      timePickerIncrement: 30,
+      locale: {
+        format: 'MM/DD/YYYY hh:mm A'
+      }
+    })
     //Date range as a button
     $('#daterange-btn').daterangepicker(
       {
@@ -468,40 +691,31 @@
         endDate  : moment()
       },
       function (start, end) {
-        $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
       }
     )
 
-    //Date picker
-    $('#datepicker').datepicker({
-      autoclose: true
+    //Timepicker
+    $('#timepicker').datetimepicker({
+      format: 'LT'
     })
-
-    //iCheck for checkbox and radio inputs
-    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
-      checkboxClass: 'icheckbox_minimal-blue',
-      radioClass   : 'iradio_minimal-blue'
-    })
-    //Red color scheme for iCheck
-    $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
-      checkboxClass: 'icheckbox_minimal-red',
-      radioClass   : 'iradio_minimal-red'
-    })
-    //Flat red color scheme for iCheck
-    $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
-      checkboxClass: 'icheckbox_flat-green',
-      radioClass   : 'iradio_flat-green'
-    })
+    
+    //Bootstrap Duallistbox
+    $('.duallistbox').bootstrapDualListbox()
 
     //Colorpicker
     $('.my-colorpicker1').colorpicker()
     //color picker with addon
     $('.my-colorpicker2').colorpicker()
 
-    //Timepicker
-    $('.timepicker').timepicker({
-      showInputs: false
-    })
+    $('.my-colorpicker2').on('colorpickerChange', function(event) {
+      $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
+    });
+
+    $("input[data-bootstrap-switch]").each(function(){
+      $(this).bootstrapSwitch('state', $(this).prop('checked'));
+    });
+
   })
 </script>
 <?php $this->end(); ?>
