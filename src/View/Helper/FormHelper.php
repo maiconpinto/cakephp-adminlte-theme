@@ -50,20 +50,20 @@ class FormHelper extends CakeFormHelper {
         parent::__construct($View, $config);
     }
 
-    public function create($context = null, array $options = [])
+    public function create($context = null, array $options = []) : string
     {
         $options += ['role' => 'form'];
         return parent::create($context, $options);
     }
 
-    public function button($title, array $options = array())
+    public function button(string $title, array $options = []): string
     {
         $options += ['escape' => false, 'secure' => false, 'class' => 'btn btn-success'];
         $options['text'] = $title;
         return $this->widget('button', $options);
     }
 
-    public function submit($caption = null, array $options = array())
+    public function submit(?string $caption = NULL, array $options = []): string
     {
         $options += ['class' => 'btn btn-success'];
         return parent::submit($caption, $options);
@@ -99,7 +99,7 @@ class FormHelper extends CakeFormHelper {
 
         return parent::control($fieldName, $options);
     }
-	public function control($fieldName, array $options = [])
+	public function control(string $fieldName, array $options = []): string
 	{
 
 		$_options = [];
