@@ -63,7 +63,7 @@ class FormHelper extends CakeFormHelper {
         return $this->widget('button', $options);
     }
 
-    public function submit(?string $caption = NULL, array $options = []): string
+    public function submit(?string $caption = null, array $options = []): string
     {
         $options += ['class' => 'btn btn-success'];
         return parent::submit($caption, $options);
