@@ -7,7 +7,7 @@ use \Cake\Utility\Inflector;
 
 class AdminLTEView extends AppView
 {
-    protected function _paths($plugin = null, $cached = true)
+    protected function _paths($plugin = null, $cached = true): array
     {
         $prefix = $this->request->getParam('prefix') ? Inflector::camelize($this->request->getParam('prefix')) : false;
         $theme = $this->theme;
