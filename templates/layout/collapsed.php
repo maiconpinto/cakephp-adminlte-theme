@@ -21,7 +21,6 @@
 
     <?php echo $this->fetch('css'); ?>
 
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -29,9 +28,8 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<!-- ADD THE CLASS fixed TO GET A FIXED HEADER AND SIDEBAR LAYOUT -->
-<!-- the fixed layout is not compatible with sidebar-mini -->
-<body class="hold-transition skin-<?php echo Configure::read('Theme.skin'); ?> fixed sidebar-mini">
+<!-- ADD THE CLASS sidedar-collapse TO HIDE THE SIDEBAR PRIOR TO LOADING THE SITE -->
+<body class="hold-transition skin-<?php echo Configure::read('Theme.skin'); ?> sidebar-collapse sidebar-mini">
     <!-- Site wrapper -->
     <div class="wrapper">
 
@@ -63,7 +61,7 @@
         </div>
         <!-- /.content-wrapper -->
 
-        <?php echo $this->element('footer'); ?>''
+        <?php echo $this->element('footer'); ?>
 
         <!-- Control Sidebar -->
         <?php echo $this->element('aside-control-sidebar'); ?>
@@ -96,7 +94,7 @@
             size: "3px"
         }).css("width", "100%");
 
-        var a = $('a[href="<?php echo $this->request->getAttribute('webroot') . $this->request->getPath() ?>"]');
+        var a = $('a[href="<?php echo $this->request->webroot . $this->request->url ?>"]');
         if (!a.parent().hasClass('treeview')) {
             a.parent().addClass('active').parents('.treeview').addClass('active');
         }
