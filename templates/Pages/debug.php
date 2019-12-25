@@ -23,7 +23,7 @@ use Cake\Http\Exception\NotFoundException;
 
 if (!Configure::read('debug')) :
     throw new NotFoundException(
-        'Please replace src/Template/Pages/home.ctp with your own version or re-enable debug mode.'
+        'Please replace templates/Pages/home.ctp with your own version or re-enable debug mode.'
     );
 endif;
 
@@ -40,7 +40,7 @@ endif;
     <div class="row">
         <div class="col-md-12">
             <div class="callout callout-info">
-                <p>Please be aware that this page will not be shown if you turn off debug mode unless you replace src/Template/Pages/home.ctp with your own version.</p>
+                <p>Please be aware that this page will not be shown if you turn off debug mode unless you replace templates/Pages/home.ctp with your own version.</p>
             </div>
         </div>
     </div>
@@ -185,7 +185,7 @@ endif;
             <div class="callout callout-info">
                 <h3>Editing this Page</h3>
                 <ul>
-                    <li>To change the content of this page, edit: src/Template/Pages/home.ctp.</li>
+                    <li>To change the content of this page, edit: templates/Pages/home.ctp.</li>
                     <li>You can also add some CSS styles for your pages at: webroot/css/.</li>
                 </ul>
             </div>
