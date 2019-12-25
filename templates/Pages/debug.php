@@ -51,10 +51,10 @@ endif;
                 <?php Debugger::checkSecurityKeys(); ?>
                 <p class="problem">URL rewriting is not properly configured on your server.</p>
                 <p>
-                    1) <a target="_blank" href="https://book.cakephp.org/3.0/en/installation.html#url-rewriting">Help me configure it</a>
+                    1) <a target="_blank" href="https://book.cakephp.org/4.0/en/installation.html#url-rewriting">Help me configure it</a>
                 </p>
                 <p>
-                    2) <a target="_blank" href="https://book.cakephp.org/3.0/en/development/configuration.html#general-configuration">I don't / can't use URL rewriting</a>
+                    2) <a target="_blank" href="https://book.cakephp.org/4.0/en/development/configuration.html#general-configuration">I don't / can't use URL rewriting</a>
                 </p>
             </div>
         </div>
@@ -65,16 +65,16 @@ endif;
             <?php
             $class = 'callout-warning';
 
-            if (version_compare(PHP_VERSION, '5.6.0', '>=') && extension_loaded('mbstring') && (extension_loaded('openssl') || extension_loaded('mcrypt')) && extension_loaded('intl')) {
+            if (version_compare(PHP_VERSION, '7.2.0', '>=') && extension_loaded('mbstring') && (extension_loaded('openssl') || extension_loaded('mcrypt')) && extension_loaded('intl')) {
                 $class = 'callout-success';
             }
             ?>
             <div class="callout <?= $class ?>">
                 <h4>Environment</h4>
-                    <?php if (version_compare(PHP_VERSION, '5.6.0', '>=')): ?>
-                        <p class="success">Your version of PHP is 5.6.0 or higher (detected <?= PHP_VERSION ?>).</p>
+                    <?php if (version_compare(PHP_VERSION, '7.2.0', '>=')): ?>
+                        <p class="success">Your version of PHP is 7.2.0 or higher (detected <?= PHP_VERSION ?>).</p>
                     <?php else: ?>
-                        <p class="problem">Your version of PHP is too low. You need PHP 5.6.0 or higher to use CakePHP (detected <?= PHP_VERSION ?>).</p>
+                        <p class="problem">Your version of PHP is too low. You need PHP 7.2.0 or higher to use CakePHP (detected <?= PHP_VERSION ?>).</p>
                     <?php endif; ?>
 
                     <?php if (extension_loaded('mbstring')): ?>
@@ -194,8 +194,8 @@ endif;
             <div class="callout callout-info">
                 <h3>Getting Started</h3>
                 <ul>
-                    <li><a target="_blank" href="http://book.cakephp.org/3.0/en/">CakePHP 3.0 Docs</a></li>
-                    <li><a target="_blank" href="https://book.cakephp.org/3.0/en/tutorials-and-examples/cms/installation.html">The 20 min CMS Tutorial</a></li>
+                    <li><a target="_blank" href="http://book.cakephp.org/4.0/en/">CakePHP 4.0 Docs</a></li>
+                    <li><a target="_blank" href="https://book.cakephp.org/4.0/en/tutorials-and-examples/cms/installation.html">The 20 min CMS Tutorial</a></li>
                 </ul>
             </div>
         </div>
