@@ -21,18 +21,18 @@ class AdminLTEView extends AppView
                 if (!empty($plugin)) {
                     for ($i = 0, $count = count($templatePaths); $i < $count; $i++) {
                         if ($prefix) {
-                            $pluginPaths[] = $templatePaths[$i] . 'Plugin'.  DIRECTORY_SEPARATOR . $theme . DIRECTORY_SEPARATOR . 'Plugin' . DIRECTORY_SEPARATOR . $plugin . DIRECTORY_SEPARATOR . $prefix . DIRECTORY_SEPARATOR;
+                            $pluginPaths[] = $templatePaths[$i] . 'plugin'.  DIRECTORY_SEPARATOR . $theme . DIRECTORY_SEPARATOR . 'Plugin' . DIRECTORY_SEPARATOR . $plugin . DIRECTORY_SEPARATOR . $prefix . DIRECTORY_SEPARATOR;
                         }
 
-                        $pluginPaths[] = $templatePaths[$i] . 'Plugin'.  DIRECTORY_SEPARATOR . $theme . DIRECTORY_SEPARATOR . 'Plugin' . DIRECTORY_SEPARATOR . $plugin . DIRECTORY_SEPARATOR;
+                        $pluginPaths[] = $templatePaths[$i] . 'plugin'.  DIRECTORY_SEPARATOR . $theme . DIRECTORY_SEPARATOR . 'Plugin' . DIRECTORY_SEPARATOR . $plugin . DIRECTORY_SEPARATOR;
                     }
                 }
 
                 if ($prefix) {
-                    $themePaths[] = $templateCurrent . 'Plugin'.  DIRECTORY_SEPARATOR . $theme . DIRECTORY_SEPARATOR . $prefix . DIRECTORY_SEPARATOR;
+                    $themePaths[] = $templateCurrent . 'plugin'.  DIRECTORY_SEPARATOR . $theme . DIRECTORY_SEPARATOR . $prefix . DIRECTORY_SEPARATOR;
                 }
 
-                $themePaths[] = $templateCurrent . 'Plugin'.  DIRECTORY_SEPARATOR . $theme . DIRECTORY_SEPARATOR;
+                $themePaths[] = $templateCurrent . 'plugin'.  DIRECTORY_SEPARATOR . $theme . DIRECTORY_SEPARATOR;
             }
         }
 
