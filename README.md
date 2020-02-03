@@ -1,12 +1,12 @@
-# CakePHP AdminLTE Theme (1.1.0)
+# CakePHP AdminLTE Theme (2.0.0)
 
 **What's the news**
 
 The AdminLTE was updated version to 2.4.5.
 
-The CakePHP was updated version compatible to 3.7.0.
+The CakePHP was updated version compatible to 4.0.0.
 
-This release 1.1.0 is can be considered the stable version, as indicated in the [SemVer.org](https://semver.org/) recommendations.
+This release 2.0.0 is can be considered the stable version, as indicated in the [SemVer.org](https://semver.org/) recommendations.
 
 ### Installation
 
@@ -27,25 +27,14 @@ public function bootstrap()
 }
 ```
 
-Before of CakePHP 3.7
-
-```php
-// config/bootstrap.php
-
-Plugin::load('AdminLTE', ['bootstrap' => true, 'routes' => true]);
-```
-
 ### Enable Theme
 
 ```php
 // src/Controller/AppController.php
 
-public function beforeRender(Event $event)
+public function beforeRender(EventInterface  $event)
 {
     $this->viewBuilder()->setTheme('AdminLTE');
-
-    // Before of CakePHP 3.5
-    $this->viewBuilder()->theme('AdminLTE');
 }
 ```
 
@@ -85,27 +74,6 @@ return [
 // config/bootstrap.php
 
 Configure::load('adminlte', 'default');
-```
-
-Before of CakePHP 3.7
-
-```php
-// config/bootstrap.php
-
-Configure::write('Theme', [
-    'title' => 'AdminLTE',
-    'logo' => [
-        'mini' => '<b>A</b>LT',
-        'large' => '<b>Admin</b>LTE'
-    ],
-    'login' => [
-        'show_remember' => true,
-        'show_register' => true,
-        'show_social' => true
-    ],
-    'folder' => ROOT,
-    'skin' => 'blue' // default is 'blue'
-]);
 ```
 
 # Customize Layout
