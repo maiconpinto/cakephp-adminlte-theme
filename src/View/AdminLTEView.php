@@ -7,7 +7,7 @@ use \Cake\Utility\Inflector;
 
 class AdminLTEView extends AppView
 {
-    protected function _paths($plugin = null, $cached = true)
+    protected function _paths(?string $plugin = NULL, bool $cached = true): array
     {
         $prefix = $this->request->getParam('prefix') ? Inflector::camelize($this->request->getParam('prefix')) : false;
         $theme = $this->theme;
@@ -21,18 +21,18 @@ class AdminLTEView extends AppView
                 if (!empty($plugin)) {
                     for ($i = 0, $count = count($templatePaths); $i < $count; $i++) {
                         if ($prefix) {
-                            $pluginPaths[] = $templatePaths[$i] . 'Plugin'.  DIRECTORY_SEPARATOR . $theme . DIRECTORY_SEPARATOR . 'Plugin' . DIRECTORY_SEPARATOR . $plugin . DIRECTORY_SEPARATOR . $prefix . DIRECTORY_SEPARATOR;
+                            $pluginPaths[] = $templatePaths[$i] . 'plugin'.  DIRECTORY_SEPARATOR . $theme . DIRECTORY_SEPARATOR . 'Plugin' . DIRECTORY_SEPARATOR . $plugin . DIRECTORY_SEPARATOR . $prefix . DIRECTORY_SEPARATOR;
                         }
 
-                        $pluginPaths[] = $templatePaths[$i] . 'Plugin'.  DIRECTORY_SEPARATOR . $theme . DIRECTORY_SEPARATOR . 'Plugin' . DIRECTORY_SEPARATOR . $plugin . DIRECTORY_SEPARATOR;
+                        $pluginPaths[] = $templatePaths[$i] . 'plugin'.  DIRECTORY_SEPARATOR . $theme . DIRECTORY_SEPARATOR . 'Plugin' . DIRECTORY_SEPARATOR . $plugin . DIRECTORY_SEPARATOR;
                     }
                 }
 
                 if ($prefix) {
-                    $themePaths[] = $templateCurrent . 'Plugin'.  DIRECTORY_SEPARATOR . $theme . DIRECTORY_SEPARATOR . $prefix . DIRECTORY_SEPARATOR;
+                    $themePaths[] = $templateCurrent . 'plugin'.  DIRECTORY_SEPARATOR . $theme . DIRECTORY_SEPARATOR . $prefix . DIRECTORY_SEPARATOR;
                 }
 
-                $themePaths[] = $templateCurrent . 'Plugin'.  DIRECTORY_SEPARATOR . $theme . DIRECTORY_SEPARATOR;
+                $themePaths[] = $templateCurrent . 'plugin'.  DIRECTORY_SEPARATOR . $theme . DIRECTORY_SEPARATOR;
             }
         }
 
