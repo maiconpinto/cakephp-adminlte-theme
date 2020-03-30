@@ -39,7 +39,8 @@
           <?php echo $this->Form->create(${{ singularVar }}, ['role' => 'form']); ?>
             <div class="box-body">
               <?php
-{% for field in fields if field not in primaryKey %}
+{% for field in fields %}
+  {%- if field not in primaryKey %}
     {%- if keyFields[field] %}
         {%- set fieldData = Bake.columnData(field, schema) %}
         {%- if fieldData.null %}
@@ -59,6 +60,7 @@
     {{- "\n" }}
         {%- endif %}
     {%- endif %}
+  {%- endif %}
 {%- endfor %}
 
 {%- if associations.BelongsToMany %}
