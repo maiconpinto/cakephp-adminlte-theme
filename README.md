@@ -31,6 +31,7 @@ public function bootstrap()
 
 ```php
 // src/Controller/AppController.php
+use Cake\Event\EventInterface;
 
 public function beforeRender(EventInterface  $event)
 {
