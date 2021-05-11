@@ -1,0 +1,115 @@
+{#
+/**
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
+ * @since         2.0.0
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ */
+#}
+<?php
+/**
+ * @var \{{ namespace }}\View\AppView $this
+ * @var \{{ entityClass }}[]&\Cake\ORM\ResultSet ${{ pluralVar }}
+ */
+?>
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1><?= __('List {{ pluralHumanName }}') ?></h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><?= $this->Html->link(__('Home'), '/') ?></li>
+                    <li class="breadcrumb-item active"><?= __('{{ pluralHumanName }}') ?></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card card-default">
+                    <div class="card-header">
+                        <h3 class="card-title"><?= __('{{ pluralHumanName }}') ?></h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown"><?= __('Actions') ?></button>
+                            <div class="dropdown-menu">
+{% set fields = Bake.filterFields(fields, schema, modelObject, indexColumns, ['binary', 'text']) %}
+                                <?= $this->Html->link(__('New {{ singularHumanName }}'), ['action' => 'add'], ['class' => 'dropdown-item']) ?>
+{% set done = [] %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body table-responsive p-0">
+                        <table class="table table-bordered table-hover table-striped">
+                            <thead>
+                                <tr>
+{% for field in fields %}
+                                    <th><?= $this->Paginator->sort('{{ field }}') ?></th>
+{% endfor %}
+                                    <th class="text-center"><?= __('Actions') ?></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach (${{ pluralVar }} as ${{ singularVar }}): ?>
+                                    <tr>
+{% for field in fields %}
+{% set isKey = false %}
+{% if associations.BelongsTo is defined %}
+{% for alias, details in associations.BelongsTo %}
+{% if field == details.foreignKey %}
+{% set isKey = true %}
+                                        <td><?= ${{ singularVar }}->has('{{ details.property }}') ? $this->Html->link(${{ singularVar }}->{{ details.property }}->{{ details.displayField }}, ['controller' => '{{ details.controller }}', 'action' => 'view', ${{ singularVar }}->{{ details.property }}->{{ details.primaryKey[0] }}]) : '' ?></td>
+{% endif %}
+{% endfor %}
+{% endif %}
+{% if isKey is not same as(true) %}
+{% set columnData = Bake.columnData(field, schema) %}
+{% if columnData.type in ['boolean'] %}
+                                        <td><i class="fas fa-<?= ${{ singularVar }}->{{ field }} ? 'check text-success' : 'times text-danger' ?>"></i></td>
+{% elseif columnData.type in ['integer', 'float', 'decimal', 'biginteger', 'smallinteger', 'tinyinteger'] %}
+                                        <td><?= $this->Number->format(${{ singularVar }}->{{ field }}) ?></td>
+{% elseif columnData.type in ['date', 'time', 'datetime', 'timestamp', 'year'] %}
+                                        <td><?= ${{ singularVar }}->{{ field }}->timeAgoInWords() ?></td>
+{% else %}
+                                        <td><?= h(${{ singularVar }}->{{ field }}) ?></td>
+{% endif %}
+{% endif %}
+{% endfor %}
+{% set pk = '$' ~ singularVar ~ '->' ~ primaryKey[0] %}
+                                        <td class="text-right">
+                                            <?= $this->Html->link(null, ['action' => 'view', {{ pk|raw }}], ['class' => 'btn btn-info btn-xs fas fa-eye', 'title' => __('View')]) ?>
+                                            <?= $this->Html->link(null, ['action' => 'edit', {{ pk|raw }}], ['class' => 'btn btn-warning btn-xs fas fa-edit', 'title' => __('Edit')]) ?>
+                                            <?= $this->Form->postLink('', ['action' => 'delete', {{ pk|raw }}], ['confirm' => __('Are you sure you want to delete "{0}"?', ${{ singularVar }}->{{ displayField }}), 'class' => 'btn btn-danger btn-xs fas fa-trash-alt', 'title' => __('Delete')]) ?>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-footer clearfix">
+                        <ul class="pagination pagination-sm float-right">
+                            <?= $this->Paginator->first('<< ' . __('first')) ?>
+                            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+                            <?= $this->Paginator->numbers() ?>
+                            <?= $this->Paginator->next(__('next') . ' >') ?>
+                            <?= $this->Paginator->last(__('last') . ' >>') ?>
+                        </ul>
+                        <p><?= $this->Paginator->counter(__('Page {{ '{{' }}page{{ '}}' }} of {{ '{{' }}pages{{ '}}' }}, showing {{ '{{' }}current{{ '}}' }} record(s) out of {{ '{{' }}count{{ '}}' }} total')) ?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,163 @@
+{#
+/**
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
+ * @since         2.0.0
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ */
+#}
+<?php
+/**
+ * @var \{{ namespace }}\View\AppView $this
+ * @var \{{ entityClass }} ${{ singularVar }}
+ */
+?>
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1><?= __('View {{ singularHumanName }}') ?></h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><?= $this->Html->link(__('Home'), '/') ?></li>
+                    <li class="breadcrumb-item"><?= $this->Html->link(__('{{ pluralHumanName }}'), ['action' => 'index']) ?></li>
+                    <li class="breadcrumb-item active"><?= __('{{ action|humanize }}') ?></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% set associations = {'BelongsTo': [], 'HasOne': [], 'HasMany': [], 'BelongsToMany': []}|merge(associations) %}
+{% set fieldsData = Bake.getViewFieldsData(fields, schema, associations) %}
+{% set associationFields = fieldsData.associationFields %}
+{% set groupedFields = fieldsData.groupedFields %}
+{% set pK = '$' ~ singularVar ~ '->' ~ primaryKey[0] %}
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title"><?= h(${{ singularVar }}->{{ displayField }}) ?></h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown"><?= __('Actions') ?></button>
+                            <div class="dropdown-menu">
+                                <?= $this->Html->link(__('Edit {{ singularHumanName }}'), ['action' => 'edit', {{ pK|raw }}], ['class' => 'dropdown-item']) ?>
+                                <?= $this->Form->postLink(__('Delete {{ singularHumanName }}'), ['action' => 'delete', {{ pK|raw }}], ['confirm' => __('Are you sure you want to delete "{0}"?', ${{ singularVar }}->{{ displayField }}), 'class' => 'dropdown-item']) ?>
+                                <?= $this->Html->link(__('List {{ pluralHumanName }}'), ['action' => 'index'], ['class' => 'dropdown-item']) ?>
+                                <?= $this->Html->link(__('New {{ singularHumanName }}'), ['action' => 'add'], ['class' => 'dropdown-item']) ?>
+                            </div>
+                        </div>
+                    </div>
+{% set done = [] %}
+                    <div class="card-body">
+                        <dl class="row">
+{% if groupedFields['string'] %}
+{% for field in groupedFields['string'] %}
+{% if associationFields[field] is defined %}
+{% set details = associationFields[field] %}
+                            <dt class="col-6 col-sm-4"><?= __('{{ details.property|humanize }}') ?></dt>
+                            <dd class="col-6 col-sm-8"><?= ${{ singularVar }}->has('{{ details.property }}') ? $this->Html->link(${{ singularVar }}->{{ details.property }}->{{ details.displayField }}, ['controller' => '{{ details.controller }}', 'action' => 'view', ${{ singularVar }}->{{ details.property }}->{{ details.primaryKey[0] }}]) : '' ?></dd>
+{% else %}
+                            <dt class="col-6 col-sm-4"><?= __('{{ field|humanize }}') ?></dt>
+                            <dd class="col-6 col-sm-8"><?= h(${{ singularVar }}->{{ field }}) ?></dd>
+{% endif %}
+{% endfor %}
+{% endif %}
+{% if associations.HasOne %}
+{% for alias, details in associations.HasOne %}
+                            <dt class="col-6 col-sm-4"><?= __('{{ alias|underscore|singularize|humanize }}') ?></dt>
+                            <dd class="col-6 col-sm-8"><?= ${{ singularVar }}->has('{{ details.property }}') ? $this->Html->link(${{ singularVar }}->{{ details.property }}->{{ details.displayField }}, ['controller' => '{{ details.controller }}', 'action' => 'view', ${{ singularVar }}->{{ details.property }}->{{ details.primaryKey[0] }}]) : '' ?></dd>
+{% endfor %}
+{% endif %}
+{% if groupedFields.number %}
+{% for field in groupedFields.number %}
+                            <dt class="col-6 col-sm-4"><?= __('{{ field|humanize }}') ?></dt>
+                            <dd class="col-6 col-sm-8"><?= $this->Number->format(${{ singularVar }}->{{ field }}) ?></dd>
+{% endfor %}
+{% endif %}
+{% if groupedFields.date %}
+{% for field in groupedFields.date %}
+                            <dt class="col-6 col-sm-4"><?= __('{{ field|humanize }}') ?></dt>
+                            <dd class="col-6 col-sm-8"><?= ${{ singularVar }}->{{ field }}->nice() ?></dd>
+{% endfor %}
+{% endif %}
+{% if groupedFields.boolean %}
+{% for field in groupedFields.boolean %}
+                            <dt class="col-6 col-sm-4"><?= __('{{ field|humanize }}') ?></dt>
+                            <dd class="col-6 col-sm-8"><?= ${{ singularVar }}->{{ field }} ? __('Yes') : __('No'); ?></dd>
+{% endfor %}
+{% endif %}
+                        </dl>
+{% if groupedFields.text %}
+{% for field in groupedFields.text %}
+                        <div class="callout callout-info">
+                            <h4><?= __('{{ field|humanize }}') ?></h4>
+                            <?= $this->Text->autoParagraph(h(${{ singularVar }}->{{ field }})); ?>
+                        </div>
+{% endfor %}
+{% endif %}
+                        <div class="row">
+{% set relations = associations.BelongsToMany|merge(associations.HasMany) %}
+{% for alias, details in relations %}
+{% set otherSingularVar = alias|variable %}
+{% set otherPluralHumanName = details.controller|underscore|humanize %}
+                            <div class="col-md-12">
+                                <div class="card card-info">
+                                    <div class="card-header">
+                                        <h4 class="card-title"><?= __('Related {{ otherPluralHumanName }}') ?></h4>
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i></button>
+                                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+                                            <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
+                                        </div>
+                                    </div>
+                                    <?php if (${{ singularVar }}->{{ details.property }}) : ?>
+                                        <div class="card-body table-responsive p-0">
+                                            <table class="table table-bordered table-hover table-striped">
+                                                <thead>
+                                                    <tr>
+{% for field in details.fields %}
+                                                        <th><?= __('{{ field|humanize }}') ?></th>
+{% endfor %}
+                                                        <th class="text-center"><?= __('Actions') ?></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php foreach (${{ singularVar }}->{{ details.property }} as ${{ otherSingularVar }}) : ?>
+                                                        <tr>
+{% for field in details.fields %}
+                                                            <td><?= h(${{ otherSingularVar }}->{{ field }}) ?></td>
+{% endfor %}
+{% set otherPk = '$' ~ otherSingularVar ~ '->' ~ details.primaryKey[0] %}
+                                                            <td class="text-right">
+                                                                <?= $this->Html->link(null, ['controller' => '{{ details.controller }}', 'action' => 'view', {{ otherPk|raw }}], ['class' => 'btn btn-info btn-xs fas fa-eye', 'title' => __('View')]) ?>
+                                                                <?= $this->Html->link(null, ['controller' => '{{ details.controller }}', 'action' => 'edit', {{ otherPk|raw }}], ['class' => 'btn btn-warning btn-xs fas fa-edit', 'title' => __('Edit')]) ?>
+                                                                <?= $this->Form->postLink('', ['controller' => '{{ details.controller }}', 'action' => 'delete', {{ otherPk|raw }}], ['confirm' => __('Are you sure you want to delete "{0}"?', ${{ otherSingularVar }}->{{ details.displayField }}), 'class' => 'btn btn-danger btn-xs fas fa-trash-alt', 'title' => __('Delete')]) ?>
+                                                            </td>
+                                                        </tr>
+                                                    <?php endforeach; ?>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+{% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

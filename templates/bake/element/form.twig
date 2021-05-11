@@ -1,0 +1,101 @@
+{#
+/**
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
+ * @since         2.0.0
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ */
+#}
+{% set fields = Bake.filterFields(fields, schema, modelObject) %}
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1><?= __('{{ action|humanize }} {{ singularHumanName }}') ?></h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><?= $this->Html->link(__('Home'), '/') ?></li>
+                    <li class="breadcrumb-item"><?= $this->Html->link(__('{{ pluralHumanName }}'), ['action' => 'index']) ?></li>
+                    <li class="breadcrumb-item active"><?= __('{{ action|humanize }}') ?></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card card-{% if 'add' in action %}primary{% else %}warning{% endif %}">
+                <div class="card-header">
+                    <h3 class="card-title"><?= __('{{ pluralHumanName }}') ?></h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown"><?= __('Actions') ?></button>
+                        <div class="dropdown-menu">
+{% if 'add' not in action %}
+                            <?= $this->Form->postLink(
+                                __('Delete {{ singularHumanName }}'),
+                                ['action' => 'delete', ${{ singularVar }}->{{ primaryKey[0] }}],
+                                ['confirm' => __('Are you sure you want to delete "{0}"?', ${{ singularVar }}->{{ displayField }}), 'class' => 'dropdown-item']
+                            ) ?>
+{% endif %}
+                            <?= $this->Html->link(__('List {{ pluralHumanName }}'), ['action' => 'index'], ['class' => 'dropdown-item']) ?>
+                            {{- "\n" }}
+{%- set done = [] %}
+                        </div>
+                    </div>
+                </div>
+                <?= $this->Form->create(${{ singularVar }}) ?>
+                    <div class="card-body">
+                        <?php
+{% for field in fields %}
+{%- if field not in primaryKey %}
+    {%- if keyFields[field] is defined %}
+        {%- set fieldData = Bake.columnData(field, schema) %}
+        {%- if fieldData.null %}
+                        echo $this->Form->control('{{ field }}', ['class' => 'form-control', 'options' => ${{ keyFields[field] }}, 'empty' => true]);
+                        {{- "\n" }}
+        {%- else %}
+                        echo $this->Form->control('{{ field }}', ['class' => 'form-control', 'options' => ${{ keyFields[field] }}]);
+                        {{- "\n" }}
+        {%- endif %}
+    {%- elseif field not in ['created', 'modified', 'updated'] %}
+        {%- set fieldData = Bake.columnData(field, schema) %}
+        {%- if fieldData.type in ['date', 'datetime', 'time'] and fieldData.null %}
+                        echo $this->Form->control('{{ field }}', ['class' => 'form-control', 'empty' => true]);
+                        {{- "\n" }}
+        {%- elseif fieldData.type in ['boolean'] %}
+                        echo $this->Form->control('{{ field }}', ['class' => 'form-check-input']);
+                        {{- "\n" }}
+        {%- else %}
+                        echo $this->Form->control('{{ field }}', ['class' => 'form-control']);
+                        {{- "\n" }}
+        {%- endif %}
+    {%- endif %}
+{%- endif %}
+{%- endfor %}
+
+{%- if associations.BelongsToMany is defined %}
+{%- for assocName, assocData in associations.BelongsToMany %}
+                        echo $this->Form->control('{{ assocData.property }}._ids', ['class' => 'form-control', 'options' => ${{ assocData.variable }}]);
+                        {{- "\n" }}
+{%- endfor %}
+{% endif %}
+                        ?>
+                    </div>
+                    <div class="card-footer">
+                        <?= $this->Form->button(__('Submit'), ['type' => 'submit', 'class' => 'btn btn-success']) ?>
+                    </div>
+                <?= $this->Form->end() ?>
+            </div>
+        </div>
+    </div>
+</section>
