@@ -8,7 +8,7 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
-    <?php echo $this->Html->css('AdminLTE./bootstrap/css/bootstrap.min'); ?>
+    <?php echo $this->Html->css('AdminLTE./bower_components/bootstrap/dist/css/bootstrap.min'); ?>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- Ionicons -->
@@ -75,16 +75,16 @@
 </div>
 <!-- ./wrapper -->
 
-<!-- jQuery 2.2.3 -->
-<?php echo $this->Html->script('AdminLTE./plugins/jQuery/jquery-2.2.3.min'); ?>
+<!-- jQuery 3 -->
+<?php echo $this->Html->script('AdminLTE./bower_components/jquery/dist/jquery.min'); ?>
 <!-- Bootstrap 3.3.5 -->
-<?php echo $this->Html->script('AdminLTE./bootstrap/js/bootstrap.min'); ?>
+<?php echo $this->Html->script('AdminLTE./bower_components/bootstrap/dist/js/bootstrap.min'); ?>
 <!-- SlimScroll -->
-<?php echo $this->Html->script('AdminLTE./plugins/slimScroll/jquery.slimscroll.min'); ?>
+<?php echo $this->Html->script('AdminLTE./bower_components/jquery-slimscroll/jquery.slimscroll.min'); ?>
 <!-- FastClick -->
-<?php echo $this->Html->script('AdminLTE./plugins/fastclick/fastclick'); ?>
+<?php echo $this->Html->script('AdminLTE./bower_components/fastclick/lib/fastclick'); ?>
 <!-- AdminLTE App -->
-<?php echo $this->Html->script('AdminLTE./js/app.min'); ?>
+<?php echo $this->Html->script('AdminLTE.adminlte.min'); ?>
 <!-- AdminLTE for demo purposes -->
 <?php echo $this->fetch('script'); ?>
 <?php echo $this->fetch('scriptBottom'); ?>
