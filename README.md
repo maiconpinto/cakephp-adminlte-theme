@@ -1,12 +1,10 @@
-# CakePHP AdminLTE Theme (2.0.0)
+# CakePHP AdminLTE Theme (2.0.3)
 
 **What's the news**
 
-The AdminLTE was updated version to 2.4.5.
+The AdminLTE was updated version to 2.4.18.
 
-The CakePHP was updated version compatible to 4.0.0.
-
-This release 2.0.0 is can be considered the stable version, as indicated in the [SemVer.org](https://semver.org/) recommendations.
+The CakePHP was updated version compatible to 4.4.
 
 ### Installation
 
@@ -167,7 +165,7 @@ The theme is prepared to show Flash Messages.
 
 ### Bake
 
-One of the better Cake features. The theme is prepared to use Bake. 
+One of the better Cake features. The theme is prepared to use Bake.
 
 ```
 bin/cake bake all user --theme AdminLTE
